@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>902,1281</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,1333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -69,7 +69,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="376,1116" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="376,1268" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="browser" />
       <Variable x:TypeArguments="x:String" Name="email" />
@@ -82,66 +82,47 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 0 - get Chrome folder workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="0 - get Chrome folder.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="ChromeFolder">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="chromeFolder" />
-        </OutArgument>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="DefaultChromeFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="DefaultChromeFolder" />
-        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ChromeFolder">[chromeFolder]</OutArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="DefaultChromeFolder">[DefaultChromeFolder]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="1 - try for free workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="1 - try for free.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="UseStaging">
-          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="UseStaging" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ChromeFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="chromeFolder" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="UseStaging">[UseStaging]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ChromeFolder">[chromeFolder]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 2 - create email address workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="2 - create email address.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="email">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="email" />
-        </OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ChromeFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="chromeFolder" />
-        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="email">[email]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ChromeFolder">[chromeFolder]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="3 - create cloud account workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="3 - create cloud account.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="ui:UiElement" x:Key="browser">
-          <mva:VisualBasicValue x:TypeArguments="ui:UiElement" ExpressionText="browser" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="email">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="email" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ChromeFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="chromeFolder" />
-        </InArgument>
+        <InArgument x:TypeArguments="ui:UiElement" x:Key="browser">[browser]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="email">[email]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ChromeFolder">[chromeFolder]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 4 - validate email workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="4 - validate email.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="ChromeFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="chromeFolder" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ChromeFolder">[chromeFolder]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 5 - download Studio workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="5 - download Studio.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="ChromeFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="chromeFolder" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ChromeFolder">[chromeFolder]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 6 - check Orchetsrator tenant sanity workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="6 - check Orchetsrator tenant sanity.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="ChromeFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="chromeFolder" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ChromeFolder">[chromeFolder]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 7 - clean up workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="7 - clean up.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

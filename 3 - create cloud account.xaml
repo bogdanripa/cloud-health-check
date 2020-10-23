@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>902,3184</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,3084</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_2___create_cloud_account_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -97,7 +97,11 @@
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="722,2711" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Default="Home" Name="orgName" />
+              <Variable x:TypeArguments="x:String" Name="orgName">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">DELETEME</Literal>
+                </Variable.Default>
+              </Variable>
               <Variable x:TypeArguments="x:String" Default="John" Name="firstName" />
               <Variable x:TypeArguments="x:String" Default="Doe" Name="lastName" />
               <Variable x:TypeArguments="x:String" Default="Romania" Name="country" />
