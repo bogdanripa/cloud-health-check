@@ -1,0 +1,17 @@
+﻿{
+  "Id": "BNydtyceM0iEC2eg-4ShGQ",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/BNydtyceM0iEC2eg-4ShGQ",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/pJ5TBuwwRkGGsTmZtnY3JA",
+  "Name": "Automation Cloud Homepage",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2020-10-22T11:10:13.5007164Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-22T11:11:13.4316882Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

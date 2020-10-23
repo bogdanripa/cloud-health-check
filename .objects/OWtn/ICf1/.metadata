@@ -1,0 +1,12 @@
+﻿{
+  "Id": "ICf1G-X87EOe9mb-H_E_OQ",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/ICf1G-X87EOe9mb-H_E_OQ",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/OWtnJwUSl065sBbdStNWNQ",
+  "Name": "1.0.0",
+  "Type": "AppVersion",
+  "Created": "2020-10-23T06:26:28.8030439Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-23T06:26:28.8030439Z"
+}

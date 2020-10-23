@@ -1,0 +1,14 @@
+﻿{
+  "Id": "bGaFGJZTHUeptlN26AVBTA",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/bGaFGJZTHUeptlN26AVBTA",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/m9Gwlgi16EiufZ9nGWudpA",
+  "Name": "Sign up with Email button",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2020-10-22T06:51:25.5554165Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-22T06:51:25.5554165Z"
+}

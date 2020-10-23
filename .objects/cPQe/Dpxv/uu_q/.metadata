@@ -1,0 +1,15 @@
+﻿{
+  "Id": "uu_qXzm2TUSdvB8KXpQkNQ",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/uu_qXzm2TUSdvB8KXpQkNQ",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/DpxvW_tvoUqAIInZh4t-tw",
+  "Name": "New account detals",
+  "Type": "Screen",
+  "Created": "2020-10-22T06:51:43.3424113Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-22T07:06:47.3517336Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

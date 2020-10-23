@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://10minutemail.com/" ContentHash="OvdO4ZtakUO1P8atWnDddQ" DesignTimeRectangle="770, 313, 118, 17" ElementType="Text" FriendlyName="'Verify your email'" FullSelectorArgument="&lt;webctrl parentid='mail_messages_content' tag='DIV' class='small_subject' /&gt;&lt;webctrl aaname='Verify your email' parentid='mail_messages_content' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Verify your email' parentid='mail_messages_content' tag='SPAN' type='' check:text='Verify your email' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email' /&gt;" SearchSteps="Selector" Text="Verify your email" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0tMzRN5rXBEu6e-eM5I2A2A</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="21ccec80f4452e42a40dbf1c480ef7e0.png" xmlns="">0fETSkTUWiE6OpACrSw4h1A</imageRef>
+</TargetAnchorable>

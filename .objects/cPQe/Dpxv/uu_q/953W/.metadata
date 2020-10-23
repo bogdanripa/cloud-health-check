@@ -1,0 +1,13 @@
+﻿{
+  "Id": "953W9J4AEkSpdJOz_bzJlg",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/953W9J4AEkSpdJOz_bzJlg",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/uu_qXzm2TUSdvB8KXpQkNQ",
+  "Name": "Country",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Created": "2020-10-22T06:55:40.4374391Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-22T06:55:40.4374391Z"
+}

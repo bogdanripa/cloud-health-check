@@ -1,0 +1,14 @@
+﻿{
+  "Id": "-zfAsVz11U-0atCkdlU_-Q",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/-zfAsVz11U-0atCkdlU_-Q",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/zmFHCZ-fDUClxVgSaQ7l1w",
+  "Name": "Verify Email button",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2020-10-22T08:52:52.4636797Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-22T08:52:52.4636797Z"
+}

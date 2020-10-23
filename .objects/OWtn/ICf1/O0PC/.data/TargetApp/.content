@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp ContentHash="_KefLFYGMUKyIsbQIhyt_Q" FilePath="windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel" Selector="&lt;wnd app='applicationframehost.exe' appid='*immersivecontrolpanel*' title='Settings' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="InformativeScreenshot" originalValue="4fee90e86da900cc48c2b5ceb8c1865e.png" xmlns="">03dBIQPNCOE2WpWxP92swug</imageRef>
+</TargetApp>

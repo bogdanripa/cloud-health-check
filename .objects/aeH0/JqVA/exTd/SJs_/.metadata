@@ -1,0 +1,14 @@
+﻿{
+  "Id": "SJs_nGgBo0qiyjsnjMVrxA",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/SJs_nGgBo0qiyjsnjMVrxA",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/exTdS5Rnpk6aNACmX-QOpw",
+  "Name": "Try UiPath Free button",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2020-10-22T06:41:52.0863312Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-22T06:41:52.0863312Z"
+}

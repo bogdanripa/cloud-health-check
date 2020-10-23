@@ -1,0 +1,134 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_7___uninstall_Studio" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,1568" sap2010:WorkflowViewState.IdRef="_7___uninstall_Studio_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_7___uninstall_Studio" sap:VirtualizedContainerService.HintSize="476,1503" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Program Manager" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,241" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(lwin)]i[u(lwin)][u(hk)]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp ContentHash="dhI9Fq4NKkecLTe7ZgwbJg" FilePath="C:\Windows\explorer.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMISURBVFhH7ZbtS1NhGMb3X/QvWCkEZmofDHHzpblp29SlEREREUGf+hj0KQoioqgvEQX+CbVsa77uzZfpcZupZZaJ8zQT5gzUc/Scq/s5PnLKHWFO2Ze84AcPz/1c13VzPh3TkY60o7nXJoFAjqSJU9x6ONpVkAuHu8TsSxP2w5LPDMw/Br7f2z8LzwVeq2vyqQm5MPPqGFJeKzD3APh8Kz9m7oDX6sLsXeTMl9sUdPNA8FpdmL6BQsJrdWHqOgoJr9WFqWs0KBy8Vhcmr6KQ8FpdmLxCg8LBa3Xh02XsRp3QUfZD4l+vUTav1YWJS9hBTXRAiXdgM9YOebwdG8JFbIztD4k8zMsytiiLZf7dwWt1YaKdBu1UzIxurI+2YXWoBemwC8tBJ34FnFgKOHKCvWWedMSlZaxRFstk2Uhs9/BaXUi4ocbd2BpvxVq0BSsRJzp7fXB2/jgQLGMl7NAyNylbjbfREm6jBWgYa4EsuPB7yIFUnx22N3M4+2L2QLCMVL9dy5THXFCoA/FWgwXiLlrASY8cyESakOy2Ggbmg9jTqGVKow5awEkLuAwWiDmgjl+APNqMTNiGpL/BMCwfxO7zyIRskKLNUKiDdfFaXYg10wJNtICdHluR/FhnGJYPYne9lilF7VCEJlqg2WCBcTtUwQY5Sp8r2EAL1JL5axaznhrMdZkx77VgwbcNO7O7bzQz8oj+Wi1TGmmkBWxgXbxWFwQr1DEr5BH6XME6JOmHo/LZdBYL3hos99ViNVSPtcFt2Jnd7eUR/WZkAnWQhhugUAfr4rW6MGaBGrVAHqLHA9VIfqhCxZNEFklvFdJ91ViP1GBzxKzBziv91RB95ww97J5lSoM1UKgDoxaDBYYroQ5VQg6XI9NbhqSnFGceCVksvi/FSk8ZNoLlUAYrNNiZecQuY49IHjaXQtse1sVrdSFSIqihEsiBYqz6T2DxbRHKHg5n8fNdETI0lwZOQgkVa7Az86Q8x409niJtvuNBuCT7n9BIp++HsBs+2lP5eI70P8tk+gMabT1X5bEGngAAAABJRU5ErkJggg==" InformativeScreenshot="e9e9855212e4fb6f245fa77155dca27d.png" Reference="8q7tX2HVr025SmmVI-6yXQ/ntOYVPrqBUSco-WP1HzFHQ" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Settings" sap:VirtualizedContainerService.HintSize="434,1349" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1060" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'edit Search'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="Add remove programs[k(enter)]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="397, 123, 338, 32" ElementType="InputBox" FriendlyName="'edit Search'" FullSelectorArgument="&lt;uia automationid='TextBox' cls='TextBox' name='Search box, Find a setting' /&gt;" FuzzySelectorArgument="&lt;uia automationid='TextBox' cls='TextBox' name='Search box, Find a setting' role='edit' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVYAAAAkCAYAAADSMhL9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMwSURBVHhe7Zq7juJAEEXns/dX+AIyMrLJyIiQCDYhISIhISL07mV8paJo2zzau2bmHOnKdne7q+mRj3jMx18aQgghVVNsJIQQ8nzak1+/CSGEPJNrqSrtSWkwIYSQ4VxLVWlP2gEAAHAfiBUAoDKIFQCgMtXFqnsAAH4yiBUAoDKIFQCgMogVAKAyiBUAoDKjiHW1WjWz2ewqy+Xy0u++VzidTpc5dHwHNpvNW60XAL44HA4XdymLxeLir3ue49HEqozFlMSqdWjzI6U2AHgv9vt98/n52ZzP57alaY7H40WyQ+5BrC+CWAG+JxJolKqRXIf89s/Futvtmvl83l59LV4flXWUkBRdRyxSR3Po2CfWOJ/SR54/1u/q8xpittvtTZvul2R1brw/isfl/ep6zQgbYHz0nK3X6/bqFn0t0MckxBqFYQlZmhaM7jO6P47JaI4oR61FdbrIwvK9rh378lpyv8htOlebsVA9T1ed+BryPgHAeOg5i89fps8nYjSxSgIxlkhJrFnC6vd49eV+i6pLrBmNjzUjllppLtXNm6vruKm6N8sut3m9RvPmP4yuXSvXECX5AsA46CuA/Ayavj4zmlizDE1JrFlesU3nlqzpk6GxzGK60FrVn9es2nkOJW6qrp8Ra64V23TMeyJKtQBgHPRVQH4OJVX9oDX0HH5Lsap2FFkWWxdal8a5Xql2piS73Jbrl/YntumIWAH+H/qBSj6QXO0jn+u/BYaYvFhLc2kOSaZLrJo/Csjj70F1vb6+12FKssttj4pVa9AeRDxHrgUAdbFUdRR6l6rn7pFnb/JiLQlF10qfWOOcHl9Cc8SxUWquHd+16jyuRbViv8htnseU9ie2+R15nENzqi3WBoC6ZKk+y+TFKnSPpOJYPF1itcicLLaI53Li2kSeK/drne7zenLbo2IVue7QawaA16glVTGKWKE+FisAjEMtqQrE+iboj971KQAApgVinSB+dxqTvy4BgOmCWAEAKlNdrAAAPx3ECgBQGcQKAFAZxAoAUBnECgBQmbvFSggh5MFcS1VpT0qDCSGEDOdaqspNAyGEkNdSbCSEEPJUPpo/PeljWr+i7fQAAAAASUVORK5CYII=" InformativeScreenshot="804b864f62a9954a71cefc95a898bb6f.png" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel' title='Settings' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Add or remove programs'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="72, 128, 168, 20" ElementType="Text" FriendlyName="'Add or remove programs'" FullSelectorArgument="&lt;uia automationid='SearchResults' cls='GridView' /&gt;&lt;uia cls='NamedContainerAutomationPeer' name='Add or remove programs' /&gt;&lt;uia cls='TextBlock' name='Add or remove programs' /&gt;" FuzzySelectorArgument="&lt;uia automationid='SearchResults' cls='GridView' /&gt;&lt;uia cls='NamedContainerAutomationPeer' name='Add or remove programs' /&gt;&lt;uia cls='TextBlock' name='Add or remove programs' role='text' automationid='' check:fulltext='Add or remove programs' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKwAAAAYCAYAAABnaha7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAObSURBVHhe7ZXtURtBEAVJjJRIhkiIghyIgRywW1ZbT6N36PwDfFTtq+ridmZ3vnZLPPzWx2Lxg6jGxeKoVONicVSqcbE4KtW4WByValwsjko1LhZH5db4+Pj4gV5eXm58Dffzt/nh6enptKf5Fot/4NbIQ31/fz/R/JP1YBffyK2Rh8oD82/bk6wHu/hGrg0+VL75pX19fb3ygw9UPT8/n/7mg/WBKvdknMk88/b2duWnFsCOiJl+wEb91I6y/lTazZv59ZsLzXxzDvkfyTrbfufUZpT7E/ohnnNUuYec5kXG+6zOPKucX9bPt/95EbVjT81+UfZoXu8GOWdJH8o3deZq8bdpvk2WfpvP4drEvAibAuV64kVkgQwgh+BQP7tY48xBoFkzw+Hbes2VF2wPxvV865GcXop+fZCPQL/9mjPjJV5k9pX5XKPs816dYGzXnsnZ840yDudynTMFlX7kntkzdWddrPM9nLlanA7MInIANJtDAxs0OM1l4TAvfDLzgA0Zl7w5xEbLQy2zZvY5nFk/kCdzzVpaj4Cc3+wp15yf/bbZCrmsN8l8bT576sxvmbH43qpN5pxR9ogfuYacCf5Zf+GyoOg5lBmE7znoeZnEmANgjdKWoHwwkrEYxr2hUdvsgTNN7mu1tVzIWlqPkPPJ2c0cnG/a6m/rMoljvlbzvTq9u+lv944t9wC2VJ5BmbvdzYyrWs1nLgua3VL+sjgg+QkPtg1bWm0tF7KWew+B73wM5M94W+e34Hw+Brk3n3t1Zo3JzMf3nCGxc888gzL3ngcLnFFpP3NZoNYcSQzahkIhyAfXimCN0paQw4sWh2nclnvShjIHOXFAaWu5kPNpPc49wD5rmvZ2fgv2zr72zGdPnfktnINcZxxzuwZy5xmUcfc+WGFv8f35aMEkh0UBsxDl4IiVa5tDnpnMM0AzeQHtQiatD/Nn89TPXr+RPmi5kH23ObA/LwzIiW3WZL95nr3Zf4IPZQ975rOnTtZZn7XlHr4ztzM1rnnyDMq87W4y7uyfvd5RcHHOZmUWZ0NKfyZzwIjYNqS/MePOelhv1ShtKGCNKX2ttpYL5QV4TuVliXnzsmX2284L5/FTk5r7t+azp05sihjky1j4Zw95x/ozNsp5tbvJuBkPzXxnbgyLAzIfw1fjo22+/0w1Lg7Gdz5Yf/nzP+aBqMbFwfjKB8uv6VTbdxCqcbE4KtW4WByValwsDsjDxy+IJkAmnKuCJAAAAABJRU5ErkJggg==" InformativeScreenshot="72380d2c4ba1468cb13b18bc7ec69602.png" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel' title='Settings' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Add or remove programs" TextMethod="FullTextScrapping" TextSelector="&lt;uia role='text' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'edit Search'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="UiPath Studio">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="352, 473, 282, 32" ElementType="InputBox" FriendlyName="'edit Search'" FullSelectorArgument="&lt;uia cls='LandmarkTarget' idx='2' /&gt;&lt;uia cls='GroupItem' name='Apps &amp;amp; features' /&gt;&lt;uia automationid='SystemSettings_StorageSense_AppSizesListFilter_DisplayStringValue' cls='TextBox' name='Search box, Search this list' /&gt;" FuzzySelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia cls='GroupItem' name='Apps &amp;amp; features' /&gt;&lt;uia automationid='SystemSettings_StorageSense_AppSizesListFilter_DisplayStringValue' cls='TextBox' name='Search box, Search this list' role='edit' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAR4AAAAkCAYAAABfX1WpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANTSURBVHhe7dk9UhtBGIRh7sAZuAEn0AGIOQGBMkVERCRE5Dqt7JarVe3xtyMhdka263XVU2j+dmZV+7UQvvv57wAAk5WdADDSrxcvLy8AMEQEjhE8AMaKwLHfgycGAOBbCB4A0xE8AKYjeABMR/AAmI7gATAdwQNgOoIHwHTDguf19fWw3+9P1K7mjfbw8HDcXz+r8Uttt9vD+/t7OSabzea4z/Pzczne8/n5eVqnfdY4LzCDnnvVhXx8fBzr/JJnd0jw6BBt0PxLweMQyb5zwfMdGTxfce06YA1PT0+Ht7e3w/39/anv8fHxWCfn6m314Lmm0EcieIAxVA8ZOqbwOfeLxurBIypaFW81ZjqY5lmOufBNRd+OqeD0M8NAhZjr1Ofgaa+5FETtuXRN9Tt4/FVI2iBSX953nqcXWhkgPqfHfH7T/u29SO4LjKbnbbfblWOir11Vvw0JHhdnBkZScWchap4LXHIsg0NtF11byFqfKeu9vT6vr3nZbnmP7KvuqWr7nDpfjuXrVi948pqS18l1wEx6JnvPdO+DVoYEj+QndRaH+3OutAWWdBNtYeo6HtfYUpC0wSW+Rs5L1bje5HYPBViGXe7zlVBYCh6fPe81ETy4FX3FWgqX3pgNCx5zIblA3a64aEUHzzGnaxam6dpL6VsV77mCrvbQ9ds3s+3TGt+DAkHtpUBMS8Ejuje1M+CM4MEt6atWW3cKHf3BOWu5Mjx4JAtdB+oVo+fmDam43a5C4W8MHusFh/WCJ+eoP4OG4MGt6A/Iev4UPq5Pv9b/dlVr0pTgERWNCv1c0auQ2gLXDfaCpwoFq/Y7d4Y1g0d8vaX9Lgke0X6a6zbBg1tw6Oin2votR89t9ewvWT14VFztp3tbMCrWbIvXqJCy8LRWbf1Ue6kwc474dRUyVV+qxnW9rwRPvge9MJEMkJyr/dt7yv30OseB0drQudbqwSMqnNSGjKhock5+cueYi80F1itirxEXaBUiVV/LZ/DZ26Kv+jTfwaN1altvr17w5DXa99EhLd4XGGWt0JEhwQPg/7NW6AjBA2A6ggfAdAQPgOkIHgDTETwApiN4AExH8ACYjuABMN3FwQMAa4vAMYIHwFgROPZHBwCMVnYCwCB3hx9BySnOIKokuAAAAABJRU5ErkJggg==" InformativeScreenshot="379bda83e43adb7d09ab1ca4a20c5455.png" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel' title='Settings' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'UiPath Studio'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="402, 571, 90, 20" ElementType="Text" FriendlyName="'UiPath Studio'" FullSelectorArgument="&lt;uia cls='LandmarkTarget' idx='2' /&gt;&lt;uia cls='GroupItem' name='Apps &amp;amp; features' /&gt;&lt;uia cls='ListView' /&gt;&lt;uia automationid='UiPath_TitleTextBlock' cls='TextBlock' name='UiPath Studio' /&gt;" FuzzySelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia cls='GroupItem' name='Apps &amp;amp; features' /&gt;&lt;uia cls='ListView' /&gt;&lt;uia automationid='UiPath_TitleTextBlock' cls='TextBlock' name='UiPath Studio' role='text' check:fulltext='UiPath Studio' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAYCAYAAABz00ofAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIFSURBVGhD7ZOJbSpBEERJjJRIhkiIghyIgRzWfsjFlss9u8sxsmVNS0+fPqaP+uvdp02DX6EMDvpTBgf9KYOD/pTBQX/K4KA/ZXDQn9m5XC7T6XTy5I39fj9h/Ku66/V6z5/P51ve7Xg83vOPcjgcbj2q3BLs7saeVd0rcJffjnG/12xkdrYKnzDYh0u4reJziNc+IzzzU2jfqXXbo6TwLzA77xIe6LP1i3uH8Bjvqhz8C+FT1DXhJaRMMzKOEVM8894/yf88od3dqFPvqtY/MGrdUvhKM/Ju3s+YnXcK7zGvVS8OV6z1xfs7frufSKDcQ/DWb9sivHrKV35JeMz97GHMTjYRudCa8AvDbvDWhW4J7+/J+8EtZHnHM8LnXkCPlvCpS1VjrBb8WCgHIHqacoJ6N5/TEl5+K9ZC+/qOedsW4f23yA/A+6JDpR+x4i9xdnI5oYXkU+NH5Rfv6K33zTnvFl5gvOP3nxaeAhdUMMzjWbckfL4FFvcFewlP35bwKTJohmK5F3BnS/iWfjn7i9nRMtWCvkAOWBMek89bzGfkYs8Inwfn3GpHBPQYPibhtavy2qElPGDu5x7G94CEdtNXI2i8VXigVqa31XIYs54RXqK5eV7vMX1EeatqJDxwl4y9ebskPKR5ziiDg/6UwUF/yuCgP2Vw0J8yOOhPGRx0ZTd9AAdiaFMVYA6qAAAAAElFTkSuQmCC" InformativeScreenshot="65ef4e2bef49be63c8ad0dbf20d40c57.png" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel' title='Settings' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="UiPath Studio" TextMethod="FullTextScrapping" TextSelector="&lt;uia role='text' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp ContentHash="_KefLFYGMUKyIsbQIhyt_Q" FilePath="windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel" InformativeScreenshot="4fee90e86da900cc48c2b5ceb8c1865e.png" Reference="8q7tX2HVr025SmmVI-6yXQ/O0PCDJ91Dka4kMM2RNA51g" Selector="&lt;wnd app='applicationframehost.exe' appid='*immersivecontrolpanel*' title='Settings' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

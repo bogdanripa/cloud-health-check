@@ -1,0 +1,14 @@
+﻿{
+  "Id": "O0PCDJ91Dka4kMM2RNA51g",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/O0PCDJ91Dka4kMM2RNA51g",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/ICf1G-X87EOe9mb-H_E_OQ",
+  "Name": "Settings Home",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2020-10-23T06:26:35.472653Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-23T06:26:35.472653Z"
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp BrowserType="Chrome" ContentHash="rcB0Em2A8Eenq-hGGxGTOg" Selector="&lt;html app='chrome.exe' title='10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email'/&gt;" Url="https://10minutemail.com/" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0nV61at6SK0W6QeLeohvW0Q</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="3e234471028df90f2dff9633725c301f.png" xmlns="">0a2ypU1sUYk2JZo4-MA7wKg</imageRef>
+</TargetApp>

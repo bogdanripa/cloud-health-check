@@ -1,0 +1,14 @@
+﻿{
+  "Id": "I92xu5oHh063q5P3utyaVg",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/I92xu5oHh063q5P3utyaVg",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/BNydtyceM0iEC2eg-4ShGQ",
+  "Name": "Orchestartor Tenant Shortcut",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2020-10-22T13:19:23.1889172Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-22T13:19:23.1889172Z"
+}
