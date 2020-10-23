@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>902,939</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,839</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_6___check_Orchetsrator_tenant_sanity_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -70,7 +70,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard CloseMode="Always" DisplayName="Use Application/Browser 'Automation Cloud Homepage'" sap:VirtualizedContainerService.HintSize="434,682" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never">
+    <uix:NApplicationCard CloseMode="Never" DisplayName="Use Application/Browser 'Automation Cloud Homepage'" sap:VirtualizedContainerService.HintSize="434,682" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
