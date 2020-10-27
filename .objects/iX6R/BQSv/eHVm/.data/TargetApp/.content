@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp ContentHash="USthWW00_kqTeRYBxTs4bg" FilePath="C:\Windows\System32\mstsc.exe" Selector="&lt;wnd app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">080MITrhFeUK7lubDfG8RYw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="8efdfa0f6d0051dfcd9607e6c766e2ba.png" xmlns="">05OuJ26dJjE-4830ezwXhWg</imageRef>
+</TargetApp>

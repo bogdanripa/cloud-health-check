@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>902,831</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,831</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_0___get_Chrome_folder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -85,7 +85,7 @@
             <OutArgument x:TypeArguments="x:String">[ChromeFolder]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">ChromeUserFolder</InArgument>
+            <InArgument x:TypeArguments="x:String">[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\ChromeUserFolder"]</InArgument>
           </Assign.Value>
         </Assign>
       </If.Else>

@@ -1,0 +1,12 @@
+﻿{
+  "Id": "BQSv-ctkbkubRRxQwycrpw",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/BQSv-ctkbkubRRxQwycrpw",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/iX6RKgce-UabvWhUR5xX9Q",
+  "Name": "1.0.0",
+  "Type": "AppVersion",
+  "Created": "2020-10-23T14:02:44.8522296Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-23T14:02:44.8522296Z"
+}

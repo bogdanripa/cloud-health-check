@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="n7rg7z4NkUu2TssZr93rNw" DesignTimeRectangle="93, 122, 213, 13" ElementType="InputBox" FriendlyName="'168.62.217.43'" FullSelectorArgument="&lt;wnd ctrlid='5012' /&gt;&lt;wnd ctrlid='5012' /&gt;&lt;wnd ctrlid='5012' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='5012' /&gt;&lt;wnd ctrlid='5012' /&gt;&lt;wnd ctrlid='5012' /&gt;" ScopeSelectorArgument="&lt;wnd app='mstsc.exe' cls='#32770' title='Remote Desktop Connection' /&gt;" SearchSteps="Selector" Text="168.62.217.43" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="1">
+      <Target DesignTimeRectangle="19, 122, 66, 13" ElementType="Text" FriendlyName="'&amp;Computer:'" FullSelectorArgument="&lt;wnd ctrlid='5011' title='&amp;amp;Computer:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='5011' title='&amp;amp;Computer:' check:text='&amp;amp;Computer:' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="&amp;Computer:" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1NboRaXt-vUCyEq2NJlE2XQ</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0eJmybop4o0O6Ky2SphlZXw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="18dd0c766a363e56e936cb23d5cfdbe6.png" xmlns="">0id06w9CmrUOmshNJKBD_sw</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="j_vHfQ4iY0qJqQXlmDDwpg" DesignTimeRectangle="93, 374, 296, 19" ElementType="Text" FriendlyName="'Use a different account'" FullSelectorArgument="&lt;ctrl name='Switch to Local or domain account password' role='list item' /&gt;&lt;ctrl automationid='StaticTextField_0' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Switch to Local or domain account password' role='list item' /&gt;&lt;ctrl automationid='StaticTextField_0' role='text' check:text='Use a different account' /&gt;" ScopeSelectorArgument="&lt;wnd app='credentialuibroker.exe' cls='Credential Dialog Xaml Host' title='Windows Security' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Use a different account" TextMethod="AttributeText" TextSelector="&lt;ctrl role='text' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0q7DPcAimOkO5L6KzYFF6jQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="c73992425a32aa8566578609b198aaa9.png" xmlns="">0BUoE-ltae0WwtMLf-3QL4Q</imageRef>
+</TargetAnchorable>

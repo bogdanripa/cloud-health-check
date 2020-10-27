@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="Dj-kfBuIl0y1s_WMWk2z4Q" DesignTimeRectangle="25, 160, 296, 32" ElementType="InputBoxPassword" FriendlyName="'Password'" FullSelectorArgument="&lt;ctrl automationid='PasswordField_2' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='PasswordField_2' role='editable text' /&gt;" ScopeSelectorArgument="&lt;wnd app='credentialuibroker.exe' cls='Credential Dialog Xaml Host' title='Windows Security' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Password" TextMethod="AttributeText" TextSelector="&lt;ctrl role='editable text' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0qVDHNQNTeUadprWYv4jLmg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="d18201480e42daaeb00d124c0610f153.png" xmlns="">0wo-NjySNuEekYYZrEelfvg</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "XdJ-DmVdYUS8EQ7mFnring",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/XdJ-DmVdYUS8EQ7mFnring",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/BQSv-ctkbkubRRxQwycrpw",
+  "Name": "Homepage",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2020-10-23T14:02:54.9919035Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-23T14:02:54.9919035Z"
+}

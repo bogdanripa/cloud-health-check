@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="Gf6k5YYUk02wjPlDZKm2Rg" DesignTimeRectangle="25, 446, 201, 32" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl automationid='OkButton' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='OkButton' role='push button' check:text='OK' /&gt;" ScopeSelectorArgument="&lt;wnd app='credentialuibroker.exe' cls='Credential Dialog Xaml Host' title='Windows Security' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="OK" TextMethod="AttributeText" TextSelector="&lt;ctrl role='push button' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0_a15090MSEmRqPauf23LMg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="75c99494a5dc4b581a1828faebc4bffe.png" xmlns="">0qDfpinqhnU-iRnUMktOKcA</imageRef>
+</TargetAnchorable>

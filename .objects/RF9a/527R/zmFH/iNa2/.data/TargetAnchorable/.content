@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://10minutemail.com/" ContentHash="890P-R8Fs0KA-ry-UD4XmA" DesignTimeRectangle="503, 583, 274, 20" ElementType="InputBox" FriendlyName="'jcefcjejcqqfkywhhy@mhza…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email' /&gt;" SearchSteps="Selector" Text="jcefcjejcqqfkywhhy@mhzayt.com" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='text' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0wR8DSO6t80Cy_14w9EPWiA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="85314819d68acfb9a8772f8c67b1ad76.png" xmlns="">0PEpdSI_oVk6-4nHFLh8zBw</imageRef>
+</TargetAnchorable>

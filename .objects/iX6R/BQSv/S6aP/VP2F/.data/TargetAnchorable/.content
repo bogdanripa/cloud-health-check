@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="wyXQJcEILkiBO5LR7Xj9WQ" DesignTimeRectangle="25, 272, 83, 19" ElementType="Text" FriendlyName="'More choices'" FullSelectorArgument="&lt;ctrl automationid='ChooseAnotherOption' /&gt;&lt;ctrl name='More choices' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='ChooseAnotherOption' /&gt;&lt;ctrl name='More choices' role='text' automationid='' check:text='More choices' /&gt;" ScopeSelectorArgument="&lt;wnd app='credentialuibroker.exe' cls='Credential Dialog Xaml Host' title='Windows Security' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="More choices" TextMethod="AttributeText" TextSelector="&lt;ctrl role='text' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">06mxn3-ILLEyHVx_xZSrIAQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="398c07fca4fccfadb782fa381b981b4a.png" xmlns="">0waEVg8gyu0e6kpOPb8rh4g</imageRef>
+</TargetAnchorable>

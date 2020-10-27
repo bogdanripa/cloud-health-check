@@ -1,0 +1,14 @@
+﻿{
+  "Id": "Jmuncq3kk0S9qStG1dyFEQ",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/Jmuncq3kk0S9qStG1dyFEQ",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/XdJ-DmVdYUS8EQ7mFnring",
+  "Name": "Connect Button",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2020-10-23T14:07:38.7592892Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-23T14:07:38.7592892Z"
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "eHVmNqPXlECtLOjE5S9XWQ",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/eHVmNqPXlECtLOjE5S9XWQ",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/BQSv-ctkbkubRRxQwycrpw",
+  "Name": "Remote View",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2020-10-23T15:03:37.761222Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-23T15:03:37.761222Z"
+}

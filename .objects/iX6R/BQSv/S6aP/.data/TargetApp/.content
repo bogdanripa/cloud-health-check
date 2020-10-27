@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp ContentHash="YIINT3bkRkeYD57VyvyacQ" FilePath="C:\Windows\System32\credentialuibroker.exe" Selector="&lt;wnd app='credentialuibroker.exe' cls='Credential Dialog Xaml Host' title='Windows Security'/&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0L8l7o-2KQ0aMrW88dvOywg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="484bca686c61ba09cad4baaa345a800c.png" xmlns="">0WTOaH2r8k0au_rl2EiKOgQ</imageRef>
+</TargetApp>
