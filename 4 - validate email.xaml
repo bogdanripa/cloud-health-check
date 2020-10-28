@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>914,1321</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,1261</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_4___validate_email_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -93,7 +93,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State '1'" sap:VirtualizedContainerService.HintSize="806,754" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="30">
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State '1'" sap:VirtualizedContainerService.HintSize="806,754" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="120">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,528" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
