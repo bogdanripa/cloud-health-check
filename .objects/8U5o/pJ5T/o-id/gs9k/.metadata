@@ -1,0 +1,14 @@
+﻿{
+  "Id": "gs9k-OZkQUC-2SuRP-9I7w",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/gs9k-OZkQUC-2SuRP-9I7w",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/o-idaPfPMkqPAAYtoE5Lyg",
+  "Name": "Send Email Again button",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2020-10-29T08:37:47.0187875Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-29T08:37:47.0187875Z"
+}

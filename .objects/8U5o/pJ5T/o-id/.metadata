@@ -1,0 +1,14 @@
+﻿{
+  "Id": "o-idaPfPMkqPAAYtoE5Lyg",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/o-idaPfPMkqPAAYtoE5Lyg",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/pJ5TBuwwRkGGsTmZtnY3JA",
+  "Name": "Email verification",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2020-10-29T08:36:45.7132357Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-10-29T08:36:45.7132357Z"
+}

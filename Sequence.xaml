@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,831" sap2010:WorkflowViewState.IdRef="Sequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,1550" sap2010:WorkflowViewState.IdRef="Sequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="27">
+    <scg:List x:TypeArguments="x:String" Capacity="54">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -28,10 +28,11 @@
       <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="23">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -55,38 +56,51 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.VMware.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="376,392" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="ui:UiElement" Name="ssEl" />
-      <Variable x:TypeArguments="ui:Image" Name="ss" />
-    </Sequence.Variables>
+  <Sequence DisplayName="_6___check_Orchetsrator_tenant_sanity" sap:VirtualizedContainerService.HintSize="476,1485" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-      <Assign.To>
-        <OutArgument x:TypeArguments="ui:UiElement">[ssEl]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="ui:UiElement">[new UiElement()]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'SHELLDLL_DefView'" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[ss]">
-      <ui:TakeScreenshot.Target>
-        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[ssEl]" Id="0990da6a-bbbe-4e76-9f76-b085d6a25326">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
-          <ui:Target.WaitForReady>
-            <InArgument x:TypeArguments="ui:WaitForReady" />
-          </ui:Target.WaitForReady>
-        </ui:Target>
-      </ui:TakeScreenshot.Target>
-    </ui:TakeScreenshot>
-    <ui:SaveImage DisplayName="Save Image" FileName="error.jpg" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[ss]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;2 &quot; + Environment.CurrentDirectory]" />
+    <uix:NApplicationCard CloseMode="Never" DisplayName="Use Application/Browser 'Automation Cloud Homepage'" sap:VirtualizedContainerService.HintSize="434,1131" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,915" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;3 &quot; + Environment.CurrentDirectory]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;4 &quot; + Environment.CurrentDirectory]" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'Skip'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Timeout="120">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://staging.uipath.com/homexomeazr/HomeDefault/orchestrator_/?tid=13778&amp;fid=27599" ContentHash="TiEu-WxlLEm0g9WK0K-SvQ" DesignTimeRectangle="1055, 669, 64, 36" ElementType="Button" FriendlyName="'Skip'" FullSelectorArgument="&lt;webctrl aaname=' Skip ' parentid='mat-dialog-0' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Skip ' parentid='mat-dialog-0' tag='BUTTON' type='button' check:text='Skip' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAoCAYAAABHJVyTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVGhD7ZbbS1RRFIf7M3rsIfChp3qKHooeoiAoCCOxskKEqKAMmqJBJAWLipK0GJCCKKTJy0hBmhaEiNkkg0F56SLSZcZKcMbmxtxW/Bac05k1B19m+5CsDR8Me6994Peds9eeNWvXVZDyDxUiUCECFSJQIQIVIlAhAhUiUCECFSJQIQIVIlAhAhUiMC7k5JlzNDk9Q9lsjjDiiQT1Px+ijZu38frwyChlMhm6ceu2vedxT4ByuRyFIxGqPlpXUjPz8RM/yxqFQoGi0Rg96PTT+g2b7OeYwKiQyuoj9CMc5jCv3wSpp+8pff4yS/l8nl4Nj3CNDNva7qN0Ok2xWIw83kbXGghBDcR29fbRs4FBWlyMssROfzfXmMKoEARAkOB4yJ47cOgYzf/8Rb8XFqim9nhRWAiACISFGGuPm5A/8TidqvfYNQ1NLZRMpmh2bo62bN9pz5eLUSEXGi7xEYktLdGV662uNVbYu/cf8hHBW8aRcatZTgh+Yw7P2Lv/oD1fLsZ7iL87wP3DOuc4KlU1tfY6wmIdaxjoN1Z/cdYsJwT1/YMv+CiOBd8W7S0X40IABEAEQkNMKpWim213eA1hMTAPMZlslnwd94r2uwlxG/g60MSde8tlRYQ4afd1cI/4+u077dpTyWEhIzTxjpovX6NEIsni6j0X7T1uQpxN9VFXL3kbm0u+LBMYFTIw9JLDOjs/bp5IZJ5vhboTp0vC9gSe8Kf/YWqatu7YzXNuQmQPWSmMCnHeGqNjQX6b6BGQ9H5yim8DGRYSIMPZXFeNEHD2vLfojxnkjIcmaF/VYV6XYYElEsenqeXq6hLyv6NCBCpEoEIEKkSgQgQqRKBCBCpEoEIEKkSgQgQqRKBCBCpEoEKKqKC/2Fkxmdmp558AAAAASUVORK5CYII=" InformativeScreenshot="65c339b584882d7fe29d23fd7d714428.png" Reference="8q7tX2HVr025SmmVI-6yXQ/3hw1BySYhUuhgPtAG1LzYQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Overview - UiPath Orchestrator' /&gt;" SearchSteps="FuzzySelector, Image" Text="Skip" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1072, 678, 30, 17" ElementType="Text" FriendlyName="'Skip'" FullSelectorArgument="&lt;webctrl aaname=' Skip ' parentid='mat-dialog-0' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Skip ' parentid='mat-dialog-0' tag='SPAN' type='' check:text='Skip' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAVCAYAAAAjODzXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI/SURBVEhL7ZTbS1RRFMb7M3zsQfDBp3qKHooeoiAwCCWx0kKESKEUmqJBJAWVipKyGJCCSKRRxxGDNDUIEbVJBoO8X5AuM2qCc2xuzO2Lb8HZnHPm4EuBPsyGD4a91trfb++1zhzKO1yAg6AciFU5EKtMINW3bmNuYRHJZApc4UgEgx9GcOTYSYmPjU8gkUjg8dPnqqbb40UqlUIgGETZ1aqsnMWlZTlLX5lMBqGQhjddbuQXHlXnKJDisgr8CgTkkMnPPnj632FldQ3pdBqfxsYlx2rS1u5CPB6HpmlwOBtscwjCHF6op68f74eGsbMTEvgud6/kUAqEhTzAN+1XwYuXr2Fjcwu/t7dRXnndZEJjAtCEQHqNHcifcBg1tQ6VU9/YjGg0hrX1dRw/dUb2FMjd+vvSCm13F62P2lSRUbrJy9ed0greiq2xy9kLhL+5xzPOl1ySPdOMuHu9Mh96H9mS0vJKFacJ44xxcZ70+THm7AXC/MHhUWn5lO+LqjOBUDQmAM0IFIvF8OTZC4nRhIv7BEokk3B1vDLV24HYLb4GPw69LgvEqHZXh8zA9x8/cbaoWEwI4Z/5iqaWh4hEogJc67inauxAjMP6tqcPzoamrJdUIEMjH8XEOMn8koLBDZnyqhs3s0w83gF54tn5BZw4fU727ECsM2InBWL8CiamfELPGSDct7l5mW6rCc0JYRzafwah6u44TX9ohJr2z+BC6RWJW00o/QJsU2Pzg/8Dsp/KgViVA7HqgIAU4C+wp3pghEcOAAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" Text="Skip" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;5 &quot; + Environment.CurrentDirectory]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;6 &quot; + Environment.CurrentDirectory]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;7 &quot; + Environment.CurrentDirectory]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp BrowserType="Chrome" ContentHash="t_ZzfB_CTE6dv0Z6QLyBJw" IconBase64="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" InformativeScreenshot="ecec75d2baf3df0983d9489d08d8c42f.png" Reference="8q7tX2HVr025SmmVI-6yXQ/BNydtyceM0iEC2eg-4ShGQ" Selector="&lt;html app='chrome.exe' title='Home - UiPath Automation Cloud'/&gt;" Url="https://staging.uipath.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;8 &quot; + Environment.CurrentDirectory]" />
   </Sequence>
 </Activity>

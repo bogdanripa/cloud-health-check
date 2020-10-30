@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_2___create_email_address" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_2___create_email_address" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="email" Type="OutArgument(x:String)" />
     <x:Property Name="ChromeFolder" Type="InArgument(x:String)" />
@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1208,933</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,1035</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_2___create_email_address_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -72,24 +72,25 @@
       <AssemblyReference>System.Memory</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_2___create_email_address" sap:VirtualizedContainerService.HintSize="494,868" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_2___create_email_address" sap:VirtualizedContainerService.HintSize="494,930" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: 10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymou" sap:VirtualizedContainerService.HintSize="452,776" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" UserDataFolderMode="CustomFolder" UserDataFolderPath="[ChromeFolder]" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: 10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymou" sap:VirtualizedContainerService.HintSize="452,838" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" UserDataFolderMode="CustomFolder" UserDataFolderPath="[ChromeFolder]" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="418,560" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence sap:VirtualizedContainerService.HintSize="418,622" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="376,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
             <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click 'I accept'" sap:VirtualizedContainerService.HintSize="376,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Timeout="5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://10minutemail.com/" ContentHash="e0tPDyo3REeItj_HuiArdA" DesignTimeRectangle="974, 631, 286, 55" ElementType="Button" FriendlyName="'I accept'" FullSelectorArgument="&lt;webctrl aaname='\s*([aA]gree|[iI] accept)\s*' tag='BUTTON' matching:aaname='regex' /&gt;" FuzzySelectorArgument="&lt;webctrl id='qcCmpButtons' tag='DIV' /&gt;&lt;webctrl tag='BUTTON' class='qc-cmp-button' type='' aaname=' I accept ' check:text='I accept' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASIAAAA7CAYAAADfEIdRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALaSURBVHhe7d3PahNRFMBhn8qdf55KfAMFwepbiLsuddEX6KqtVXelFKWbUihdtGXg2tv0JpnMzZgJCcfB78AH4pzEtDI/7tiFT5IxxgSPEBljwqcVordff6eXH36mp+++A2xFbkxuzfxMQ/Tmy6/qiwC2ITenzEOImqZJL3Z+VJcBtiE3J7dnGqK7u7vqIsA25fYIERBKiIBwQgSEEyIgnBAB4YQICCdEQDghAsIJERBOiIBwQgSEEyIgnBAB4YQICCdEQDghAsIJERBOiIBwQjQWe9fpKv8lXVzWry91mU7y6/LcXKeP1Z055c+Zm5Ojyl6x8v7c56jM1el5a3/34vHC4tS+hqObx4v1WXxv/j1CNBbrhqh1kzZpf6+yU/Tc0NWbedD+hkKUZzFGQjR6QjQWa4XoPO0/3KNNOrmY/C8Jy2/KWSjmTzQfTyevu7/70+5G9hd/v66EqH26WuE9SpQGnxyJJERjsU6IymvyCWL+17XdpTdwjlnlJDV0X4joIURjsUaIyulkcgqanY5qj2dlt/7vO11D9+dPUN3pfqbeR7O+74EQjZIQjcXgEHXD0w5Te7/vWs3Q/Y2F6G9fvxCNkhCNxdAQlf3qVB5teh+1KiefofsbeTRbgRCNkhCNxcAQ9T7a3M/yULSvlZNP99Sy7r4Q0SVEYzEoROWm7z7yTENReZ9ZRLrT9zhXm+7+LFzVWfg8QvR/EaKxGBKicjPWfkI2fWRbcjKpPNL1xmDlfSFiOSECwgkREE6IgHBCBIQTIiCcEAHhhAgIJ0RAOCECwgkREE6IgHBCBIQTIiCcEAHhhAgIJ0RAOCECwgkREE6IgHBCBITrhOj5Tn0RYBtyczohev25vgywDbk5rRA1TZPOzs7Sq0/f0rP3x9UXAWxCbkxuTW5Obs80RHlub28fLhwfH6fDw8N0cHAAsFG5LbkxuTW5OWWmIcqT65SPSgDbVE5Ck0npDyHXb4uWa1AbAAAAAElFTkSuQmCC" InformativeScreenshot="55b4ec87b7896d38f977aac2f9e41c80.png" Reference="8q7tX2HVr025SmmVI-6yXQ/ybzwAHcXaEawiuqNW2Xq8w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email' /&gt;" SearchSteps="Selector" Text="I accept" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" />

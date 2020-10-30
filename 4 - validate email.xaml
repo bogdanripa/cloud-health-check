@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_4___validate_email" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_4___validate_email" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="ChromeFolder" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1208,1261</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1513,1939</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_4___validate_email_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -38,6 +38,7 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -73,68 +74,150 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_4___validate_email" sap:VirtualizedContainerService.HintSize="924,1156" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_4___validate_email" sap:VirtualizedContainerService.HintSize="1523,1834" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="882,1064" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" UserDataFolderMode="CustomFolder" UserDataFolderPath="[ChromeFolder]" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1481,1742" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" UserDataFolderMode="CustomFolder" UserDataFolderPath="[ChromeFolder]" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="848,848" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1447,1526" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="tries">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:Int32" Value="2" />
+                </Variable.Default>
+              </Variable>
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State '1'" sap:VirtualizedContainerService.HintSize="806,754" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="120">
-              <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,528" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="1405,1433" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1369,1268" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'Verify your email'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://10minutemail.com/" ContentHash="OvdO4ZtakUO1P8atWnDddQ" DesignTimeRectangle="770, 313, 118, 17" ElementType="Text" FriendlyName="'Verify your email'" FullSelectorArgument="&lt;webctrl parentid='mail_messages_content' tag='DIV' class='small_subject' /&gt;&lt;webctrl aaname='Verify your email' parentid='mail_messages_content' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Verify your email' parentid='mail_messages_content' tag='SPAN' type='' check:text='Verify your email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHoAAAAVCAYAAACJ+/prAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALRSURBVGhD7VXbbcMwDMyMBrJQ4FXsBbqDM0g+OoYriRTFl2w5DzSAdYBQRJWO5B1FX9aOU6AbfRJ0o0+CbvRJQEZfLsM6PfCHg9952D2zifsY7o/rgj8D4zpdL2EvLr7fcRzLOgYdxzv8Sl5dp6BwARk9RMFvNbmBSF9+BdA43eBPYNNoeF0V4dNrLB3zDnSjP4dNo7fMXG6qCR4TTIC81CRIgW5TGc3x/2x0A19Zw/yTJsYwq3mR7vifC79R8HPA8oFzPBaPIUceQHPEMyGHGfTZ/nzh5MtLiZ0NWEROwCfyNJOTf+ZwCc0PjG5KUpmW90kgNLkIhkkw4py0EFV9o+FM+Z3MV8l5ewTMQ5ik9qChmDEmdykQwDM68uim0rD66QdCZhpuZ49+2+bdq2PHaCt+gnpVrvhK4DqPLpqdMa8XkhfNImAFEJxeIwTIuFIggG90PQ+AW7O6C2fkRNDNECE0TnXIO7Ucm422nYKEdKlWNJwTBelm2DNacxvjLSSHKr52XzSAFAiwLaIPfacgmYb7tmbcU1q5jykCc7fj+6jRAbabeJFASIHUes1oea9arAArUOeq4hE+aXQ4566XjFbciWs7R4/TGM1fgk0MCO2LlvACtRgNJsTYbXEi8osxfJsvOu+/2Wi648Or2dNKGO3W8Q6jkWSYF/zLj9cK2g/UZHSOfRuZGTtA3hENJ5hpBJBxvYaCvWNGh1PuBMpawq5Xs6cV53K1xNpeNDonFIiqL0KKo4t0k2symsXW96tAY1ihGSkvXoPJHRuXxYI7YR00mvJgzaZr9Gr2tBJ6Jt14fMw5xqJ7TxrtJS2QOyovReoFajXaa6Q9gDkOVwDEKblaw0qjxBXjJr7DRkdILtfUo0YH6BooR+J62uh/RGqIxrGdUPucdHB8ndHyNTUgTYAjjXFOfI3RNJ70yK+ijMm2sXpufN/o7vgIutGnwLr+AXcQ4ti4euT6AAAAAElFTkSuQmCC" InformativeScreenshot="21ccec80f4452e42a40dbf1c480ef7e0.png" Reference="8q7tX2HVr025SmmVI-6yXQ/7PfjNxfO2UuLVWogGtjmhw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email' /&gt;" SearchSteps="Selector" Text="Verify your email" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
-                    </uix:NClick.Target>
-                  </uix:NClick>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'Verify Email'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://10minutemail.com/" ContentHash="K2XA4Ja5gE2u8o63NRKjcQ" DesignTimeRectangle="710, 723, 124, 38" ElementType="Text" FriendlyName="'Verify Email'" FullSelectorArgument="&lt;webctrl id='hs_cos_wrapper_hs_email_body' parentid='main_body' tag='DIV' /&gt;&lt;webctrl tag='A' aaname='Verify Email*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='m_-1412743199057750244batch-call-action' tag='A' type='' aaname='Verify Email                                                                                       ' check:text='Verify Email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIAAAAAqCAYAAAB7uVNDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ7SURBVHhe7Zw9bgIxEIVzjfQ5I1KKFFyGNgVHoKSLUiHaUFAgISREgeT47xmPPUuWLJsIzzzpFWt7vR7P559qn4xKtBQA4SIAvL5/mZe3T/M8+VA3aJdbl+NcCQBXwb2kbs85BAkAXfly7HINJQC4hup2DSkAQg0pAEINKQBCDSkAQg0pAEINKQBCDSkAQg0pAEINKQBCDbUDwPIUI7E6HsyUa/NAnq7Po8YBjQPA/GD2ts/Vkqmznm1t5XbH1vXzzqxsF/v1hjx3fa+347g5Xb41kj3AZ7OYh+fHBmCyMYuj7ZRN8p2Sldsn7mRmXN0t/gHcv/SDA2Dtia6T4gMj5QGIJBI0YIlAOfn6DCJm1aJ9tWp928sqq9wHAMSVHzmxzxAbRGOndU7FOIr5enwA2JVe7gx1G388pMABR5m04j0Gthq0sm/GvQGwynY33y9Xlj278eT9VuNrDwBmwosV6IMsjwnShoOIKWcAqN/t6itzBIBT2k24b/UtI3bjycBuEYAQVJHwLKi0cirdAwAKYLXiON9yBPyijIu3K4Y2AIhbflg99blcbpO1hwEQyh1MHXeC0qMBEMZLE3o9hkYAyAIptn9Sl7WnHggA7hxe9NusxwLA91uOTwgAIfiz2ZPLX15XlrukYSKGAhAn0unqThM9KgC0XxwH7QOQrUJ+YkMyiVKyhgPQK6kwgGQ0+BLony9aLa/H0BAA/2wuOeqQdKvGAeh5+RNoqG0A/OrvcfkTaKj9I0DNGlIAhBpSAIQaUgCEGlIAhBpSAIQaUgCEGlIAhBpKAOgPIuSY/UGE/iJGjtlfxDi5Ct0J2rXLbZ58JwKASp4UANEy5hu4Hfi9SLHyTQAAAABJRU5ErkJggg==" InformativeScreenshot="a2599a9e805cfcfec1945ae8b14c0bc3.png" Reference="8q7tX2HVr025SmmVI-6yXQ/-zfAsVz11U-0atCkdlU_-Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email' /&gt;" SearchSteps="Selector, Image" Text="Verify Email" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" />
-                    </uix:NClick.Target>
-                  </uix:NClick>
-                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State '1'" sap:VirtualizedContainerService.HintSize="1327,1176" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="120">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,629" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Verify your email'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://10minutemail.com/" ContentHash="OvdO4ZtakUO1P8atWnDddQ" DesignTimeRectangle="770, 313, 118, 17" ElementType="Text" FriendlyName="'Verify your email'" FullSelectorArgument="&lt;webctrl parentid='mail_messages_content' tag='DIV' class='small_subject' /&gt;&lt;webctrl aaname='Verify your email' parentid='mail_messages_content' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Verify your email' parentid='mail_messages_content' tag='SPAN' type='' check:text='Verify your email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHoAAAAVCAYAAACJ+/prAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALRSURBVGhD7VXbbcMwDMyMBrJQ4FXsBbqDM0g+OoYriRTFl2w5DzSAdYBQRJWO5B1FX9aOU6AbfRJ0o0+CbvRJQEZfLsM6PfCHg9952D2zifsY7o/rgj8D4zpdL2EvLr7fcRzLOgYdxzv8Sl5dp6BwARk9RMFvNbmBSF9+BdA43eBPYNNoeF0V4dNrLB3zDnSjP4dNo7fMXG6qCR4TTIC81CRIgW5TGc3x/2x0A19Zw/yTJsYwq3mR7vifC79R8HPA8oFzPBaPIUceQHPEMyGHGfTZ/nzh5MtLiZ0NWEROwCfyNJOTf+ZwCc0PjG5KUpmW90kgNLkIhkkw4py0EFV9o+FM+Z3MV8l5ewTMQ5ik9qChmDEmdykQwDM68uim0rD66QdCZhpuZ49+2+bdq2PHaCt+gnpVrvhK4DqPLpqdMa8XkhfNImAFEJxeIwTIuFIggG90PQ+AW7O6C2fkRNDNECE0TnXIO7Ucm422nYKEdKlWNJwTBelm2DNacxvjLSSHKr52XzSAFAiwLaIPfacgmYb7tmbcU1q5jykCc7fj+6jRAbabeJFASIHUes1oea9arAArUOeq4hE+aXQ4566XjFbciWs7R4/TGM1fgk0MCO2LlvACtRgNJsTYbXEi8osxfJsvOu+/2Wi648Or2dNKGO3W8Q6jkWSYF/zLj9cK2g/UZHSOfRuZGTtA3hENJ5hpBJBxvYaCvWNGh1PuBMpawq5Xs6cV53K1xNpeNDonFIiqL0KKo4t0k2symsXW96tAY1ihGSkvXoPJHRuXxYI7YR00mvJgzaZr9Gr2tBJ6Jt14fMw5xqJ7TxrtJS2QOyovReoFajXaa6Q9gDkOVwDEKblaw0qjxBXjJr7DRkdILtfUo0YH6BooR+J62uh/RGqIxrGdUPucdHB8ndHyNTUgTYAjjXFOfI3RNJ70yK+ijMm2sXpufN/o7vgIutGnwLr+AXcQ4ti4euT6AAAAAElFTkSuQmCC" InformativeScreenshot="21ccec80f4452e42a40dbf1c480ef7e0.png" Reference="8q7tX2HVr025SmmVI-6yXQ/7PfjNxfO2UuLVWogGtjmhw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email' /&gt;" SearchSteps="Selector" Text="Verify your email" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Verify Email'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://10minutemail.com/" ContentHash="K2XA4Ja5gE2u8o63NRKjcQ" DesignTimeRectangle="710, 723, 124, 38" ElementType="Text" FriendlyName="'Verify Email'" FullSelectorArgument="&lt;webctrl id='hs_cos_wrapper_hs_email_body' parentid='main_body' tag='DIV' /&gt;&lt;webctrl tag='A' aaname='Verify Email*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='m_-1412743199057750244batch-call-action' tag='A' type='' aaname='Verify Email                                                                                       ' check:text='Verify Email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIAAAAAqCAYAAAB7uVNDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ7SURBVHhe7Zw9bgIxEIVzjfQ5I1KKFFyGNgVHoKSLUiHaUFAgISREgeT47xmPPUuWLJsIzzzpFWt7vR7P559qn4xKtBQA4SIAvL5/mZe3T/M8+VA3aJdbl+NcCQBXwb2kbs85BAkAXfly7HINJQC4hup2DSkAQg0pAEINKQBCDSkAQg0pAEINKQBCDSkAQg0pAEINKQBCDbUDwPIUI7E6HsyUa/NAnq7Po8YBjQPA/GD2ts/Vkqmznm1t5XbH1vXzzqxsF/v1hjx3fa+347g5Xb41kj3AZ7OYh+fHBmCyMYuj7ZRN8p2Sldsn7mRmXN0t/gHcv/SDA2Dtia6T4gMj5QGIJBI0YIlAOfn6DCJm1aJ9tWp928sqq9wHAMSVHzmxzxAbRGOndU7FOIr5enwA2JVe7gx1G388pMABR5m04j0Gthq0sm/GvQGwynY33y9Xlj278eT9VuNrDwBmwosV6IMsjwnShoOIKWcAqN/t6itzBIBT2k24b/UtI3bjycBuEYAQVJHwLKi0cirdAwAKYLXiON9yBPyijIu3K4Y2AIhbflg99blcbpO1hwEQyh1MHXeC0qMBEMZLE3o9hkYAyAIptn9Sl7WnHggA7hxe9NusxwLA91uOTwgAIfiz2ZPLX15XlrukYSKGAhAn0unqThM9KgC0XxwH7QOQrUJ+YkMyiVKyhgPQK6kwgGQ0+BLony9aLa/H0BAA/2wuOeqQdKvGAeh5+RNoqG0A/OrvcfkTaKj9I0DNGlIAhBpSAIQaUgCEGlIAhBpSAIQaUgCEGlIAhBpKAOgPIuSY/UGE/iJGjtlfxDi5Ct0J2rXLbZ58JwKASp4UANEy5hu4Hfi9SLHyTQAAAABJRU5ErkJggg==" InformativeScreenshot="a2599a9e805cfcfec1945ae8b14c0bc3.png" Reference="8q7tX2HVr025SmmVI-6yXQ/-zfAsVz11U-0atCkdlU_-Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email' /&gt;" SearchSteps="Selector, Image" Text="Verify Email" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                        <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[tries]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="897,950" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="855,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[tries]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[tries - 1]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <If Condition="[tries &gt; 0]" sap:VirtualizedContainerService.HintSize="855,756" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If.Then>
+                            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Email Verification - UiPath Automation Cloud" sap:VirtualizedContainerService.HintSize="434,607" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" Version="V1">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,391" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Email did not arrive, trying again&quot;]" />
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'Send Email Again'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://staging.uipath.com/portal_/emailverification" ContentHash="bI6f4JNAFEiugBnrD8MM6A" DesignTimeRectangle="828, 439, 280, 40" ElementType="Button" FriendlyName="'Send Email Again'" FullSelectorArgument="&lt;webctrl aaname='Send Email Again ' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Send Email Again ' tag='BUTTON' type='button' check:text='Send Email Again' /&gt;" ImageBase64="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" InformativeScreenshot="b306952099647bbeeb6c7b4dc1cc4d06.png" Reference="8q7tX2HVr025SmmVI-6yXQ/gs9k-OZkQUC-2SuRP-9I7w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Email Verification - UiPath Automation Cloud' /&gt;" SearchSteps="FuzzySelector, Image" Text="Send Email Again" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target DesignTimeRectangle="845, 449, 246, 20" ElementType="Text" FriendlyName="'Send Email Again'" FullSelectorArgument="&lt;webctrl aaname='Send Email Again ' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Send Email Again ' tag='SPAN' type='' check:text='Send Email Again' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" Text="Send Email Again" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp BrowserType="Chrome" ContentHash="BXV3LEmSyEKIE2fdr-wGwQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXpSURBVFhH1ZZvVFNlHMdvvvJlKoiYpmm9qHd1ynMGg93BgE02/rPJAJkYZacXmXVK046cOscwQ8FMqyVjgJZGLTXziHlESZDBIFOTjbGNbTQHnQyGHhPw1/PcPZc9u2xi9qZ+53zOHZd7n8/3+T33uRvzvymorJzjLJCzriLVXpda2ebSZNpdGlXAoVYGXIWKfvS/C4hap0oqwdeS2/59OXXsXHdJzrsubdbwQG4aTJMjC5KdwmHPkoJdFcRZkOFHobbie8kwD1euYpUWzdg7kJ8BHHnpQWaESA0LYFeyCAk48tI8zmxWQ4Z78AKAR1wludUO9WpwFCgQ8lAAYReQfEYXSAB7ZjJCgu5L24nHJMPfv/CFA0U5Jk5eiOWKoDxaB2YLsDqIIzvt6wcK8YtavrsPDc7JSYCwDtABsJwKESYXBOhXiMGZK6simshVv0GVfwndeDVXBrb89HB51CWgZh9xCUIBMI5McSHRhddyg25uVk3Z0Gm5GLrRANez0MBIGDXA9MzJAyiU0x1QJAUDyBNhQCVxR9wdTx15ZdvKQy/BpleV0KZIhstoQCvqhFBsRzi3bwbvsWYY7rUEblg7A15z82178xs3r9eIblg/Fvms+0Q++75E3+CBhCGPXuT16kUef53YM2JMdP/RkOAeMYq3E22wKqFyzpNfbhhecagCVu0vg0ZFAnSi1NdQF+xYTujXqcF37gyMjo6C1T0GpyxB8Gd8bsTWAl6TEoaaE8BnSoSb34vh1plkuHMuGSbPI9oQF5Ng6qLUD8hJ9Kj9hyskTzRVAI9ucy6cTE8EC9pCfXgp8MzXqeGm1wP93lF4sykAqo/Gp1HuGodNDQGweUbhz989MN6WD/faU2CqIwXuXUoBMKcCdKGjBR050OduVkz0DLPyq5drljWuh+VNL3I8bVgPNXkS+DFDBJdVLNjQevtbz0I/EqhrQ2I6QCYir2acCzHmPYsk6QA9mDSCLAgf4OeMaqJnmBWHKy7gADSqHRo4LhNBW4YYbNvf4lqMZ55VHS7HYszqD4O8jjqBr71zbYsgAAmB5Zhe2TmiZ5jHG8v7hQEw28rT4bRsFbiPf8OtMy3Gs+ZnTgdQ7ByHPnTt+OC34fLp9pMO9KRaiZ5hljWtD0QKkFhbDCbZC+Azd3AP22xyPsDJrjEYG2oPD0C3nwuQEiB61AEUAHUBaJY2rOOo2JQJQ53tcKp77L5iHnnEAIL155COET3DLG0qt/HCJeTI84y+DK6cCC7BbDPH4AB9g2gJXKbwANNiQk9KaAmWNpafx2IaOtD7De9xDxbearSUFvPyjUbyEP66lZo1PXOMFP2PDT2EqAN7HjPqICr1ZVMdzis+vMXy9oQH4ENgec5utA3do3DdYRmGngxBgLD2w5SF3UX0DBNfX5YslC42lnHwn587uhEGR37j9jneavSs+ZljufOGF4bMpZPRxEFY9B6QhV5E+FW82KjzxyMRDx+APvfskdfghK2DazHeavhhw+A1x+eOXf0Jak9UoJmjdZ8h5wOwMNUteBXjijfq3sGSRfVrOWgxfz6uvhRQt6C0pRqMV85Aq7OXo+FyC5SYqmDJXg3cNsuRRCjm5XwA9m2iDRX+Oo43rvXwAbAMI/ybZyEh1lACCw9oIXbvGjD9kE2te6QASN7FusGpi/xjNba+RC0U0YRJyTHGUAwxn2jg+c80MNmjEEhDYp7JLraA6CLXorq1VbyIBstoMc8CvRZi9mugt1WJBMJ1D7UdM2GW7iCa6IV/OMbVaY/SEhpuxoQFdQh9EWgb0devRfiy4eXBAHfN0iP/6JdxnKH0g9i6cCENJ0fM/1QD/na69bRYCve60cy7pTseWE7XfIO2MPag1s3LOGGddpp5B4ug6lguEvFtp+Vo1p0S96xrPlvh3bHgi+ItMXqtH0vpEHF6DdzqUkyEi6Uw0Snx/3WJ3Rz1aX+Ywi+refo1STEGbXXMwaLWRz/XWL9ryfbc7WQDaH2td81sK2p19YQlNWnGS+a/WwzzN8pWpGcXa7w4AAAAAElFTkSuQmCC" InformativeScreenshot="dbad752cfbeaa24260c6f537175b9e26.png" Reference="8q7tX2HVr025SmmVI-6yXQ/o-idaPfPMkqPAAYtoE5Lyg" Selector="&lt;html app='chrome.exe' title='Email Verification - UiPath Automation Cloud'/&gt;" Url="https://staging.uipath.com/portal_/emailverification" />
+                              </uix:NApplicationCard.TargetApp>
+                            </uix:NApplicationCard>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,237" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="334,81" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" />
+                              <Throw Exception="[new Exception(&quot;Email did not arrive&quot;)]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://10minutemail.com/" ContentHash="aNfLDqICUUiWrr6h-SdRsw" DesignTimeRectangle="998, 565, 20, 42" ElementType="Text" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl id='inbox_count_number' tag='SPAN' aaname='[1-9]' matching:aaname='regex' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inbox_count_number' tag='SPAN' type='' aaname='1' check:text='1' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAuCAYAAAAyVNlIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVFhH7dChC8JQEMdx/0Srf4H1YX3RKNhNMy8KarA4LCIDYfCiRVEeggvCEGb4uekb6FAO3S15B98wDu4zXqPZ0qgzAcgEIPtDoLuMcZ9kA+/Nvtx3QC/ELn3c5wfUFNHZHc+HFVA+gv3VXXbDBugZwlPpeD4cQGdoYIs3L08lQI8QbC/ukpvkgMnq6D6yqQJ45vV4ag0GKtvNuYE0RjT20S52bMA6hjUL9PO/ft5xAR8TgEwAMgHIBCATgKx24IcEIBOATACymgGNGwVpCfubNOsbAAAAAElFTkSuQmCC" InformativeScreenshot="30edeb49903c756a1b1fc2cf0d5e237b.png" Reference="8q7tX2HVr025SmmVI-6yXQ/ynEA5hLzekKExB5vwLTVAA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email' /&gt;" SearchSteps="Selector" Text="1" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="874, 573, 190, 29" FriendlyName="'Inbox  1'" FullSelectorArgument="&lt;webctrl id='inbox_count' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inbox_count' tag='DIV' type='' aaname='Inbox   ' check:text='Inbox  1' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" Text="Inbox  1" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
                 </Sequence>
-              </uix:NCheckState.IfExists>
-              <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,237" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="334,81" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" />
-                  <Throw Exception="[new Exception(&quot;Email did not arrive&quot;)]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
-                </Sequence>
-              </uix:NCheckState.IfNotExists>
-              <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="https://10minutemail.com/" DesignTimeRectangle="998, 565, 20, 42" ElementType="Text" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl id='inbox_count_number' tag='SPAN' aaname='1' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inbox_count_number' tag='SPAN' type='' aaname='1' check:text='1' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAuCAYAAAAyVNlIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVFhH7dChC8JQEMdx/0Srf4H1YX3RKNhNMy8KarA4LCIDYfCiRVEeggvCEGb4uekb6FAO3S15B98wDu4zXqPZ0qgzAcgEIPtDoLuMcZ9kA+/Nvtx3QC/ELn3c5wfUFNHZHc+HFVA+gv3VXXbDBugZwlPpeD4cQGdoYIs3L08lQI8QbC/ukpvkgMnq6D6yqQJ45vV4ag0GKtvNuYE0RjT20S52bMA6hjUL9PO/ft5xAR8TgEwAMgHIBCATgKx24IcEIBOATACymgGNGwVpCfubNOsbAAAAAElFTkSuQmCC" InformativeScreenshot="30edeb49903c756a1b1fc2cf0d5e237b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email' /&gt;" SearchSteps="Selector" Text="1" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="874, 573, 190, 29" FriendlyName="'Inbox  1'" FullSelectorArgument="&lt;webctrl id='inbox_count' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inbox_count' tag='DIV' type='' aaname='Inbox   ' check:text='Inbox  1' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" Text="Inbox  1" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NCheckState.Target>
-            </uix:NCheckState>
+              </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="tries &gt; 0" />
+              </ui:InterruptibleWhile.Condition>
+            </ui:InterruptibleWhile>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

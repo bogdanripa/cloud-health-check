@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://staging.uipath.com/portal_/emailverification" ContentHash="bI6f4JNAFEiugBnrD8MM6A" DesignTimeRectangle="828, 439, 280, 40" ElementType="Button" FriendlyName="'Send Email Again'" FullSelectorArgument="&lt;webctrl aaname='Send Email Again ' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Send Email Again ' tag='BUTTON' type='button' check:text='Send Email Again' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Email Verification - UiPath Automation Cloud' /&gt;" SearchSteps="FuzzySelector, Image" Text="Send Email Again" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="845, 449, 246, 20" ElementType="Text" FriendlyName="'Send Email Again'" FullSelectorArgument="&lt;webctrl aaname='Send Email Again ' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Send Email Again ' tag='SPAN' type='' check:text='Send Email Again' /&gt;" SearchSteps="FuzzySelector, Image" Text="Send Email Again" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">8qLcCMPYEkkWqddwdwVOEOg</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">07HLV5e2OWEKun6YeJJCduA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="b306952099647bbeeb6c7b4dc1cc4d06.png" xmlns="">0Hf126e28n0y93XdUHv8jLQ</imageRef>
+</TargetAnchorable>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetAnchorable BrowserURL="https://staging.uipath.com/homexomeazr/HomeDefault/orchestrator_/?tid=13778&amp;fid=27599" ContentHash="5Wt_BhULf0-zD-HkSAc_xw" DesignTimeRectangle="1055, 669, 64, 36" ElementType="Button" FriendlyName="'Skip'" FullSelectorArgument="&lt;webctrl aaname=' Skip ' parentid='mat-dialog-0' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Skip ' parentid='mat-dialog-0' tag='BUTTON' type='button' check:text='Skip' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Overview - UiPath Orchestrator' /&gt;" SearchSteps="FuzzySelector, Image" Text="Skip" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<TargetAnchorable BrowserURL="https://staging.uipath.com/homexomeazr/HomeDefault/orchestrator_/?tid=13778&amp;fid=27599" ContentHash="TiEu-WxlLEm0g9WK0K-SvQ" DesignTimeRectangle="1055, 669, 64, 36" ElementType="Button" FriendlyName="'Skip'" FullSelectorArgument="&lt;webctrl aaname=' Skip ' parentid='mat-dialog-0' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Skip ' parentid='mat-dialog-0' tag='BUTTON' type='button' check:text='Skip' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Overview - UiPath Orchestrator' /&gt;" SearchSteps="FuzzySelector, Image" Text="Skip" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TargetAnchorable.Anchors>
-    <scg:List x:TypeArguments="ITarget" Capacity="1">
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
       <Target DesignTimeRectangle="1072, 678, 30, 17" ElementType="Text" FriendlyName="'Skip'" FullSelectorArgument="&lt;webctrl aaname=' Skip ' parentid='mat-dialog-0' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Skip ' parentid='mat-dialog-0' tag='SPAN' type='' check:text='Skip' /&gt;" SearchSteps="FuzzySelector, Image" Text="Skip" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;">
-        <imageRef attrName="ImageBase64" xmlns="">1-TqEteYSDUydb5uQhenaeg</imageRef>
+        <imageRef attrName="ImageBase64" xmlns="">18q68_BolCEGBAtPd8NE7Pg</imageRef>
       </Target>
     </scg:List>
   </TargetAnchorable.Anchors>
-  <imageRef attrName="ImageBase64" xmlns="">0SfP6FwX_oUaFFH3IL4A4MQ</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="f71eaa4443554247b475679fe531efbc.png" xmlns="">0eHASzO2r8kCl2rvWgtPlgQ</imageRef>
+  <imageRef attrName="ImageBase64" xmlns="">0ReWVmJHXXk6y1fmyMUi17w</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="65c339b584882d7fe29d23fd7d714428.png" xmlns="">0ufyHfHjdcUetWsigafAmDQ</imageRef>
 </TargetAnchorable>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp BrowserType="Chrome" ContentHash="BXV3LEmSyEKIE2fdr-wGwQ" Selector="&lt;html app='chrome.exe' title='Email Verification - UiPath Automation Cloud'/&gt;" Url="https://staging.uipath.com/portal_/emailverification" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0KbDTlSTHa0KRcmBXnTY_sw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="dbad752cfbeaa24260c6f537175b9e26.png" xmlns="">0GlT7OjnHz0eZQZyn6MmDJg</imageRef>
+</TargetApp>
