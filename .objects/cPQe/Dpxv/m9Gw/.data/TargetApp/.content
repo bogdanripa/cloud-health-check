@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetApp BrowserType="Chrome" ContentHash="ZBjp0qOQVU-VKfFxwWGtuA" Selector="&lt;html app='chrome.exe' title='Continue with UiPath'/&gt;" Url="https://account.uipath.com/login" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="IconBase64" xmlns="">0eqKnrPe8OUi_Z2W-R-4g7w</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="7b69b65eeb1c1ac07cf8ef0d2c310648.png" xmlns="">0rgVAPnkqwEePn2KB8cPyaQ</imageRef>
+<TargetApp BrowserType="Chrome" ContentHash="KgWWvMBV80iIDEmuxYsrsA" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='Continue with UiPath' /&gt;" Url="https://account.uipath.com/login" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0J654E0GkuEetBeXW7bW9bg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="7b69b65eeb1c1ac07cf8ef0d2c310648.png" xmlns="">0mTM9iPh2_0-NtqTKtVRXGA</imageRef>
 </TargetApp>

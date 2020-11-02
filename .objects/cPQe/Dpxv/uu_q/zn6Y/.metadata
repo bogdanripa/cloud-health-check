@@ -1,0 +1,14 @@
+﻿{
+  "Id": "zn6Yw0O6w0O31QltFu8bRw",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/zn6Yw0O6w0O31QltFu8bRw",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/uu_qXzm2TUSdvB8KXpQkNQ",
+  "Name": "Check App State 'Email verification'",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2020-11-02T10:33:10.2620254Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=20.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2020-11-02T10:33:10.2620254Z"
+}
