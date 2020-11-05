@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_7___install_Studio" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,1082" sap2010:WorkflowViewState.IdRef="_7___install_Studio_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/vmware" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uvc="clr-namespace:UiPath.VMware.Contracts;assembly=UiPath.VMware" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_7___install_Studio" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,1896" sap2010:WorkflowViewState.IdRef="_7___install_Studio_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/vmware" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uvc="clr-namespace:UiPath.VMware.Contracts;assembly=UiPath.VMware" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
       <x:String>System.Activities</x:String>
@@ -75,7 +75,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_7___install_Studio" sap:VirtualizedContainerService.HintSize="486,1017" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_7___install_Studio" sap:VirtualizedContainerService.HintSize="680,1791" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="pass" />
       <Variable x:TypeArguments="x:String" Name="user" />
@@ -90,9 +90,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="account" DisplayName="Get Credential" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[pass]" Username="[user]" />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="robotAccount" DisplayName="Get Credential" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[robotPass]" Username="[robotUser]" />
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="serverAddress" DisplayName="Get Asset" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="444,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="account" DisplayName="Get Credential" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[pass]" Username="[user]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="robotAccount" DisplayName="Get Credential" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[robotPass]" Username="[robotUser]" />
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="serverAddress" DisplayName="Get Asset" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[serverAddress]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -103,7 +103,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="vmName" DisplayName="Get Asset" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="444,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="vmName" DisplayName="Get Asset" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[vmName]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -114,7 +114,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <p:VMwareScope DisplayName="VMware Scope" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="VMwareScope_1" Password="[pass]" ServerAddress="[serverAddress]" Username="[user]">
+    <p:VMwareScope DisplayName="VMware Scope" sap:VirtualizedContainerService.HintSize="638,796" sap2010:WorkflowViewState.IdRef="VMwareScope_1" Password="[pass]" ServerAddress="[serverAddress]" Username="[user]">
       <p:VMwareScope.Body>
         <ActivityAction x:TypeArguments="p:VMwareService">
           <ActivityAction.Argument>
@@ -236,17 +236,17 @@
       </p:VMwareScope.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </p:VMwareScope>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="hostName" DisplayName="Get Asset" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="444,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="hostName" DisplayName="Get Asset" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[hostName]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Remote Desktop Connection" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Remote Desktop Connection" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -287,7 +287,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Windows Security" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Windows Security" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -337,8 +337,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Remote Desktop Connection" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" Version="V1">
+    <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Remote Desktop Connection" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
