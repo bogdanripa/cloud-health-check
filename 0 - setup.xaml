@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_7___install_Studio" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,1896" sap2010:WorkflowViewState.IdRef="_7___install_Studio_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/vmware" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uvc="clr-namespace:UiPath.VMware.Contracts;assembly=UiPath.VMware" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_7___install_Studio" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1073,1972" sap2010:WorkflowViewState.IdRef="_7___install_Studio_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/vmware" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uvc="clr-namespace:UiPath.VMware.Contracts;assembly=UiPath.VMware" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
       <x:String>System.Activities</x:String>
@@ -75,7 +75,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_7___install_Studio" sap:VirtualizedContainerService.HintSize="680,1791" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_7___install_Studio" sap:VirtualizedContainerService.HintSize="680,1907" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="pass" />
       <Variable x:TypeArguments="x:String" Name="user" />
@@ -114,13 +114,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <p:VMwareScope DisplayName="VMware Scope" sap:VirtualizedContainerService.HintSize="638,796" sap2010:WorkflowViewState.IdRef="VMwareScope_1" Password="[pass]" ServerAddress="[serverAddress]" Username="[user]">
+    <p:VMwareScope DisplayName="VMware Scope" sap:VirtualizedContainerService.HintSize="638,912" sap2010:WorkflowViewState.IdRef="VMwareScope_1" Password="[pass]" ServerAddress="[serverAddress]" Username="[user]">
       <p:VMwareScope.Body>
         <ActivityAction x:TypeArguments="p:VMwareService">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="p:VMwareService" Name="VMwareScopeConnectionName" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,710" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,826" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="p:VirtualMachineInfo" Name="vm" />
               <Variable x:TypeArguments="uvc:Snapshot[]" Name="snapshots" />
@@ -134,21 +134,29 @@
             </sap:WorkflowViewStateService.ViewState>
             <p:GetVM VirtualMachineId="{x:Null}" DisplayName="Get VM" sap:VirtualizedContainerService.HintSize="562,22" sap2010:WorkflowViewState.IdRef="GetVM_1" Timeout="30" VirtualMachineInfo="[vm]" VirtualMachineName="[vmName]" />
             <p:GetVMSnapshotList DisplayName="Get VM Snapshot List" sap:VirtualizedContainerService.HintSize="562,22" sap2010:WorkflowViewState.IdRef="GetVMSnapshotList_1" Snapshots="[snapshots]" Timeout="300" VirtualMachine="[vm]" />
-            <ui:ForEach x:TypeArguments="uvc:Snapshot" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,432" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[snapshots]">
+            <ui:ForEach x:TypeArguments="uvc:Snapshot" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,548" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[snapshots]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="uvc:Snapshot">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="uvc:Snapshot" Name="snapshot" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,299" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,415" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[snapshot.Name = &quot;SS3&quot;]" sap:VirtualizedContainerService.HintSize="484,207" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[snapshot.Name = &quot;SS5&quot;]" sap:VirtualizedContainerService.HintSize="484,323" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
-                        <p:RevertVMToSnapshot Host="{x:Null}" DisplayName="Revert VM to Snapshot" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RevertVMToSnapshot_1" Snapshot="[snapshot]" SuppressPowerOn="False" Timeout="300" VirtualMachine="[vm]" WaitForCompletion="True" />
+                        <Sequence sap:VirtualizedContainerService.HintSize="242,176" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <p:RevertVMToSnapshot Host="{x:Null}" DisplayName="Revert VM to Snapshot" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RevertVMToSnapshot_1" Snapshot="[snapshot]" SuppressPowerOn="False" Timeout="300" VirtualMachine="[vm]" WaitForCompletion="True" />
+                          <p:PowerOnVM DisplayName="Power On VM" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PowerOnVM_1" Timeout="300" VirtualMachineInfo="[vm]" WaitForCompletion="True" />
+                        </Sequence>
                       </If.Then>
                     </If>
                   </Sequence>
@@ -166,7 +174,7 @@
                   <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="5" RetryInterval="30.00:00:00">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
-                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="480,532" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="480,533" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

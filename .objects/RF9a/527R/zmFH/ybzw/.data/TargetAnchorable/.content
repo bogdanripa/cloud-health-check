@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<TargetAnchorable BrowserURL="https://10minutemail.com/" ContentHash="e0tPDyo3REeItj_HuiArdA" DesignTimeRectangle="974, 631, 286, 55" ElementType="Button" FriendlyName="'I accept'" FullSelectorArgument="&lt;webctrl aaname='\s*([aA]gree|[iI] accept)\s*' tag='BUTTON' matching:aaname='regex' /&gt;" FuzzySelectorArgument="&lt;webctrl id='qcCmpButtons' tag='DIV' /&gt;&lt;webctrl tag='BUTTON' class='qc-cmp-button' type='' aaname=' I accept ' check:text='I accept' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='10 Minute Mail - Free Anonymous Temporary email - 10 Minute Mail - Free Anonymous Temporary email' /&gt;" SearchSteps="Selector" Text="I accept" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="ImageBase64" xmlns="">0JNmeC0NI6Uu6E3bttIuEDw</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="55b4ec87b7896d38f977aac2f9e41c80.png" xmlns="">0GCR3NIekykakXNuNOVG0Yg</imageRef>
-</TargetAnchorable>
