@@ -1,2 +1,0 @@
-[Net.ServicePointManager]::SecurityProtocol = 'tls12, tls11, tls'
-(New-Object System.Net.WebClient).DownloadFile('https://download.uipath.com/beta/UiPathStudioSetup.exe','C:\Users\robot\Desktop\UiPathStudioSetup.exe')
