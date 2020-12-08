@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_7___install_Studio" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1073,4276" sap2010:WorkflowViewState.IdRef="_7___install_Studio_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/vmware" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uvc="clr-namespace:UiPath.VMware.Contracts;assembly=UiPath.VMware" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_7___install_Studio" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1687,4557" sap2010:WorkflowViewState.IdRef="_7___install_Studio_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/vmware" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uvc="clr-namespace:UiPath.VMware.Contracts;assembly=UiPath.VMware" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
       <x:String>System.Activities</x:String>
@@ -75,7 +75,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_7___install_Studio" sap:VirtualizedContainerService.HintSize="680,4171" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Install Studio" sap:VirtualizedContainerService.HintSize="680,4492" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="pass" />
       <Variable x:TypeArguments="x:String" Name="user" />
@@ -90,9 +90,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="account" DisplayName="Get Credential" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[pass]" Username="[user]" />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="robotAccount" DisplayName="Get Credential" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[robotPass]" Username="[robotUser]" />
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="serverAddress" DisplayName="Get Asset" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="account" DisplayName="Get Credential - vmware account" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[pass]" Username="[user]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="robotAccount" DisplayName="Get Credential - robot account" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[robotPass]" Username="[robotUser]" />
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="serverAddress" DisplayName="Get Asset - server address" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[serverAddress]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -103,7 +103,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="vmName" DisplayName="Get Asset" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="vmName" DisplayName="Get Asset - vm name" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[vmName]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -114,13 +114,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <p:VMwareScope DisplayName="VMware Scope" sap:VirtualizedContainerService.HintSize="638,912" sap2010:WorkflowViewState.IdRef="VMwareScope_1" Password="[pass]" ServerAddress="[serverAddress]" Username="[user]">
+    <p:VMwareScope DisplayName="VMware Scope" sap:VirtualizedContainerService.HintSize="638,850" sap2010:WorkflowViewState.IdRef="VMwareScope_1" Password="[pass]" ServerAddress="[serverAddress]" Username="[user]">
       <p:VMwareScope.Body>
         <ActivityAction x:TypeArguments="p:VMwareService">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="p:VMwareService" Name="VMwareScopeConnectionName" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,826" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,764" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="p:VirtualMachineInfo" Name="vm" />
               <Variable x:TypeArguments="uvc:Snapshot[]" Name="snapshots" />
@@ -163,82 +163,6 @@
                 </ActivityAction>
               </ui:ForEach.Body>
             </ui:ForEach>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="562,22" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="5" RetryInterval="30.00:00:00">
-                    <ui:RetryScope.ActivityBody>
-                      <ActivityAction>
-                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="480,533" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,441" sap2010:WorkflowViewState.IdRef="TryCatch_2">
-                            <TryCatch.Try>
-                              <Sequence sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <p:RunProgramInVM ProgramWorkingDirectory="{x:Null}" DisplayName="Run Program in VM" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="RunProgramInVM_1" Password="[robotPass]" Program="C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" ProgramArguments="[Net.ServicePointManager]::SecurityProtocol = 'tls12, tls11, tls'; (New-Object System.Net.WebClient).DownloadFile('https://download.uipath.com/beta/UiPathStudioSetup.exe','C:\Users\robot\Desktop\UiPathStudioSetup.exe')" Timeout="600" Username="[robotUser]" VirtualMachineInfo="[vm]" WaitForCompletion="True" />
-                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:String">[success]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:String">True</InArgument>
-                                  </Assign.Value>
-                                </Assign>
-                              </Sequence>
-                            </TryCatch.Try>
-                            <TryCatch.Catches>
-                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ActivityAction x:TypeArguments="s:Exception">
-                                  <ActivityAction.Argument>
-                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                  </ActivityAction.Argument>
-                                </ActivityAction>
-                              </Catch>
-                            </TryCatch.Catches>
-                          </TryCatch>
-                        </Sequence>
-                      </ActivityAction>
-                    </ui:RetryScope.ActivityBody>
-                    <ui:RetryScope.Condition>
-                      <ActivityFunc x:TypeArguments="x:Boolean">
-                        <ui:IsMatch BuilderPattern="True" DisplayName="Is Match" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[success]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;True&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="True" RegexOption="IgnoreCase" />
-                      </ActivityFunc>
-                    </ui:RetryScope.Condition>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:RetryScope>
-                </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
           </Sequence>
         </ActivityAction>
       </p:VMwareScope.Body>
@@ -249,12 +173,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </p:VMwareScope>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="hostName" DisplayName="Get Asset" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="hostName" DisplayName="Get Asset - host name" FolderPath="FRE" sap:VirtualizedContainerService.HintSize="638,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[hostName]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Remote Desktop Connection" sap:VirtualizedContainerService.HintSize="638,815" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Remote Desktop Connection" sap:VirtualizedContainerService.HintSize="638,815" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -266,7 +190,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '&amp;Computer:'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[hostName]">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Computer'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[hostName]">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable ContentHash="n7rg7z4NkUu2TssZr93rNw" DesignTimeRectangle="93, 122, 213, 13" ElementType="InputBox" FriendlyName="'168.62.217.43'" FullSelectorArgument="&lt;wnd ctrlid='5012' /&gt;&lt;wnd ctrlid='5012' /&gt;&lt;wnd ctrlid='5012' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='5012' /&gt;&lt;wnd ctrlid='5012' /&gt;&lt;wnd ctrlid='5012' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANkAAAARCAYAAABQBQmvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIdSURBVGhD7ZlBjoMwDEV7rh6oZ5hjcIyeoEtOgTQLpO66qbpi1V0mDgmxjQ1oInb/SV+iiU2C5I+BXgIA4FRgMgBOZjHZ5ecXMgRAKzDZjgBoZW2y7hMeYQo3VmiX+xTGHDcOr2X82pfxb3j0zxrP5eTehm8ejeNO7maM2ue1r7EVdR1Mt0Ges64Vr+Ve4wBohZnsGbp3/iGK8xWLOeTCizGxONNxLPKR4jo6pphv6Oh4ySM5udF4YfiEa4qZ1+WFneTGePtUov0xU6/mYvZiMlrrnddK11LPC0ArxuOiLDJRgFxUqGycOoNpFCtXibqQ182K1jFqn0rUmdamJ5FJY7eK8/aa83zJBaCVXZOlxzCzI7BipLv/e13wfi4X71KerJgNk6kbgFA0PnU419ilQ+ffALRyyGTjMEUTzXHiESwVc5ynzmCYZDOXxex1OzvGNxnF26atN4O0N2WytA7tk40D0MrBTlYKnHUU0S3kI1aRm8vm3Y6T5cd4JqtGkuP5XNlA/FhK7hOAVg69k/FiLMWpi9QsWie3HP+vgxXZJjP3kTSbR2PF8nMA0Mq+ycrv1KXYXV581Fh3qc1c9d5jajfGMhmt4X3wkFoZnt7T0py8FgBaOWCyKOpIOc79r2sZV/lGLn2J1MwFX3P9mHxea5/dK3S9fu+zzKg73pNdi/zPD4BWDJNBXAC0ApPtCIBWFpMBAM4BJgPgVEL4A5+In5ajTvlrAAAAAElFTkSuQmCC" InformativeScreenshot="18dd0c766a363e56e936cb23d5cfdbe6.png" Reference="8q7tX2HVr025SmmVI-6yXQ/Jqbi2xq0KU6bI0iET8qJIQ" ScopeSelectorArgument="&lt;wnd app='mstsc.exe' cls='#32770' title='Remote Desktop Connection' /&gt;" SearchSteps="Selector" Text="168.62.217.43" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;">
                   <uix:TargetAnchorable.Anchors>
@@ -295,7 +219,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Windows Security" sap:VirtualizedContainerService.HintSize="638,1493" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use: Windows Security" sap:VirtualizedContainerService.HintSize="638,1493" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -346,7 +270,7 @@
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
     <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Remote Desktop Connection" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use: Remote Desktop Connection" sap:VirtualizedContainerService.HintSize="638,405" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -367,7 +291,7 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
