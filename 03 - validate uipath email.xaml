@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1208,2296</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1687,2256</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_4___validate_uipath_email_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -111,7 +111,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetIMAPMailMessages Port="{x:Null}" TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[user]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="749,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="Inbox" MarkAsRead="False" Messages="[messages]" OnlyUnreadMessages="False" Password="[new System.Net.NetworkCredential(string.Empty, pass).Password]" SecureConnection="Auto" Server="uipath-qa.com" Top="20" />
+            <ui:GetIMAPMailMessages Port="{x:Null}" TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[user]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="749,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="Inbox" MarkAsRead="False" Messages="[messages]" OnlyUnreadMessages="False" Password="[new System.Net.NetworkCredential(string.Empty, pass).Password]" SecureConnection="Auto" Server="uipath-qa.com" Top="200" />
             <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="749,1024" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[messages]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="snm:MailMessage">
