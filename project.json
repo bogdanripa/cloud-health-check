@@ -14,12 +14,12 @@
       "serviceDocument": ".entities/EntitiesStore.json",
       "tenantName": "productTeam",
       "namespace": "FRE",
-      "uniqueReference": "wC13eI7mJgEoo6KprDz9Gx6EwZ+imWJDXFlAKaG80+k="
+      "uniqueReference": "c+d/kvRFOzYUdwm9ONNxB8BGM8ZZLPWmQerqgbzI9e4="
     }
   ],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.0.0",
-  "projectVersion": "1.0.76",
+  "projectVersion": "1.1.0",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -57,5 +57,6 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {}
+  "publishData": {},
+  "targetFramework": "Legacy"
 }

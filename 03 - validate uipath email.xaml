@@ -1,14 +1,15 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="validate_uipath_email" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="validate_uipath_email" this:validate_uipath_email.email="t00000000-0000-0000-0000-615557548266@uipath-qa.com" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="email" Type="InArgument(x:String)" />
+    <x:Property Name="argument1" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1047,2256</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1226,2481</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_4___validate_uipath_email_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="66">
+    <scg:List x:TypeArguments="x:String" Capacity="40">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -52,7 +53,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="60">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -83,12 +84,12 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Validate UiPath email" sap:VirtualizedContainerService.HintSize="875,2191" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Validate UiPath email" sap:VirtualizedContainerService.HintSize="766,2316" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="ss:SecureString" Name="pass" />
-      <Variable x:TypeArguments="x:String" Name="user" />
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="messages" />
       <Variable x:TypeArguments="x:String" Name="url">
         <Variable.Default>
@@ -101,24 +102,28 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="uipath-qa" DisplayName="Get Email Credentials" sap:VirtualizedContainerService.HintSize="833,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[pass]" Username="[user]" />
-    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="833,1396" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="24" RetryInterval="00:00:05">
+    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="724,1573" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="24" RetryInterval="00:00:05">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="791,1178" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="682,1355" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ss:SecureString" Name="pass" />
+              <Variable x:TypeArguments="x:String" Name="user" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetIMAPMailMessages Port="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[user]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="749,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="Inbox" MarkAsRead="False" Messages="[messages]" OnlyUnreadMessages="False" Password="[new System.Net.NetworkCredential(string.Empty, pass).Password]" SecureConnection="Auto" Server="uipath-qa.com" Top="200" />
-            <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="749,1024" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[messages]">
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="uipath-qa" DisplayName="Get Email Credentials" sap:VirtualizedContainerService.HintSize="640,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[pass]" Username="[user]" />
+            <ui:GetIMAPMailMessages Password="{x:Null}" Port="{x:Null}" TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[user]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="640,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="Inbox" MarkAsRead="False" Messages="[messages]" OnlyUnreadMessages="False" SecureConnection="Auto" SecurePassword="[pass]" Server="uipath-qa.com" Top="200" />
+            <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="640,1082" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[messages]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="snm:MailMessage">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="message" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="713,891" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,949" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sxl:XDocument" Name="xmlBody" />
                       <Variable x:TypeArguments="x:Object" Name="hrefs" />
@@ -130,7 +135,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="Assign (Get the HTML Body)" sap:VirtualizedContainerService.HintSize="671,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign DisplayName="Assign (Get the HTML Body)" sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[htmlBody]</OutArgument>
                       </Assign.To>
@@ -138,16 +143,16 @@
                         <InArgument x:TypeArguments="x:String">[message.Headers("HTMLBody").ToString.Replace(vbCr, "").replace(vbLf, "")]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If Condition="[message.To.ToString.Contains(email)]" sap:VirtualizedContainerService.HintSize="671,699" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[message.To.ToString = email OR message.To.ToString.Contains(email)]" sap:VirtualizedContainerService.HintSize="562,757" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="526,552" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence sap:VirtualizedContainerService.HintSize="526,581" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Matches DisplayName="Matches (vas the verify email link in it)" sap:VirtualizedContainerService.HintSize="484,59" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[htmlBody]" IsBuilderTabModified="False" Pattern="[&quot;&lt;a\s+href=&quot;&quot;([^&quot;&quot;]+)&quot;&quot;[^&gt;]+&gt;\s*Verify Email\s*&lt;\/a&gt;&quot;]" RegexOption="IgnoreCase" Result="[matches]" />
-                          <If Condition="[matches.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="484,361" sap2010:WorkflowViewState.IdRef="If_2">
+                          <ui:Matches DisplayName="Matches (vas the verify email link in it)" sap:VirtualizedContainerService.HintSize="484,59" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[htmlBody]" IsBuilderTabModified="False" Pattern="[&quot;&quot;&quot;(https:\/\/uipath[^&quot;&quot;]+\/email\-verification\?[^&quot;&quot;]+)&quot;&quot;&quot;]" RegexOption="IgnoreCase" Result="[matches]" />
+                          <If Condition="[matches.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="484,390" sap2010:WorkflowViewState.IdRef="If_2">
                             <If.Then>
                               <Sequence sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -189,7 +194,7 @@
         </ActivityFunc>
       </ui:RetryScope.Condition>
     </ui:RetryScope>
-    <If Condition="[url &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="833,601" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[url &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="724,611" sap2010:WorkflowViewState.IdRef="If_4">
       <If.Then>
         <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Email Verification - UiPath Automation Cloud" sap:VirtualizedContainerService.HintSize="434,453" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" UserDataFolderMode="Automatic" Version="V1">
           <uix:NApplicationCard.Body>
