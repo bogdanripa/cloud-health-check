@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1226,3281</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1226,5421</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_9___install_Studio_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -79,19 +79,19 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Install and open Studio" sap:VirtualizedContainerService.HintSize="798,3116" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Install and open Studio" sap:VirtualizedContainerService.HintSize="798,5256" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Recycle Bin" sap:VirtualizedContainerService.HintSize="756,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" OpenMode="Never" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Recycle Bin" sap:VirtualizedContainerService.HintSize="756,1755" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" OpenMode="Never" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,322" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="722,1386" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="el" />
             </Sequence.Variables>
@@ -100,14 +100,14 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Downloads (pinned)'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Downloads (pinned)'" sap:VirtualizedContainerService.HintSize="680,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="59, 154, 63, 24" FriendlyName="'Downloads (pinned)'" FullSelectorArgument="&lt;wnd cls='ShellTabWindowClass' title='Downloads' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Shell Folder View' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;&lt;ctrl name='Items View' role='list' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' text='UiPathStudioSetup' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ShellTabWindowClass' title='Recycle Bin' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Control Host' cls='NamespaceTreeControl' title='Namespace Tree Control' /&gt;&lt;wnd cls='SysTreeView32' title='Tree View' /&gt;&lt;ctrl name='Downloads (pinned)' role='outline item' automationid='' check:text='Downloads (pinned)' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAcCAYAAAA6EgJRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF4SURBVFhH7ZWLbcQgDIaZi4GYh2myTIbx2Tx8P66JLlUjtao/6aQY8IM/di5RoIQYQIgBhBhAiAGEGECIAYQYQIgBOGIcVFKiBL9cz7H3NJI708+luxdvIwYGGOKUY9hP8uvFYM5KORXeeZq/IAadVHMibY4mznuM5vpR4IyNIz5tc6zX4oyh4+PkESTXXF+6FnxyrRCv38GLNfmGGLIPwVrycf7gC84Nfs4560XPOp+7P55L2nWY+yLPwt5Hciavtg03xBhrrah1ZLQjZC9XPi1rfP6YNvh/iW8v80Gebuhb1gtD/o6Nd/1ncP+bcVnkvDTHUBH47FKkjY+2Lf5CdN0zL2onxqB3C4gKfCCG2OhsbFN0GwczHqXwyGhAL/607fMmj3TFvHRb932WMQFajXaR2Yjx/tB4wXoBm/2lOMdeLixYAayvl0e6Yaxz5xUdQQbGZ/mALmO1dtzEEeP/EmIAIQYQYgAhBhBiACEGEGIAIQYQYihEL44zgIfliXJVAAAAAElFTkSuQmCC" InformativeScreenshot="f0eefee91d05d24d9b320c2d877c863c.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Recycle Bin' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Downloads (pinned)" TextMethod="AttributeText" TextSelector="&lt;ctrl role='outline item' /&gt;" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState Exists="{x:Null}" DisplayName="Wait for download to be finished" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="120">
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Wait for download to be finished" sap:VirtualizedContainerService.HintSize="680,1086" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="120">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,672" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,860" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -123,11 +123,12 @@
                       <uix:TargetAnchorable DesignTimeRectangle="59, 154, 63, 24" FriendlyName="'Downloads (pinned)'" FullSelectorArgument="&lt;wnd cls='ShellTabWindowClass' title='Desktop' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Control Host' cls='NamespaceTreeControl' title='Namespace Tree Control' /&gt;&lt;wnd cls='SysTreeView32' title='Tree View' /&gt;&lt;ctrl name='Downloads (pinned)' role='outline item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ShellTabWindowClass' title='Desktop' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Control Host' cls='NamespaceTreeControl' title='Namespace Tree Control' /&gt;&lt;wnd cls='SysTreeView32' title='Tree View' /&gt;&lt;ctrl name='Downloads (pinned)' role='outline item' automationid='' check:text='Downloads (pinned)' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAcCAYAAAA6EgJRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGASURBVFhH7ZWJbcMwDEU1lwbSPJrGW3QCL9AtWFIH88VSRlw0QIPyAQZMSTz0Qzrp45Monv6EGPAkCpQQAwgxgBADCDGAEAMIMQBHjINKSpTgyfUce69Gcmf6vXT34m3EwABDnHIM+5X8eTGYs1JOhXdezTuIQSfVnEibo4nzGKO5fhQ4Y+OIT9sc67U4Y+j4OHkEyTXXl64Fn1wrxOt38GJNfiCG7EOwlnycP/iCc4Pfc8560bPO9+6P55J2Hea+yLOw95Gcyattww0xxlorah0Z7QjZy5VPyxqfP6YN/t/i28s8kacb+ivrhSF/x8a7/jO4/824LHJemmOoCHx2KdLGR9sWfyG67pkfaifGoHcLiAo8IYbY6GxsU3QbBzMepfDIaEAv/rTt+yaPdMW8dFv3fZYxAVqNdpHZiPH40HjBegGb/aU4x14uLFgBrK+XR7phrHPnFR1BBsZn+YAuY7V23MQR4/8SYgAhBhBiACEGEGIAIQYQYgAhBhBiKERfC15aUSpert0AAAAASUVORK5CYII=" InformativeScreenshot="1d3e24b4684a7c0b3a249e7acebb2d03.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Desktop' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Downloads (pinned)" TextMethod="AttributeText" TextSelector="&lt;ctrl role='outline item' /&gt;" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NClick ClickType="Double" DisplayName="Open the Studio installer" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left">
+                  <uix:NClick ClickType="Single" DisplayName="Open the Studio installer" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="204, 163, 236, 22" ElementType="Text" FriendlyName="'UiPathStudioSetup'" FullSelectorArgument="&lt;wnd cls='ShellTabWindowClass' title='Downloads' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Shell Folder View' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;&lt;ctrl name='Items View' role='list' /&gt;&lt;ctrl automationid='System.ItemTypeText' text='Application' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ShellTabWindowClass' title='Downloads' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Shell Folder View' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;&lt;ctrl name='Items View' role='list' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' role='editable text' check:text='UiPathStudioSetup' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPAAAAAaCAYAAACJitF2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJKSURBVHhe7ZgNrqwgDEZnXS7I9bia2cwshgdUsSBlwDHvhuSchER+WmrSj6IvBwDTgoABJgYBA0wMAgaYGAQMMDEIGGBiEDDAxCBggImpCPjt1tfits/ejaixz+aWNB/GX+6VWmnXQ20/xXtV/le/+lesd/nC43EA/M64gDPy8c+2uNeyubYeSl+Wb08UmBKL72+x07D5yg1bMw6LX+ID6OdRAfcl7oBNqHrVA6FnH4sbtmYcFr/EB9DPDQFbz4G8/16PK6dvayhZYb425m3eocrJ+JIcyvqzH2j4MOKQCnr43tScvS606DpSi2MnswlVejS+/bn6/gBtHhWwfYW2baTvE/ewi9+a+hvz47ZFEjsXVOnD6ov/wzbGWI0lXyfC1D474vCxi/iK8WZf9k3vf9kXwOYBAUtSSyt+7mQ/fmr2gW/9nb3SiXgGfAS77FDRa4t1RfzhBnGKdUfHsT+f7+hbnBiI7zJn7AtQoSLgUGnyhMqTu518icxG+2wlc8D2GavnqEBCHE8K2JPiqNgIA/Fd5qTSI2DooSJgSVx9FY79lFGt5FPoHz8x0S2bRt9/F57jktj1K2qR9LHy6/3OubEr9C7OZhy1b9bx+JIP81AAuFIV8JFw6VrYU8EuKB/L6lZV1eOBEMZjRpc+Sv/72rReyH3EAbXO76d9qrn+n1hlTMe4byqO3Oac649PYljXcLDIvHYP0MIQMPw/ikMEYAAE/OcgYLgPAv5zEDDcBwEDTAwCBpgYBAwwMQgYYGIQMMDEIGCAaXHuH1t1Dp6NhLoIAAAAAElFTkSuQmCC" InformativeScreenshot="596c09e1a9ec243967c889bbf3c6d58f.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Downloads' /&gt;" SearchSteps="Selector" Text="UiPathStudioSetup" TextMethod="AttributeText" TextSelector="&lt;ctrl role='editable text' /&gt;" />
                     </uix:NClick.Target>
                   </uix:NClick>
+                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DelayAfter="2" DelayBefore="1" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(enter)][u(hk)]" />
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
@@ -145,7 +146,7 @@
               </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -158,13 +159,12 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="756,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Open File - Security Warning" sap:VirtualizedContainerService.HintSize="756,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" OpenMode="Never" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Open File - Security Warning" sap:VirtualizedContainerService.HintSize="756,549" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" OpenMode="Never" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -189,7 +189,7 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -227,13 +227,13 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="563,769" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="563,798" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[UseStaging]" sap:VirtualizedContainerService.HintSize="521,469" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[UseStaging]" sap:VirtualizedContainerService.HintSize="521,498" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="376,320" sap2010:WorkflowViewState.IdRef="Sequence_14">
                   <sap:WorkflowViewStateService.ViewState>
