@@ -79,7 +79,6 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Install and open Studio" sap:VirtualizedContainerService.HintSize="798,6816" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -111,7 +110,7 @@
                 <uix:TargetAnchorable DesignTimeRectangle="59, 154, 63, 24" FriendlyName="'Downloads (pinned)'" FullSelectorArgument="&lt;wnd cls='ShellTabWindowClass' title='Downloads' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Shell Folder View' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;&lt;ctrl name='Items View' role='list' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' text='UiPathStudioSetup' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ShellTabWindowClass' title='Recycle Bin' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Control Host' cls='NamespaceTreeControl' title='Namespace Tree Control' /&gt;&lt;wnd cls='SysTreeView32' title='Tree View' /&gt;&lt;ctrl name='Downloads (pinned)' role='outline item' automationid='' check:text='Downloads (pinned)' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAcCAYAAAA6EgJRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF4SURBVFhH7ZWLbcQgDIaZi4GYh2myTIbx2Tx8P66JLlUjtao/6aQY8IM/di5RoIQYQIgBhBhAiAGEGECIAYQYQIgBOGIcVFKiBL9cz7H3NJI708+luxdvIwYGGOKUY9hP8uvFYM5KORXeeZq/IAadVHMibY4mznuM5vpR4IyNIz5tc6zX4oyh4+PkESTXXF+6FnxyrRCv38GLNfmGGLIPwVrycf7gC84Nfs4560XPOp+7P55L2nWY+yLPwt5Hciavtg03xBhrrah1ZLQjZC9XPi1rfP6YNvh/iW8v80Gebuhb1gtD/o6Nd/1ncP+bcVnkvDTHUBH47FKkjY+2Lf5CdN0zL2onxqB3C4gKfCCG2OhsbFN0GwczHqXwyGhAL/607fMmj3TFvHRb932WMQFajXaR2Yjx/tB4wXoBm/2lOMdeLixYAayvl0e6Yaxz5xUdQQbGZ/mALmO1dtzEEeP/EmIAIQYQYgAhBhBiACEGEGIAIQYQYihEL44zgIfliXJVAAAAAElFTkSuQmCC" InformativeScreenshot="f0eefee91d05d24d9b320c2d877c863c.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Recycle Bin' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Downloads (pinned)" TextMethod="AttributeText" TextSelector="&lt;ctrl role='outline item' /&gt;" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState Exists="{x:Null}" DisplayName="Wait for download to be finished" sap:VirtualizedContainerService.HintSize="680,1141" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="120">
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Wait for download to be finished" sap:VirtualizedContainerService.HintSize="680,1141" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="600">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,915" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
