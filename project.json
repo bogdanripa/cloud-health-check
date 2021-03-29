@@ -3,9 +3,9 @@
   "description": "FRE experience - from uipath.com to assistant",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Mail.Activities": "[1.9.5]",
-    "UiPath.System.Activities": "[20.10.3]",
-    "UiPath.UIAutomation.Activities": "[20.10.8]",
+    "UiPath.Mail.Activities": "[1.10.3-preview]",
+    "UiPath.System.Activities": "[21.4.0-beta.1500069]",
+    "UiPath.UIAutomation.Activities": "[21.4.1-preview]",
     "UiPath.VMware.Activities": "[1.1.4]"
   },
   "webServices": [],
