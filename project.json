@@ -3,6 +3,7 @@
   "description": "FRE experience - from uipath.com to assistant",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.DataService.Activities": "[21.1.2]",
     "UiPath.Mail.Activities": "[1.10.3-preview]",
     "UiPath.System.Activities": "[21.4.0-preview]",
     "UiPath.UIAutomation.Activities": "[21.4.2-beta.1526206]",
@@ -12,14 +13,14 @@
   "entitiesStores": [
     {
       "serviceDocument": ".entities/EntitiesStore.json",
-      "tenantName": "productTeam",
+      "tenantName": "bogdanripa",
       "namespace": "FRE",
-      "uniqueReference": "c+d/kvRFOzYUdwm9ONNxB8BGM8ZZLPWmQerqgbzI9e4="
+      "uniqueReference": "AtoJmI1SIIQnQ2ZHD61/cu3tjQd9WZ1fG9HuhTddkYk="
     }
   ],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.0.0",
-  "projectVersion": "1.1.25",
+  "projectVersion": "1.1.30",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
