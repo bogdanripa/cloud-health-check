@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://licensing01.uipath.com/product/studio" ContentHash="4ZUEOuCswkCnWhwYlV-ung" DesignTimeRectangle="359, 523, 112, 45" ElementType="Button" FriendlyName="'Request trial'" FullSelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl tag='BUTTON' type='' aaname='                             Request trial                                                      ' check:text='Request trial' /&gt;" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='Process Automation Software - Request your free download' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0Pbrh2xivMEu6GfOgV5CvkA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="0be5db64f8d12714d439d6e1d7e95a83.png" xmlns="">0khTMR4SOEEiBczfpeSUFUQ</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "-beYsVkRrU6dEfCe5En2ew",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/-beYsVkRrU6dEfCe5En2ew",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/_Y_ZGk4ou0SZ1oCrUDwPoA",
+  "Name": "Install Studio",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-14T08:45:08.2216615Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-14T08:45:08.2216615Z"
+}

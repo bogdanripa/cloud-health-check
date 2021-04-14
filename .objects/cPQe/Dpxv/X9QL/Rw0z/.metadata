@@ -1,0 +1,16 @@
+﻿{
+  "Id": "Rw0z3foJAkih07J_3X9oug",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/Rw0z3foJAkih07J_3X9oug",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/X9QLFrhYBEu8qNW8CbKN9w",
+  "Name": "Download link",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-14T07:57:42.1700881Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-14T07:59:51.377374Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

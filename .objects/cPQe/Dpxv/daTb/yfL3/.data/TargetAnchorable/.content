@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://licensing01.uipath.com/product/studio" ContentHash="_V8YYgk32ES8d1Os1shi8A" DesignTimeRectangle="530, 233, 149, 45" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl name='LastName' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl name='LastName' tag='INPUT' type='text' aaname='' /&gt;" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='Process Automation Software - Request your free download' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="530, 209, 50, 16" ElementType="Text" FriendlyName="'Last Name*'" FullSelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl aaname='Last Name' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl aaname='Last Name' tag='LABEL' type='' check:text='Last Name*' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">1hCEE_QJFKE-xLRwib5lhhQ</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0qtybRbOJgEuAfZlLkxfdbw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="0b094e2d6ae59ccef88923bd350179b6.png" xmlns="">0xAvwaAqInEimLF_pgUB7Ug</imageRef>
+</TargetAnchorable>

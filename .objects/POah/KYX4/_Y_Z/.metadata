@@ -1,0 +1,12 @@
+﻿{
+  "Id": "_Y_ZGk4ou0SZ1oCrUDwPoA",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/_Y_ZGk4ou0SZ1oCrUDwPoA",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/KYX4bIxp9Eq0GecaiOL-Zw",
+  "Name": "UiPath Studio Setup",
+  "Type": "Screen",
+  "Created": "2021-04-14T08:45:08.0940124Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-14T08:45:08.0940124Z"
+}

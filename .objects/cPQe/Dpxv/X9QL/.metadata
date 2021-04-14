@@ -1,0 +1,15 @@
+﻿{
+  "Id": "X9QLFrhYBEu8qNW8CbKN9w",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/X9QLFrhYBEu8qNW8CbKN9w",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/DpxvW_tvoUqAIInZh4t-tw",
+  "Name": "Get Activation Key",
+  "Type": "Screen",
+  "Created": "2021-04-14T07:51:58.9591003Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-14T07:52:19.5098153Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

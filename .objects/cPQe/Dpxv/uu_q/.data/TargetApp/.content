@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetApp BrowserType="Chrome" ContentHash="jh0yhOeWWUqPGtNkwGzrXQ" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='Continue with UiPath' /&gt;" Url="https://account.uipath.com/login" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="IconBase64" xmlns="">0FaUWGJYxvEOWyPxGuO9BAw</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="93bdb4183f11507f12716ae7d4008878.png" xmlns="">0Vt6evY5k8keHRm2lrfFqfw</imageRef>
+<TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="WrenHbLfZEm485PzaJ-IJQ" Reference="8q7tX2HVr025SmmVI-6yXQ/uu_qXzm2TUSdvB8KXpQkNQ" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' /&gt;" Url="https://account.uipath.com/login" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">02eyo61TYJ0Wl1XxvydpOSQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="93bdb4183f11507f12716ae7d4008878.png" xmlns="">0qS2F8qdRT0eZGa60uXIjcA</imageRef>
 </TargetApp>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://licensing01.uipath.com/product/studio" ContentHash="Igw6ifwfpUelC2yIcTK5HA" DesignTimeRectangle="359, 323, 320, 45" ElementType="DropDown" FriendlyName="'Select...'" FullSelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl name='productTrialOptions' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl name='productTrialOptions' tag='SELECT' type='' aaname='' /&gt;" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='Process Automation Software - Request your free download' /&gt;" SearchSteps="FuzzySelector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="359, 298, 166, 16" ElementType="Text" FriendlyName="'Select your'" FullSelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl aaname='Select your UiPath Studio trial options' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl aaname='Select your UiPath Studio trial options' tag='LABEL' type='' check:text='Select your UiPath Studio trial options*' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">0OOIsgwGI5kSryP0PVM5feQ</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="InformativeScreenshot" originalValue="795bce05093f57017ebadda34bbbf201.png" xmlns="">0W4Z5u18Iw0qzJl_KUxM2Fw</imageRef>
+</TargetAnchorable>

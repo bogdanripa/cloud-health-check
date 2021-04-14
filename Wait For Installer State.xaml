@@ -1,0 +1,173 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Wait_For_State" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Text" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1214,1378</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Wait_For_State_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.VMware.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Wait_For_State" sap:VirtualizedContainerService.HintSize="554,1213" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="retries">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="300" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InterruptibleDoWhile Condition="[retries &gt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="512,1121" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+      <ui:InterruptibleDoWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,956" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="434,764" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Timeout="1" Version="V1">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="390,475" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Launch UiPath Studio'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="348,381" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="1">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="304,155" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[retries]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="137, 262, 220, 50" ElementType="CheckBox" FriendlyName="'Launch UiPath Studio'" FullSelectorArgument="[String.Format(&quot;&lt;wnd cls='Static' title='*{0}*' /&gt;&quot;, Text)]" ImageBase64="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" InformativeScreenshot="5814eb835b7fb85950fa3fe4a2c59674.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup*' /&gt;" SearchSteps="Selector" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" ContentHash="VxWtQK2scE6S6Nqw4j2BHw" FilePath="C:\Windows\System32\msiexec.exe" IconBase64="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" InformativeScreenshot="359e29d77f5d2dacf1d469b24e1ca791.png" Reference="8q7tX2HVr025SmmVI-6yXQ/_Y_ZGk4ou0SZ1oCrUDwPoA" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup*' /&gt;" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+          <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[retries]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">[retries - 1]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ui:InterruptibleDoWhile.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InterruptibleDoWhile>
+  </Sequence>
+</Activity>

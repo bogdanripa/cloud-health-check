@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="Rly0s0iqV0umn84xZvfz3A" DesignTimeRectangle="1702, 823, 83, 22" ElementType="Button" FriendlyName="'&amp;Install'" FullSelectorArgument="&lt;wnd aaname='Install' cls='Button' title='&amp;amp;Install' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Install' cls='Button' title='&amp;amp;Install' check:text='&amp;amp;Install' /&gt;" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup v20.10.6' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0zsjqUGnwnEOobZ0G3hoShQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="16d38490ed9817319e61a986832ae8c3.png" xmlns="">0YD3ivbDt7UaLhQBTyv-dtQ</imageRef>
+</TargetAnchorable>

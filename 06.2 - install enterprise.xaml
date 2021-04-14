@@ -1,0 +1,320 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_06_2___install_enterprise" this:_06_2___install_enterprise.ActivationKey="4477-3211-7404-5171" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ActivationKey" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1214,2783</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_06_2___install_enterprise_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.VMware.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_06_2___install_enterprise" sap:VirtualizedContainerService.HintSize="476,2618" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="retries">
+        <Variable.Default>
+          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="60*15" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Wait For State workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Wait For Installer State.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="Text">
+          <Literal x:TypeArguments="x:String">What do you want to install</Literal>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser 'UiPath Studio Setup'" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Install Studio'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable ContentHash="iKoRCE0XhkmBmNgPaUvoOg" DesignTimeRectangle="282, 112, 80, 20" ElementType="Button" FriendlyName="'Install Studio'" FullSelectorArgument="&lt;wnd aaname='Install' cls='Button' title='&amp;amp;Install' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Install' cls='Button' title='&amp;amp;Install' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAZCAYAAACvrQlzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM7SURBVGhD7ZfdS1NhHMe78q7bwIuIbrpIZxgiJCL5QsuUMAwDxcgXys0XbJOpB91SGbo0RzWZjmVMTVzZ0liUvbia7YyxOVs7apbzOLqILgr/g2/nWILCox7p1Lw4Fx/47vn99mV82HjODqytrUFCPCShIiMJFZktQq30N8itKxJ7hPdGFNrk/IoDTYsSe4T3tqPQe0/dqGw2IOF0gZR3yYKEZmdnY2FhAcFgEJFIRMo7ZEFCl5aWEI1GJXYhPT1dmNDU1FRigdiwLIuVFRbs6ipxvpVVbn+bPdqIvDwdKEoH+/sQeecfwH9+QUIZhiEWiE3JySTExcWjuHkYi4T5FkITKOCk0aRZjIRmZmYKE5qfn08sEB1eRIERIfYzZgMMQgE33G43AswyVtkI5vz0+mvv7Dw+eR/gbFYdxj1ehJkwvJ4ZbjYD/9w82BgJ9fl8woS6XC5igehsCOW/fVlKVF+WQXbsCLKbHPjofYby3BQkyGRIu6THaH89jh6KR1KGHMa7RsgzUiBLOIHcq50ITN+KidCioiJhQsvKyogForNZaGIyOqe4M88QkuUUHo21oLjwBt4tfsFkby98m3/yEQavnoxjdLAPhRW1cDo6YiLU6XQKE2q324kForNZ6IasP/m5dxjXckuh7b4N28gbLGzssMvwPDah5Nx55MpzIDt1EcN2XUyE1tTUCBPa2NhILBCdHYROf3DBG/TCWleKrJRKvPRz52lqvF4O4aayCp0OH9jFAKjaeozGSOjg4KAwoSaTiVggNjbdFRxPLEL//TvrQjYLnXjRheryBrS21kGp0IOeo9GccwYVHe1oabgOpboBWkqN/AvlGImR0La2NmFCe3p6iAViY9HroVJRsAyNwWSeBMOfL/lg4bIv6ESXSsXNVbBM/X6Mox/qoWltx+jYEHSUChqKQnffGGh6EmbuPQ7HJOjw//tTYjAYhAnVarXEArHRaDTrFyCP3+8n7uxnzGazMKE2m41YIDZWqxW93A3OEw6HiTv7GbVaLUyoQqHAwMDA+oOrlLfP/F0jSOjBqgkcbnqLJENIyrtkQUIl9sa2QqPffyIc/SGxR3hvRKESf48kVFTW8AtEBxPggh/CeAAAAABJRU5ErkJggg==" InformativeScreenshot="547ccc5cfa4ca1a10f0ed39d8b4a045b.png" Reference="8q7tX2HVr025SmmVI-6yXQ/-beYsVkRrU6dEfCe5En2ew" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" ContentHash="VxWtQK2scE6S6Nqw4j2BHw" FilePath="C:\Windows\System32\msiexec.exe" IconBase64="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" InformativeScreenshot="359e29d77f5d2dacf1d469b24e1ca791.png" Reference="8q7tX2HVr025SmmVI-6yXQ/_Y_ZGk4ou0SZ1oCrUDwPoA" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup*' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Wait For State workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Wait For Installer State.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="Text">
+          <Literal x:TypeArguments="x:String">Please read the</Literal>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser 'UiPath Studio Setup'" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,466" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'I accept'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable ContentHash="Jqg8b5SrMUu772dGpdhziQ" DesignTimeRectangle="22, 250, 226, 23" ElementType="CheckBox" FriendlyName="'I accept'" FullSelectorArgument="&lt;wnd aaname='I accept the terms in the License Agreement' cls='Button' title='I &amp;amp;accept the terms in the License Agreement' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='I accept the terms in the License Agreement' cls='Button' title='I &amp;amp;accept the terms in the License Agreement' check:fulltext='I accept the terms in the License Agreement' /&gt;" ImageBase64="" InformativeScreenshot="57ae27a202fc57b71d9bd58d9a10b1c9.png" Reference="8q7tX2HVr025SmmVI-6yXQ/GpeEH-c1ek2AqqfSWkOQuA" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup*' /&gt;" SearchSteps="Selector, FuzzySelector" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click '&amp;Install'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable ContentHash="Rly0s0iqV0umn84xZvfz3A" DesignTimeRectangle="1702, 823, 83, 22" ElementType="Button" FriendlyName="'&amp;Install'" FullSelectorArgument="&lt;wnd aaname='Install' cls='Button' title='&amp;amp;Install' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Install' cls='Button' title='&amp;amp;Install' check:text='&amp;amp;Install' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAZCAYAAACvrQlzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARISURBVGhD7ZlfTFtVHMevLxi2+UCMMcbog24uke2FgbIWppAJYrfQVsZ/pZsptFvbOddCV5LhYMn4U8AyOtkkjYEmWF2hpdVWWLem0JY/YVnXjbnwZ/IA8mAIb+oLX++5S0tna7KZmkLTh0/u+d3f75yHT849955zqfX1dSSIHgmhUSYhNMpQKysrWF1dZQJyJXGCZ2NtbW1TqN1uB4EEgXaCp2d4eBjLy8ubQpeWlphEQCiJ/0/8fj8cDgdsNhs8Hg8WFhYi1m0XvF5vbIQuLi7C7XajTd2BgjIRagQfoe4LMQYHBzE7Oxuxz3YgJkItFgv0ej1Oy5VI48vwsuBb/Kzjo68pB/KTJejq0sBkMmFqaipi/61MTISWVgrALldgd3kzdlVbQZ2ahH/4Y/w5yobzyiG0nc1FvewYdDpdxP7/lXteK73GWdHba8X9CPloEBOhh46U4oUaC56TeBmZlJgWauZj4xYLGzcP4nczC6OabHR3dzP1jRIJJJImmGfuh40Vht+Gy1dseBghN25ogErVAA6nAZ4I+WgQE6Hso5+Akk6BktCcpIWKJuA30UJpmRuOTIZH3x0MCm06UYB87jnYfA/CxgrD0wkOtxO+CLm4FZp9pAxJ4luPZYonQNUQobygzI0b78Lbww4KZUS0mjB/xwhVrRYqGQ88Hg9Xby7hgcuA6qpi8Iqr0GmwwVD/IV59LR0Vqk44+i4wdTzecWjtt+NX6HucEuwQ/hSUSVV74R/iBmVujL4DS9vmIx8USs8+9m4WGrU66JSFyKzpRbdSAWmrBl9rtGjv0cHZL0NGphDfmEdxZ9zKrMO6S7Vg1fXFr1CpVIyr7RVw/UDzPY2hHPwve5BVq0eWoh9Z8n4cOyHGwMAAUx8qNP9wHdwP6XGczcgpbEKLtAT794nx4/w87vp8WAx95GfocTIykLF/D5Iz5RiKV6Fdmq9w7XwO/rrx+CVEZmbqGSMogRtU1TiSKyzgl1TC6XQy9aFCg7KYdgfctyfgGLmGir0HIL5owC+Bmnt2iLOP4rx+BCPGLuR+UA9DvAolO6JTn/Hx2xA7uG6mfk4LpWVSn45jX2EtFAoF8/FP6v9VKOcCtPQsnrk7C9dgD1Tn1PC5OpH3thwunwncPCWci/RuzNqBt3Lk8St0bm4OLc3NuHTmcHDdTD19nZH5UrEOBbxSZhcVqE9LTkLS8+lo7VP9Y4ZeRPvZIryycydefH0vWowz+PXRAhoLkvBGvhBtVXuwg869mZ6GNJYyfoUSyB5eKBTisvJ9/GGjhcquY1eZEblcAcxm8xO1ZKYGCL2/FYmZUML09DQqy0vRVZeDA8fbkVdYBo1Gg3n6BRNal5KSEiT0/lYkpkIJk5OTEIlEKCoqglqtTpw2RQNyCEIOTCLlththQsnaFiqUxAmeHvKp94TQsbExZsaQgFxJnODZCPxCYoQGGgmiQ0JoVFnH35fDi2nX1GqUAAAAAElFTkSuQmCC" InformativeScreenshot="16d38490ed9817319e61a986832ae8c3.png" Reference="8q7tX2HVr025SmmVI-6yXQ/iEfr1thlAkOEJYUvfy4U_w" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup v20.10.6' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" ContentHash="VxWtQK2scE6S6Nqw4j2BHw" FilePath="C:\Windows\System32\msiexec.exe" IconBase64="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" InformativeScreenshot="359e29d77f5d2dacf1d469b24e1ca791.png" Reference="8q7tX2HVr025SmmVI-6yXQ/_Y_ZGk4ou0SZ1oCrUDwPoA" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup*' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Wait For State workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Wait For Installer State.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="Text">
+          <Literal x:TypeArguments="x:String">Ready to install</Literal>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser 'UiPath Studio Setup'" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DelayAfter="10" DisplayName="Click '&amp;Install'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable ContentHash="Rly0s0iqV0umn84xZvfz3A" DesignTimeRectangle="1702, 823, 83, 22" ElementType="Button" FriendlyName="'&amp;Install'" FullSelectorArgument="&lt;wnd aaname='Install' cls='Button' title='&amp;amp;Install' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Install' cls='Button' title='&amp;amp;Install' check:text='&amp;amp;Install' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAZCAYAAACvrQlzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARISURBVGhD7ZlfTFtVHMevLxi2+UCMMcbog24uke2FgbIWppAJYrfQVsZ/pZsptFvbOddCV5LhYMn4U8AyOtkkjYEmWF2hpdVWWLem0JY/YVnXjbnwZ/IA8mAIb+oLX++5S0tna7KZmkLTh0/u+d3f75yHT849955zqfX1dSSIHgmhUSYhNMpQKysrWF1dZQJyJXGCZ2NtbW1TqN1uB4EEgXaCp2d4eBjLy8ubQpeWlphEQCiJ/0/8fj8cDgdsNhs8Hg8WFhYi1m0XvF5vbIQuLi7C7XajTd2BgjIRagQfoe4LMQYHBzE7Oxuxz3YgJkItFgv0ej1Oy5VI48vwsuBb/Kzjo68pB/KTJejq0sBkMmFqaipi/61MTISWVgrALldgd3kzdlVbQZ2ahH/4Y/w5yobzyiG0nc1FvewYdDpdxP7/lXteK73GWdHba8X9CPloEBOhh46U4oUaC56TeBmZlJgWauZj4xYLGzcP4nczC6OabHR3dzP1jRIJJJImmGfuh40Vht+Gy1dseBghN25ogErVAA6nAZ4I+WgQE6Hso5+Akk6BktCcpIWKJuA30UJpmRuOTIZH3x0MCm06UYB87jnYfA/CxgrD0wkOtxO+CLm4FZp9pAxJ4luPZYonQNUQobygzI0b78Lbww4KZUS0mjB/xwhVrRYqGQ88Hg9Xby7hgcuA6qpi8Iqr0GmwwVD/IV59LR0Vqk44+i4wdTzecWjtt+NX6HucEuwQ/hSUSVV74R/iBmVujL4DS9vmIx8USs8+9m4WGrU66JSFyKzpRbdSAWmrBl9rtGjv0cHZL0NGphDfmEdxZ9zKrMO6S7Vg1fXFr1CpVIyr7RVw/UDzPY2hHPwve5BVq0eWoh9Z8n4cOyHGwMAAUx8qNP9wHdwP6XGczcgpbEKLtAT794nx4/w87vp8WAx95GfocTIykLF/D5Iz5RiKV6Fdmq9w7XwO/rrx+CVEZmbqGSMogRtU1TiSKyzgl1TC6XQy9aFCg7KYdgfctyfgGLmGir0HIL5owC+Bmnt2iLOP4rx+BCPGLuR+UA9DvAolO6JTn/Hx2xA7uG6mfk4LpWVSn45jX2EtFAoF8/FP6v9VKOcCtPQsnrk7C9dgD1Tn1PC5OpH3thwunwncPCWci/RuzNqBt3Lk8St0bm4OLc3NuHTmcHDdTD19nZH5UrEOBbxSZhcVqE9LTkLS8+lo7VP9Y4ZeRPvZIryycydefH0vWowz+PXRAhoLkvBGvhBtVXuwg869mZ6GNJYyfoUSyB5eKBTisvJ9/GGjhcquY1eZEblcAcxm8xO1ZKYGCL2/FYmZUML09DQqy0vRVZeDA8fbkVdYBo1Gg3n6BRNal5KSEiT0/lYkpkIJk5OTEIlEKCoqglqtTpw2RQNyCEIOTCLlththQsnaFiqUxAmeHvKp94TQsbExZsaQgFxJnODZCPxCYoQGGgmiQ0JoVFnH35fDi2nX1GqUAAAAAElFTkSuQmCC" InformativeScreenshot="16d38490ed9817319e61a986832ae8c3.png" Reference="8q7tX2HVr025SmmVI-6yXQ/iEfr1thlAkOEJYUvfy4U_w" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup v20.10.6' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" ContentHash="VxWtQK2scE6S6Nqw4j2BHw" FilePath="C:\Windows\System32\msiexec.exe" IconBase64="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" InformativeScreenshot="359e29d77f5d2dacf1d469b24e1ca791.png" Reference="8q7tX2HVr025SmmVI-6yXQ/_Y_ZGk4ou0SZ1oCrUDwPoA" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup*' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Remote Desktop: TestingFRE.deskover.local - Remote Desktop Connection" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" OpenMode="Never" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,242" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DelayAfter="5" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(tab)][u(hk)][d(hk)][k(tab)][u(hk)][d(hk)] [u(hk)]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" FilePath="C:\Windows\System32\mstsc.exe" IconBase64="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" InformativeScreenshot="eeae7c44169f2d819607ba3f5e9d1a9a.png" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='*.deskover.local - Remote Desktop Connection' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Wait For State workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Wait For Installer State.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="Text">
+          <Literal x:TypeArguments="x:String">Completed the</Literal>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="434,548" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" Timeout="1" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,259" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="238, 329, 55, 21" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Finish' cls='Button' title='&amp;amp;Finish' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Finish' cls='Button' title='&amp;amp;Finish' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAZCAYAAACPQVaOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM4SURBVFhH7ZfdS1NhHMdF68YIGhRiISRIQWAS6I1BCTKplHwp14tZmRhMmqmRtFVMly9svpSz1pZyVCxLw/RCjWUOp3ObUwP1uOncC164a/+Db+ccyflyOAfNhGkXH/g9v/M7v8OH85znPE/Q8vIy9gv/ZfcqQQsLC1haWmIGyp9Le5JVWZPJBIfDsTJ45tiTrMrabLZ1shfeORGR8RLi5jEkStsCOj6Y1cIte07SBKVSiZmZGej1ehAEEbDxpfJebtnU6h+w2+1YXFwMaMbGxnDmoYZbNur+a1gsFtYG/5TZQZQU6zDJdm0bzM3NIbPeyC17R2uB0+lkbcBHY1UVYqOjEc2QjvdddRBLWkBurJ1o2Zyf6kFashzmtbm/YHR0FBG3lNyyYdcUGBkZYW3Ah6rqMxo6ejE8PExhBTk3g4lJO7wba932zfkdlnW5XHhA/OKWFX8i4fF4WBvwoVL1oMM05c9ZNRCJKqFQVEJ2NwoCgQDxWVJMGKh8lgYjvW8QExUOQXgU8ktfIZmSLRIJmDpRjWFd761iNBpxJOUFt2xo0lMYDNt7kKqoCKHBwQgJCaGIQWWrlBGQ5STgeoUeHtKKQrEErR1yJv88R4IaPTUDrFY010ogjAxDUacHHkMTTiXJYGF5xlZ4/HWBW/bRFwe8Xi/rzXxserPm1yuyMvlK3jUFFR3TsmkVqC+5gfBDqWi3O+Cc6PJP4x2Y0kNDQzh8WcotezRNznxzbA342JpsHWzUQuj19uD2sZPIzMmH8MrOybrdbuS1TnHL3mu0gd4vszXgY0uyKaWo1arR2dWPb+1qlD3JQ2LSzsnS2+Dj1HrBKRuZXQOz2czagA+CGED/OOnPTbahoEADtVqzkneTIOi4X4OC4g9orS5GQlwczguvgujuRjFVO0nfNzvgj7fJ/Pw8br41cctm1A0yY7YGfNDfCb1VWwtb3W5gpRa907kN3LJn83UYHx9nbcCHTqdDenr6OtjqdgOSJJFc9Z1bVljWg+npaWi1WvT19QVsXF5ejthCnlPPgeyPyG2y4USmAhel7QEdxzc418vuq8M7/T/y+XzMoN7o25Osyv4J9gP7SHYZvwFUD88OoSRLiwAAAABJRU5ErkJggg==" InformativeScreenshot="5650fb84910d0e8c05c6897e24575089.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup v20.10.6' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" ContentHash="VxWtQK2scE6S6Nqw4j2BHw" FilePath="C:\Windows\System32\msiexec.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAowSURBVFhHtVcJUFRXFv1OyixqjBpj1AgSs5hMjSalmSRmHJeMJhWTzIyjSU1lqaxDJnE0ijHRgEGRBgIKSAfohU12sIFuaOgFGppuoKG76WbtZgcxKAguxKBEljP3fZqKPWbGqamaW3Xq/f68/8559553/4e7ORKk0rsrjOUfWMymD01VxlerTRVPWi0mD9ef//9RkJcbqSvWjFcYS2A1l/9ot1X219urWutspnq7zVRJkNlqq0W11uqDVkv1uyRuK2EtYRVhKWGxa6n/LVQFCllGWi6WPXoC6zYn4Y13FPD+XIEjQUrEndJAqTKgsrIKNmvlhK225kqDveZcQ53ZQTDbbRY1CUshYSk0xtVaa/yt1uq9JOpNwuuEzQQm9mEX3a2hVuYbo6IycM+9QnB3ZoO7qxDcrFJw80zgltZhzqNtWLz6DF75qBdx2b1IV3QjU9mDPLUTOkMTTFYHLPYWWO3Nkw0NDVecjsYeZ3N9VYujvqi1tTnP4WhKrDZV/slFd2toigqcPgeScPdsErAwC9xiEvCQHtwyCziPVhrP0v3LWLNzEs2dQPv3gNkJGOuBktoxqM0/Id90A9n6EWSUDCKn7DzUpgGoq/rh7OjHhYFzSEpKOpOVlTXXRekemsL886/vEOOuWSTg/gxwDxbQznVEXg3OqxncI13glg/AY+M1VBHpxWGg7wJwbpBwiXCRftP4/RDQTffbzgHNvUCuaQwG+xDOdLciNlY0KBaLbxWgyM2ZV6xSXnp+QyzuvPs7cAvSwC2Sk4AS2nkVCagnAe00nscdv/4BiXlTxG1EwIOy0U6EXeeBHiI/S3/rI0EXSGR1C+DovAy7zUwCYptclO6h02pWa4uU19dvEWPpyiRwswkP5IBboiEBRnCeNnAPt5AIKoPnJewR3EAHETd2APWEBipJYzehZ2rXzrNTojr7gULzBFq6hlCq07IMlLgo3cNQptuZL8/HcxslePkvCnBzEigLZMRpH3iaSUDTVBmWXsCL742gpoE80AyYGmmXNNaQH2pot5Y2wNoO2Jg4EpRe9hOcZBiFIgciUWyWi9I9qoz6w7JsOZ5+VowPP9Pifi/KwJxkKkMeZYHKwHywnMqwgsrwUB9WbBlGXukkjDag1EywAno7oQ4oJ38YSFRFE40kLEE9go7OLmRmZpAA0UkXpXtU6HVJWRn5WLVWBO/dGjy7KZOOoYjMmOoqhXqqFMvtNLZg9uo+RCaPQlMxCUXZJPL1kygwAsoKSnkVUFQNaC2Agq4TCofR3dWOlJQUJmCPi9I9jHqdPiE+G088FYN3Py7Atp1yzJgbA25uIh09OhFMxINUjqVlhEoSYcPuI/04rfoRyfIRpMhHkVpwA2nKMaQXTSBDBci0QLycBOReRnengx3BcRKw0UXpHoZSrVMgOIVHfhON7X+V4bU3crHAU0JmjHVlgfywiLyxmEy5xEDXJmz37kZ81hVEJxNSriImbQSxGaMQZf0EcfYYEmQTCE0gEdmD6GxrQEJCwohEIpnnonSPUq1q4LNdEqx4MgZbXk3Di9vS8NjTtHvWlOaRIfksyCgLyilPLCzHuu0OhIoGERQzRLiEYNEwgsVXESodQVjcNYQnjuLQiRtIye2Bs9mKuDjpZRede3R3diygHnB1+85YeD7+HZ75XTyZUYIn1sRj5gLqCXMoC/NPkYCbRNyvwWPrLfgisBdfCPoI/TgQfAFfhgzhYOglHDp+Bb4RV+Ht9wMK1O2wmMtBDajXRekeTkfTE0UF8rFn1kVg6YoorFwVC6+VQngS5iyOoiwQ7hPTsaRTsZDMyfwwX45Fq/R4d08LPjrQgQ+/6MbHX53Fxwf74P31eXziN0Dkg3hr7wDKjE5UGIuZgBoXpXuc6e7YKpfJsGh5CBZ5RpKIk3jAIxzzl4Rh1sIwcPeGkxkpE/eRJ5iIB0jE/NO416sIr7xtww7vRmz/mxM7PmmDz2EjfI+m4tDXIdi37wAPgSAYEnEspBKp1UXpHo4G+56M1CzM+NU3mDEjEHfMCcHMuUE0CuhtGEgZCHKJYH4gEfNJxPx0zFySg9++pMeLO0zY8VElvvRNREBAEMQSCQoLC2E2m3mwa3bv2LHAibCwsMK0tLS1LuqpsJgqw1JPpUIozKdJ+XjjrWR4PX4SHBdAOErwJxwDNzOUBEWSEOoP89jxTMfDa5R4aYcKPl9GISpKiNbWVoyMjGBiYgKTk5MYHx/H9evXMTg4CHpF83MEAkG1m4j05JSvoyPCkZ0jQpE2FSXaQpTp9DQaIY3TYPe+PLz8SjKWP0ZmvIcJiyCQL6hR3eeVjl17Y/iFBwYGeNKbg5FfvDgEoSoWjvZOtDidNPc7sEy46DlOGBGxVnDk6FeCQP/M8BPBXSLhybG802koLc5HlUGFKqMGFYZiqNUlkOXoIYzWEakKL2zNo36RiqNHBfzObyaf3nk/ifKX+WK9ZC6CFUlob2uDyWRi5bgRHxf/qUvCz7Hp95vv9Fi2zGPTho3Pf/Dee5/5HTqYFBVxwpYojh5KTYhF+qloKHIToSnMgVatglQs5evL0s5iOu0jI9cxdPEiDmf64jnhXHwjSyaRbWhsbITNVss/ExZ6UxZuFxvXb1j22rZtf/b388uJPHEc4aEhEIZ/iyP+/rzJpmuuMCmQZpRheHiYXtfnsCFiJTZHbIG1roGIbfzuy8rK+GcO+x3+5b7wr7FmzZpVb7399klBUFCdVCq9TB8V8Cfiw75+8NnnwzudkY+NjeGT7H9gS+JCxKiT0NHRAXWlGS98uxpbj7+OEkMFjEYjiouL+Wfo2VEXxS+Hj4/PrP3792+TyWTXmOqioiLk5uaCfiM9PR3R0THY77OfX4ylfXR0FOcHh/BOyt+xQTIPIafDeecXlpuwNuAP2Cs+Tl/VlSgtLb29AIPBMIMIj+j1ejCwh8rLy/kFampqeFRUVCDwWCCfTmY4lnZ2Etq7uvHH2E1YR7WX5qbwda+01qG+vp4+y2yopjLctgRqtdpLpVJBo9FAp9Px5FVV9D8BLdDc3MyjtrYWcdI43lAX6Jwz8q6uLvinHMPa47PxqWQ36urq4GxpQRu5v729nT8tTMhtTUh924ORs9RPk1utVjgcDnR2dvJg6VUVqaixBPHXvWfOICRThKdC7oF3zC4001xGzub29PTg7Pdn0dvby6/zb4/hzUHv7/cZMasXg91uh5MaCTMXW7SpqYlfjH3pCIXRlBUHzLV18EsU8pmaJmekLDt95/r4LLC5bo3oP0V0dPQuqv8g2yEjZwuwNDMRTAArA/sbfenwHY4dM4vFwgtm5B00nwlg85lYRn5LK75dREZGesjlcj9avJp2doXqP0a1nKRyTNLvSVp4vKSk5JpQKLxKqR1n9WUmm84cu2b3WNp/8WX03wSl+Q6tVvuIUql8Mycnx48MKiCPBGdmZgaFh4f7BwQEvO/r67uKTPk5MxdzODtmDOya3bu15hz3T1/5uZ1vLWjEAAAAAElFTkSuQmCC" InformativeScreenshot="359e29d77f5d2dacf1d469b24e1ca791.png" Reference="8q7tX2HVr025SmmVI-6yXQ/_Y_ZGk4ou0SZ1oCrUDwPoA" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup*' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Wait For Studio State workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Wait For Studio State.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="Text">
+          <Literal x:TypeArguments="x:String">Add License Key</Literal>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Remote Desktop: UiPath Studio" sap:VirtualizedContainerService.HintSize="434,814" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" OpenMode="Never" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,525" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Add License Key'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[ActivationKey]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="187, 169, 225, 26" ElementType="InputBox" FriendlyName="'Add License Key'" FullSelectorArgument="&lt;ctrl automationid='LicenseKeyTextBox' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='LicenseKeyTextBox' role='editable text' /&gt;" ImageBase64="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" InformativeScreenshot="8527c50586c71deeeb2db30fe202875a.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;wnd app='uipath.studio.exe' cls='HwndWrapper*' title='UiPath Studio' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="501, 471, 75, 30" ElementType="Button" FriendlyName="'Continue'" FullSelectorArgument="&lt;ctrl name='Continue' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Continue' role='push button' automationid='' check:text='Continue' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAiCAYAAAAeXoQCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQcSURBVGhD7Zf9b1NVGMf9M6buBVwWnAQHyQygEaGi8zdCTDAB44yoQRwEFjvGsmRbZ9Jh98KMpALdCwoVUHRODWokTLaxhWWwvt/b9vZ9W9m6ru/b1OTrue3SuHGXxZ1LMPH88ElOn/uc+5z7uefc0/PY41VGMNYGk0cBk0cBk0cBk0cBk0cBk0cBk0cBk0cBk0cBk0cBk0cBk0eB7PLya8zY0eZAWTvhtB0lDWbJvH/DFo0dW1UW5Epce5TIK6+aQ7nejz5fEv2OOIaFGFq/dSNfKncVFJ85UaoyI0dpROVgGE1fCHhKIu9RIp+8Exa81hkGF4zg3fN8OlassuEjnYANy3NXIUdpxo+T86i/xEle/68gm7wnVC5cH5/DFb30Axe3u3H0qh+VX/vxfocTT4vxGgcO6r14p9uL4yR+uFvAFvIS9nb6YIj8iZ6hCbzZYsaz5zx4vYVD/gkOb1304mC3B8dIfsVFF7bVGZF7SsB7Yt/FWmVdHuzWWNPtIpWAClL3OOHAmUxMLmSTt+6sH2OhOI4qDQ9cy9W40GJO4oZhCp/fCuGuN4ryVhty6oIQUgsYGA1D1x+FeyqBitNOHO4JwpX4C4PWEKq1FuwxpvBdrwdFJ724G/kDhnsz6Px9GrZQCk0dHIr0M3AFZrGP1BaXebt7Dk3XBPJynFDdjOEXUlc7mMCodQIv1i8dGw2yySu8EAB3P4o3JOS9+msEgi+Esibxtwm1phQu/eBBoSgvnkJzF4+Cah5t3nnoetwoWLZsl8qbR9cVOwrF+5jn8PNPPmxeQd76rhm4JyLYrybxGgG9gQSUZy1LxkbDQ595OUoTGkxJ3BnxZGM79FEMDQawuTEILhTDB82ZPllJpM9K8kamk6g6l8l/+bc4+q77UbqCvD23Y4jNpvDNwDR0A2TGhxfw8VVHdhy0yP7Nu6BbLs+Ik2NkyYz6srHtZ2bR1xdAierhylP0x+Dzh3Hksj/DV14oPpHvuyebPHG33TscR8AbwttaWzpW3GhDVYcLr/TOwkd24f1tmZnYPpaC9nvyF4YsWznklWimIMzEcaTNgDztOIzRhbS8vE+nwS/WTY9RZuSTR8hT8zh0LQZzMIkhVwLDjijUlx1Yp+Lx4Z0kbONxEk9ihLuP0kZLesOQlEfa5UNJcJNxnP/Suqq8TdU2VDrn4JpM4LY7hlvj85kNg8QPZesmcOPeFPappce+Fog8E2nIR0Eth5daHVCQU8auFjs21oknDBPWN/LYtRh/Xi0uHZJPHu4FDY8NNZm+hUR+aYMFTy7m72y1Yxs5oWTjZHZvJ/nP1GbyxZytKivy0n3t6Xsrmnk8d4rHpnpxY1had+c/asmB7PL+TzB5FDB5FDB5FDB5FDB5FDB5FDB5FDB5FDB5a8aEvwGLBLGdiTb4RAAAAABJRU5ErkJggg==" InformativeScreenshot="089863ac4dfd6844aa375db289bf0627.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;wnd app='uipath.studio.exe' cls='HwndWrapper*' title='UiPath Studio' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="517, 478, 42, 17" ElementType="Text" FriendlyName="'Continue'" FullSelectorArgument="&lt;ctrl name='Continue' role='push button' /&gt;&lt;ctrl name='Continue' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Continue' role='push button' /&gt;&lt;ctrl name='Continue' role='text' automationid='' check:text='Continue' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAVCAYAAAA5BNxZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPESURBVFhH7ZX7T9VlHMf7M6i4aIwpNUM3mlrLlC70m3NttlmLltXM0CkLRMYGHNrAuEnLkcrNUlLLIspZLRcJCJOhnBvne87he+5chMPlXIFqe/V8z8HDxcN0zNho/PDenu/7+Xyez+v7XB97PEfDatQa+EprDXyl9f8Bj8/TsaPKTHq10EkTKUW6Bf3L0ZYyE1tVemKj9C1XC8FzJTKanLQ6ArSZfXTJXiq/txI/P+YhlfZFP6kqHTHZGrI6xin9SuapKHHL1Rz4MT2v148jDU/y/lljyEtWGfikVmbDvZiHVEy2jp+Hpim8IEXtfxSKgD+hsnBtYIpLTdGLJVdbOXzZSda3Tj6s62ej4ueZ2d9k571GO0eFf7BRZouYgD31DtSTf9PcOcjbFTqePWPjjQqJ+GMS75y3s7/RxhERn3newrYCDbEnZD5QcmdrpTfYeKWsL9ROUslkirpHhd46FfYURcDXnXbS6/ZxOFsd6byn2DILFboA19UjfHnDzW27h4xKAzEFw8jBGdp7xqlt82Ad8ZN5sp+DzcNY/P/Q0ecmt0bPbk2QH1psJB23c3vyL9R3xqj/cxSDO0hpnURS0xgW1wR7RW1la1Vbpyi9IouJ6Uf1h5dfRd2aDj89fYO8WLgIPPGcC+muhzejgL/22ySyw016qfKtJV8b5MJPNhIVcF+Q8gYjCblGquzT1DZbSVi0VRaCT9NwyUSiMo5uil+uOti8BPj6hjGsg5PsKxF+nkyLy0/2aX1ozAfOeEy2liJtgFvdtoi3o8lDZ4eLzcXDSG4vH5WHcyKAImcp8O7RADlnwvEv/+6j9ZqT1CXAd9/04p0I8l37KLXtYqXHZ/j0sjmUe98eP1e7GFzD8V6xTD2OiLf91AStrS5SVP8teFqbF4dznEMXnWF9Yyfts/A+j4Art8qeLh8uu5t3awwhL7nYQE6dhVdbJnCI22ZfVXgFqnuD1PworkmxVR4FeErZCPKYj0NVauJqBtB4ZkLgcZ+PYpytG2KcpzlwobgSIweueNENB+i0+Okyeyi5aGadysjHtwIYBnzCD9At3SW1WB86nFHBRTujM4A05OPs130PBN+UayCrfwrLkJ+bVi83BqbDh1P4ByJ1/Vy/M8Lekgi4VjTmlJAv8VKlmTTxeu6qMPFMgfJyallfbGTXrP98ibJcIl4M/EKZkQ154dxE8eOpRXqenI3fWWlim3h5I75Y1e0i/un8cLwSs1XVR1wo1xQaO63cyHMnjGwqVA7hwro759W6D3y1aA18pbVKwbX8C8fpuS5lfJgkAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="660, 254, 600, 516" FilePath="C:\Program Files (x86)\UiPath\Studio\uipath.studio.exe" IconBase64="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" InformativeScreenshot="f63dd35d83ca8b75d14808e005d9a7f7.png" IsExactTitleEnabled="True" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='uipath.studio.exe' cls='HwndWrapper*' title='UiPath Studio' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

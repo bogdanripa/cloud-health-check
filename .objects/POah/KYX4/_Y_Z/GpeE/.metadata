@@ -1,0 +1,13 @@
+﻿{
+  "Id": "GpeEH-c1ek2AqqfSWkOQuA",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/GpeEH-c1ek2AqqfSWkOQuA",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/_Y_ZGk4ou0SZ1oCrUDwPoA",
+  "Name": "I accept",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-14T08:45:08.2855262Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-14T08:45:08.2855262Z"
+}

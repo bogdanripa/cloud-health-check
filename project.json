@@ -4,9 +4,9 @@
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.DataService.Activities": "[21.1.2]",
-    "UiPath.Mail.Activities": "[1.10.3-preview]",
-    "UiPath.System.Activities": "[21.4.0-preview]",
-    "UiPath.UIAutomation.Activities": "[21.4.2-beta.1526206]",
+    "UiPath.Mail.Activities": "[1.10.4]",
+    "UiPath.System.Activities": "[21.4.0]",
+    "UiPath.UIAutomation.Activities": "[21.4.1-preview]",
     "UiPath.VMware.Activities": "[1.1.4]"
   },
   "webServices": [],
@@ -15,12 +15,12 @@
       "serviceDocument": ".entities/EntitiesStore.json",
       "tenantName": "bogdanripa",
       "namespace": "FRE",
-      "uniqueReference": "AtoJmI1SIIQnQ2ZHD61/cu3tjQd9WZ1fG9HuhTddkYk="
+      "uniqueReference": "xh9Xu89/OrMN17IRK93DKM4WUdDbiP5/N7/FsG+/3H8="
     }
   ],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.0.0",
-  "projectVersion": "1.1.30",
+  "projectVersion": "1.1.37",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,

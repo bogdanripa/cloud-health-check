@@ -1,0 +1,14 @@
+﻿{
+  "Id": "JW1eIchQ70urJRLY2flhsw",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/JW1eIchQ70urJRLY2flhsw",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/ntOYVPrqBUSco-WP1HzFHQ",
+  "Name": "Downloads App Type",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-14T08:09:37.0754582Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-14T08:09:37.0754582Z"
+}

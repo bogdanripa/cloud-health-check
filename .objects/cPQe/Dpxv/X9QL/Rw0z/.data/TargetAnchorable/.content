@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://licensing01.uipath.com/en/thank-you" ContentHash="ATgvKmObGEOm_PIMEG6V_w" DesignTimeRectangle="311, 359, 84, 19" ElementType="Text" FriendlyName="'download here'" FullSelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl aaname='download here' tag='A' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl aaname='download here' tag='A' type='' check:text='download here' /&gt;" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0zEigcNaZS0yE9MddpZtlnQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="2656228bfe98e19ea9b96710b8665cb1.png" xmlns="">0-YQjRmblkUGYUBWs2j8aOw</imageRef>
+</TargetAnchorable>

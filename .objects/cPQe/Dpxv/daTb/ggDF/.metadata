@@ -1,0 +1,16 @@
+﻿{
+  "Id": "ggDFxQuWJ0qnR5qYgCOOaA",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/ggDFxQuWJ0qnR5qYgCOOaA",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/daTb7Sau3EiXNlZ0cMxH6A",
+  "Name": "UiPath SRL",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-14T07:26:43.7813324Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-14T07:26:57.3596595Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

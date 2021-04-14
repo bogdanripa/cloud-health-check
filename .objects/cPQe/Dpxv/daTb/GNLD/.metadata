@@ -1,0 +1,13 @@
+﻿{
+  "Id": "GNLDabCfhkq4YCHXhn4NLA",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/GNLDabCfhkq4YCHXhn4NLA",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/daTb7Sau3EiXNlZ0cMxH6A",
+  "Name": "Business Email*",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-14T07:17:07.795312Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-14T07:17:07.795312Z"
+}

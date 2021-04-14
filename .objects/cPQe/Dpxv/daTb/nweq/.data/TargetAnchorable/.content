@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.uipath.com/developers/studio-download" ContentHash="uSbIoSEuBkuC1-1EeIWZkg" DesignTimeRectangle="51, 767, 151, 45" ElementType="Button" FriendlyName="'Accept and continue'" FullSelectorArgument="&lt;webctrl id='onetrust-accept-btn-handler' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='onetrust-accept-btn-handler' tag='BUTTON' type='' aaname='Accept and continue' check:text='Accept and continue' /&gt;" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='Process Automation Software - Request your free download' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0H9V5DtV_VketqfIJbzECkw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="b022124d9283783958211f446f763c57.png" xmlns="">05rDQS9QSYUWcT2gUaFCEvA</imageRef>
+</TargetAnchorable>

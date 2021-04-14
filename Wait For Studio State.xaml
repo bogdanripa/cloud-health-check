@@ -1,0 +1,161 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Wait_For_Studio_State" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Text" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1214,1378</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Wait_For_Studio_State_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.VMware.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Wait_For_State" sap:VirtualizedContainerService.HintSize="554,1213" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Default="300" Name="retries" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InterruptibleDoWhile Condition="[retries &gt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="512,1121" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+      <ui:InterruptibleDoWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,956" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Remote Desktop: ActiproWindowChromeShadow" sap:VirtualizedContainerService.HintSize="434,764" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" Timeout="1" Version="V1">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="390,475" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Add License Key'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="348,381" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="1">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="304,155" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[retries]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="234, 92, 132, 31" ElementType="Text" FriendlyName="'Add License Key'" FullSelectorArgument="[String.Format(&quot;&lt;ctrl name='*{0}**' role='text' /&gt;&quot;, Text)]" FuzzySelectorArgument="&lt;ctrl name='Add License Key' role='text' automationid='' check:text='Add License Key' /&gt;" ImageBase64="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" InformativeScreenshot="4265909545bbca91e7c4646c2478d7f6.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='uipath.studio.exe' cls='HwndWrapper*' title='*UiPath Studio*' /&gt;" SearchSteps="Selector" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="650, 242, 619, 540" FilePath="C:\Program Files (x86)\UiPath\Studio\uipath.studio.exe" IconBase64="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" InformativeScreenshot="59d9bde370e3801320f4772d79098dc4.png" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='uipath.studio.exe' cls='HwndWrapper*' title='*UiPath Studio*' /&gt;" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+          <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[retries]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">[retries - 1]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ui:InterruptibleDoWhile.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InterruptibleDoWhile>
+  </Sequence>
+</Activity>

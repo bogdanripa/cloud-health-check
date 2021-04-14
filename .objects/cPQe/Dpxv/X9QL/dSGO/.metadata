@@ -1,0 +1,16 @@
+﻿{
+  "Id": "dSGOpqCOyUKfiX6Xd0vWCA",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/dSGOpqCOyUKfiX6Xd0vWCA",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/X9QLFrhYBEu8qNW8CbKN9w",
+  "Name": "Activation key",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-14T07:52:32.1526517Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-14T07:57:36.9496726Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

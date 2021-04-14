@@ -1,0 +1,13 @@
+﻿{
+  "Id": "8eQrarypM0qHlXLyn6R2OQ",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/8eQrarypM0qHlXLyn6R2OQ",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/daTb7Sau3EiXNlZ0cMxH6A",
+  "Name": "Phone Number",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-14T07:17:07.8531581Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-14T07:17:07.8531581Z"
+}
