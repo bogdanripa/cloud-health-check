@@ -87,7 +87,6 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.VMware.Activities</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="797,1999" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -108,12 +107,8 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="1 - try for free workflow" sap:VirtualizedContainerService.HintSize="755,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="01 - try for free.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="UseStaging">
-          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="UseStaging" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="Community">
-          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Community" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="UseStaging">[UseStaging]</InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="Community">[Community]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <If Condition="[Community]" sap:VirtualizedContainerService.HintSize="755,514" sap2010:WorkflowViewState.IdRef="If_1">
@@ -174,7 +169,7 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 08 - run from Assistant workflow" sap:VirtualizedContainerService.HintSize="755,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="08 - run from Assistant.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        <InArgument x:TypeArguments="x:Boolean" x:Key="Community">[Community]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 09 - check Studio open time workflow" sap:VirtualizedContainerService.HintSize="755,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="09 - check Studio open time.xaml">

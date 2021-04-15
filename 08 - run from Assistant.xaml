@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="run_from_Assistant" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1226,1873" sap2010:WorkflowViewState.IdRef="_08___run_from_Assistant_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="run_from_Assistant" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Community" Type="InArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1214,1011</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_08___run_from_Assistant_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -61,15 +69,43 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.VMware.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Run from Assistant" sap:VirtualizedContainerService.HintSize="476,1808" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Run from Assistant" sap:VirtualizedContainerService.HintSize="526,846" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="StudioPath">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Program Files (x86)\UiPath\</Literal>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Downloads" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" OpenMode="Never" Version="V1">
+    <If Condition="[Community]" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[StudioPath]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">%localappdata%\UiPath\</InArgument>
+          </Assign.Value>
+        </Assign>
+      </If.Then>
+    </If>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Downloads" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" OpenMode="Never" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -81,7 +117,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address: Downloads'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="%localappdata%\UiPath\[k(enter)]">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address: Downloads'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="[StudioPath + &quot;[k(enter)]&quot;]">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="115, 61, 749, 22" ElementType="Toolbar" FriendlyName="'Address: Downloads'" FullSelectorArgument="&lt;wnd cls='ToolbarWindow32' title='Address: Downloads' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ToolbarWindow32' title='Address: Downloads' check:text='Address: Downloads' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvEAAAAaCAYAAAA+JAOJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUlSURBVHhe7dy/TyRlHMdx/gJ6ChoTc+h5p+Kx56FRKajpqago1IgkakEs0DvuaLD2x3lq4C8wJAcNhGrpCJ0E/oAtoCWBsDzOZ7Pf8dmHZ5fZyf6Q2fcr+WTneWZ2ZmdJbj87DDfkAAAAANwplHj0RbVaJYQQQgjpS4qgVuKPjo4I6WmOj48JIYQQQvqSWDe5a0lLPNBLsW/FhBBCCCG9SBFkKvGl71+7ydVyQyaSOQAAAAC9l6nEP3lRdlOvKg358Hm5vhYAAABAL2Uq8Y+Twv5ZUtz9lCjxAAAAQF9kKvETK2X36e+VhjxK5nplbm7ODQ0N3cja2po7PT11Y2Nj7vDwsL71fzQ3OjoaXRfSfkZGRtJ9Dw8P33je+fm5m5qaSrfRsua6KXxdis67F1q9t3l0en8AAACDKlOJ/yAp7J8kxd3P+LPeX4mPlcBOFcNwPyrKfknXvIr95uZmbSya29nZqY+6I3xdGqvU64tNt3XqvTWd3h8AAMCgylTiVdg/fllpyPtP2y/xKsTb29vu6uqqPtOeWAnsVDEM9+OP7Qq8X+DblffcY+enZc1pXTd16r01nd4fAADAoMpU4t9LCvtHv1Ua8m6OEr+1teWWl5fdxsZGriIfK4E2t76+XrtS7t9u4m9vRdxuSQkLebhvf6xoWXN55T338HVJ+KVC6+zc/XPT1XpbDvejx4WFhXR+ZWUlfX7s/ZNmxxH/lif/twT+c5aWltL93fbzAAAAQHOZSvzDH8tuMinufh4kc+1SeVWJzVvkY4VWc7q9xG59URnUWPP+9ppvdQtKuG//dhrNzczM1JbzynvusXP2S7ydv5VgbWd/B+Cfs5YnJyfTgq5HxZ7vbxd7/1odx9fqOTqeCn342gAAANCeGyX+27/23b3vXtdKumX8p3/ck18rDdHc/R/Kad5Y/Nst/rlf30tzFxcXbnV1tVZm9/b26rPZ+AXRhHNhibRlRQXSSmzICqddGbYiK3qu9mPjvPKcu38ORiVeXyrsvMLXpnKskqx19uVDV9312wqNz87O0ueH+/fH/rLS7DiiR3vvrKgr/pefcH+tfh4AAABoLnol/pukyD98ceAeJ2U9S95Jts1S4Lt1Jd6f88ex7VUaY7dvxLY1/pXvvDp5JV7LmtM6f9lYubayv7u762ZnZ2vlXY8aW7kO9++P/eVWx/HX2THtOc1KvGn280D3XV9fE0LIQAUokqa30ywmRf7B8wNX+qXSMveTbb7OUOClm/fE25w/jm0vKo7hFeBm2xqVzLBsatus/ztNp+6J19i/RSUcazttr3nReYa30czPz6fj2P5tHC43O47m/FuP7Dab8Dk6pl2l92neXg96J/YBRwghRQ5QJC3viVc5V0mfSMp6LG+vHLiv/shW4EUlr9v/O40/9pdVJO12D/9WGRPbd0jrVEJtP1Zcs8h77npder12zFgJ9l9XuF7L/r3r4Tg8b38crtNj7Dg6N70Xmi+VSm56ejpd57/v/h+23vbzQPfFPuAIIaTIAYrk1j9sXUhK+ltJWX/0c6UhY8ncl6+yF3gA/y+xDzhCCClygCK5tcSLyvq9ZwduPCnvipYp8MDdFvuAI4SQIgcokkwlXr5ISvubTw9q0TIAAACA/shc4uXzl/u1AAAAAOiftko8AAAAgP6jxAMDqlqtEkLIQAUoEko8MKAuLy8JIWSgAhRJWuIJIYOVk5MTQggZqMT+LSTkrqZW4gEMntivmgkhpMgBioQSDwAAANwpzv0Ly1lgLgmqCy0AAAAASUVORK5CYII=" InformativeScreenshot="87c6d533e7ab15dca9908611e95fe7d6.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Downloads' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
               </uix:NTypeInto.Target>
@@ -99,7 +135,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: UiPath Install Folder" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" OpenMode="Never" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: UiPath Install Folder" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" OpenMode="Never" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -111,7 +147,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Search Box'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_5" Text="UiPath Assistant">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Search Box'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_5" Text="UiPath Assistant exe">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="923, 64, 170, 15" ElementType="InputBox" FriendlyName="'Search Box'" FullSelectorArgument="&lt;wnd aaname=' Search UiPath' cls='DirectUIHWND' /&gt;&lt;ctrl name=' Search UiPath' role='pane' /&gt;&lt;ctrl automationid='SearchEditBox' /&gt;" FuzzySelectorArgument="&lt;wnd aaname=' Search UiPath' cls='DirectUIHWND' /&gt;&lt;ctrl name=' Search UiPath' role='pane' /&gt;&lt;ctrl automationid='SearchEditBox' role='editable text' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAK4AAAATCAYAAAAJWDZFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIkSURBVGhD7ZixjsIwDIbvhZnZEBsrE2JiQ7wGOzMLO4/AggQ5fdUZWZbTpohwiupPikhc2zXy36Twk4KgQUK4QZOEcIMmCeEGTRLCDZokK9zz+Zxms1k3FotFut1uf1c+D7lXq1W6Xq9/Fh/PT9sYy+Wy+8RO3fId5vP5YH5LaV3B93GFS6NoGI2T9eVy6eY1KBWI55eLtfbj8Zg2m0263+/d2sPGlNYVfB9XuOy2Q03+JKUC8fxyse+I8J2Y4H9whUvDOGbZpSw0kWPXvkIcDofXscwcpPH7/f7ly8PAQyG+PCTidzqdXrm9e4ufFpK25ebWD2y9XNevFmIjZqiu4Ptk33G1wBAX2OZjt43UPiIG8ZGcXgx+ssuTVz8Ugr0/2Pt5c+Ce3inSF8O6pK7g+2SFK9BEdhuaJnPZlWRnAq6LDR9PCHyyto33BKPXgmfXNjtHZFKTFVxJvUPrEp7P56RHLQaFC+xWCJSG0TgtANB2dqbdbtfZbKNz8dbPrgWdW9A5dVwuB+iYvnqH1iV4zZzSqIUrXP5BkObQWDneaRw7lz3q2b3kOCVO/yWlG61zacYIhAdIH/msZdfXcX05SusdU1cOr5lTGrXo/XEmR6kIA2iafl3gmgiS9Xq9Ttvt1hUC2NyIaIxA9L0YWsQ6rjSHrhf4Ptj5HFNXDq+ZUxq1KHpVCN7Ha+aURi1CuEGThHCDJgnhBk0Swq3M4/GY9KhDSr+8pT9oe3HyUgAAAABJRU5ErkJggg==" InformativeScreenshot="d77366d6c8c5aa35cde7794714ea84a0.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='explorer.exe' cls='CabinetWClass' title='UiPath' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
               </uix:NTypeInto.Target>
@@ -130,8 +166,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Search for Assistant" sap:VirtualizedContainerService.HintSize="434,792" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" OpenMode="Never" Version="V1">
+    <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Search for Assistant" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" OpenMode="Never" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -157,28 +193,37 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" FilePath="C:\Windows\explorer.exe" IconBase64="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" InformativeScreenshot="1438d892ccd337f3e1167adf2fdf7b8f.png" IsExactTitleEnabled="True" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection'/&gt;&lt;wnd app='explorer.exe' cls='CabinetWClass' title='UiPath Assistant - Search Results in UiPath'/&gt;" />
+        <uix:TargetApp Area="0, 0, 0, 0" FilePath="C:\Windows\explorer.exe" IconBase64="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" InformativeScreenshot="1438d892ccd337f3e1167adf2fdf7b8f.png" IsExactTitleEnabled="True" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='explorer.exe' cls='CabinetWClass' title='UiPath Assistant exe - Search Results in UiPath' /&gt;" />
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Assistant" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" OpenMode="Never" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Assistant" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" OpenMode="Never" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="798,2159" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[Not Community]" sap:VirtualizedContainerService.HintSize="756,344" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <uix:NClick ClickType="Single" DisplayName="Click 'Stay offline'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="145, 461, 48, 18" ElementType="Text" FriendlyName="'Stay offline'" FullSelectorArgument="&lt;ctrl name='UiPath Assistant' role='document' /&gt;&lt;ctrl idx='2' name='Home' role='property page' /&gt;&lt;ctrl name='Stay offline' role='link' /&gt;" FuzzySelectorArgument="&lt;ctrl name='UiPath Assistant' role='document' /&gt;&lt;ctrl name='Home' role='property page' /&gt;&lt;ctrl name='Stay offline' role='link' automationid='' check:text='Stay offline' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAWCAYAAACPHL/WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATdSURBVFhH7ZXpT1RXGIf7d/RLUz/Q1Jq0jWmaLl9qS9J+67cmTWratFpTxYparQoiIk1dMFjcERSjstgKREXAiqBd3AVnnzswzHZnX+4MzMDM3Hl6ZhhECGmCxkiMv+Qk9555z7nv8/7eOeclnjO9AJrvegE03/UCaL7r2QApAeoOWig6JePQy5RUW/it3UFTmxsvGaKBCFb/eD54bpoGlEkmudw6yKL1RhZulWjXxFAJ0rjPjjWeD3pipelvlvjihIxLCdO4y8DGzjCKxcO7P1vQqEm6Wy18ftyTj5+bpgEF3S427BnG5Esim2XOdgeIJjxszn4olg96YiW4VG1k5VVFPEepLdFzVJsBOcgb6yT6xWwqpRJPirnH0DQgh3aILfVeQmP5iVGFnZV6Xv5OwzvFRjodfs4eNlK4WstrK/Q06hVam82UdY/mwsMPvBSUD+LPvWWVRnvJzGertLwnXL9gi+Me8FG4SsMrK7R8VKylQOxdIH470WnLA6XR/GljaYuPVHSMdfUmdlcZ+GCllk9Ep8gjacZH4tTsN/Ch2OPreie+R7pzGlDMH6Co1EDlJS/uUbEwLarkc7J0o3Aomovg9o0AibSK/YJEwV47/X85WVxlF2mkudM5zDe/T+GM6oYpFO7eC6eIDVh5f4sVSzJBh3CoqC+74YRDtTrx+NChGUC79ey8pZBU4hTvNtPpHsfcK7G20YeSStBSY2D/nan2mXEoqPhMXtZXmFhUYuLM/RhJ76NAGWHaGNbhENdazLxaYmPYHeTTdWZujozTcNJMnWbS3hT/iuq+ftTNxEyIPZtNXByOzQ3ooJleT1J06jjbDkmccY7SXK3n194wLnFw9JwzsbojxKRJM4AmlUTbZ+XLajv2IftDIDUR5UiNkeUHbFwUQAsEkEMd4Zhoyx1Xo2w6YqHPKz6e0xjdInbhSZ8oQ1YKB8qNtEiRCaDeLFAsB3RsEmi9xMAsQH0eka4AKjssgFwBajZpWVImsWzPIF/9Msj2XkX8Myc0DSgejmMRCWU7LSJHWL7PilGy8+0GCU0kg3LfypuVNtxJlejdIRaU2nFlMti6zLy1Y4iNtTacUTW3V0bM69rMvL1XJijix6N+irdkkxsVh4KBNT2iTdQYx0oM1OsyqJ4AC3+yoFNTAki0bpM/DyTxt2izjAAqPSrR5IzSut9I9Y1YLk81nSKlTh0g04DkAQflDeI+uBXheIeF8iY3gVCQim0GDl9XMN608vH2Idruheg6Y2RxqS0HpMoyS75/wDLR17FUfjOhhNvHml1mjl8P03ZeVLPOjV+Nzw4UDFG4ycQ5OfG/QC2OMaQbdtaedNBxL0LvXQ/2cDr/xRlAqXiCrm4XPwiooiaZfocwUlTs7hUnW0+Ld0+Q82cdlJ128UePm0OtQcKiOBmRWOUGHRV9imiYKWVdsgx4qDrtoOKsG10gS5tEc1mm0SD2zoxxrVXmuisj7sAEbW1O6gZGcOoD1N8UDiRSNF/1YomIdckUbX1eboeEI/k8Kxsd7Gv3IIVmAfIoKaq6/XMaDf+EJhaLC7K0zEjJlfCscU97dOlipLL9J/QQSA4nKT/vndM42OvHaQ5Te8rCjw0uWkR1Z4t72qO9XxzrM4EeTxk8wwotPUHueCaP62erJwSaf3rOgOA/ALaYfhCD9FQAAAAASUVORK5CYII=" InformativeScreenshot="081e6d41a1685a8917729e33220ef57e.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='uipath.assistant.exe' cls='Chrome_WidgetWin_1' title='UiPath Assistant' /&gt;" SearchSteps="FuzzySelector, Image" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </If.Then>
+            </If>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Give your robot a name'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="756,226" sap2010:WorkflowViewState.IdRef="NTypeInto_6" Text="FRE">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="360, 548, 180, 19" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;ctrl name='UiPath Assistant' role='document' /&gt;&lt;ctrl name='Give your robot a name' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='UiPath Assistant' role='document' /&gt;&lt;ctrl name='Give your robot a name' role='editable text' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALgAAAAXCAYAAAC4eYX8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVHhe7dIBDQAADMOg+ze9+2hAAzcIE5w0wUkTnDTBSROcNMFJE5w0wUkTnDTBSROcNMFJE5w0wUkTnDTBSROcNMFJE5w0wUkTnDTBCdseRWrhsOkj7TUAAAAASUVORK5CYII=" InformativeScreenshot="46c74a4a1d45c5458bb8b6b48d07c91a.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='uipath.assistant.exe' cls='Chrome_WidgetWin_1' title='UiPath Assistant' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
@@ -195,19 +240,19 @@
                 <uix:TargetAnchorable DesignTimeRectangle="382, 705, 136, 30" FriendlyName="'grouping'" FullSelectorArgument="&lt;ctrl name='UiPath Assistant' role='document' /&gt;&lt;ctrl name='Get started' role='push button' /&gt;&lt;ctrl idx='1' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='UiPath Assistant' role='document' /&gt;&lt;ctrl name='Get started' role='push button' /&gt;&lt;ctrl automationid='' role='grouping' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIwAAAAiCAYAAACN1jGgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR+SURBVHhe7Zz7bxRVFMdX/cnf9A8gJv4bJvqb8ScSE2MhJv4olRojkFgbMfqDmoAPWo1GSE14CCwgTUwEC5ECBRGthgpWS1vKdttud93tPme2+5r9es+dx85O787sBCQ1OSf5JLszc+49e873vjbZjeh6GQzTLVIwc0kdPcNLeLw/hkjfHMM4kCZIG6QRRzDPH0goH2YYG9KII5hHd/HMwvhDGnEEo3qAYbywYJhQsGCYULBgmFCwYJhQsGCYULBgmFCwYDY6vct4dn8GW79MYFPfrPqZB8jGE4xI0EvnKpgpNWBbZa2KyYlU1wnb9HEGL3ydwjO71ff9uBdfL/elrV4dc0YTRkXH69tn1M88QDacYJ67KpIjEtRsNpFaKuLEzQayZcj3Pxy7rfTxsmPa9L98KnyC78XXy31piwXjw0drWERDJvnCt3db14d0jE7+0/UMw4L579hQgum5ZcglqLZc9BfHqwkM/W2gJMRFZjQM3BhPIrI9jZ+K8pJjyoK9lceppab1hOivWsPYWB4Tmtm/bbZwt5zVcTPXkDMfmdOf1d7hFUPcM3Dm94qMifxW9Vb7ZE4cnWK3Y+vP4at4q69qviZfs2AUUOLJbl/3SYzY49DIJSski9gVzclCU0HOHorh6S8y+D5lFujaWFK5hxiYM/1z83lsO63h13QD0z+nlL5PvbOAPbMGdK2MkfNJbBnRsVQx+4vuM+O046ZrsbsFjP5ZxO79SWVbnWI/d1AMEPHZPotZQqlUMfpbUcZGxoLxYs0OlDx7Rnjk3bRMtM3mfYuIDKyfoh8+XpMjNjObke+pgO52vNgFnr6yoLzn50vYRbeFbbe38pdrprCut7UVFLu1JNNsdfgTqx1ekjqgEEzkWuukRCaTeqEuXxdiBUdIPcOameikLv2Civ7k0arcSJPRSL54pXUCU/qKkf/aeFWe3OylgswtGFV/664HxW593nq21FqSWTCdoQSTxf8QM4n7npVIKRiPiNzWrWAk7+WxZ8JwhKMtarJI63zFnuNQwtyX0Knt/aNJvD1l+oQWTFDs1n37c0hYMJ154mJr/X7zQ1dyXIJ5aKQqR7nfxrgrwdiIZeKW2JPQMnBQFGSd7zdrcslwj3rVktSNYAJjt/uq1bG39455jQXjgzWayRp1sRGdLeDkDZGwVbNAcoZxjfjEQg4fHBPTuti4Xo6XsHfATLJdULmpPaNhx6dW8q0+TqYNaCUd0dE0XrlUl0VqFsp4WRTE6/vGCV0uGRTP6e9W5KxEz5MFCcbbVt/gin/sYln+cVW6ILucw87jWZwXsZKxYDoh9gvbfmkg7fqml46eU9NZbB2YN58Rx+LoglloMioAnToGP7dG7ZCOKet4Tfcmxtvb936TvFauIHokrvS9LjbGOydFDGKUk9ER/NKdmnwdJBhlHEGxD2q4mjL7IlvNl+WpjAXD/C9hwTChYMEwoWDBMKFgwTChYMEwoWDBMKFwBMM/lWWCaPupLP8Ynwmi7cf4/HcfjJoZPNY/jxeH4+1/98Ew3VHGv9f+4ALzS7WhAAAAAElFTkSuQmCC" InformativeScreenshot="356ee3c9ddc751fca8a7f4f002ffb8de.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='uipath.assistant.exe' cls='Chrome_WidgetWin_1' title='UiPath Assistant' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="756,773" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="24" StartAt="1">
+            <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="756,735" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="24" StartAt="1">
               <ui:RepeatNumberOfTimesX.Body>
                 <ActivityAction x:TypeArguments="x:Int32">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItem" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="722,618" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="722,580" sap2010:WorkflowViewState.IdRef="Sequence_13">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NCheckState Exists="{x:Null}" CheckVisibility="True" DisplayName="Check App State 'Refresh'" sap:VirtualizedContainerService.HintSize="680,526" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="5">
+                    <uix:NCheckState Exists="{x:Null}" CheckVisibility="True" DisplayName="Check App State 'Refresh'" sap:VirtualizedContainerService.HintSize="680,486" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="5">
                       <uix:NCheckState.IfExists>
                         <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_11">
                           <sap:WorkflowViewStateService.ViewState>
@@ -270,7 +315,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Robot - Message Box" sap:VirtualizedContainerService.HintSize="434,549" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" OpenMode="Never" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use: Robot - Message Box" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" OpenMode="Never" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -295,7 +340,7 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
