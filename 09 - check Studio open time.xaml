@@ -123,7 +123,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,464" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,466" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -152,7 +152,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Remote Desktop: UiPath Assistant - Search Results in UiPath" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Never" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Remote Desktop: UiPath Assistant - Search Results in UiPath" sap:VirtualizedContainerService.HintSize="434,1120" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Never" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -164,7 +164,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UiPath Assistant'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="uipath.studio.exe">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'UiPath Assistant'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="uipath.studio.exe[k(enter)]">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="692, 61, 126, 14" ElementType="InputBox" FriendlyName="'UiPath Assistant'" FullSelectorArgument="&lt;wnd aaname=' Search UiPath' cls='DirectUIHWND' /&gt;&lt;ctrl name=' Search UiPath' role='pane' /&gt;&lt;ctrl automationid='SearchEditBox' /&gt;" FuzzySelectorArgument="&lt;wnd aaname=' Search UiPath' cls='DirectUIHWND' /&gt;&lt;ctrl name=' Search UiPath' role='pane' /&gt;&lt;ctrl automationid='SearchEditBox' role='editable text' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIIAAAASCAYAAACXZQa+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR8SURBVGhD7VhHS21JEH6/wqXgzpWgghtBRV0YMGFYiRlUDCgIKuacUMGFARFREQQVRVFUFAMi5qyYc845a837al7fuV6u432PWc3tDw7ndHWf6jpdX1VXnx9PT08kL3n9IAmJn5BEkGBIIkgwFET4+Pig6+tren9/5/br6yvd39/T29sbXV1dsRz9Z2dndH5+Ts/Pzzzu36Cq8yvc3t5qpA9Qtkfiv4OCCJeXl2RtbU1HR0fcHhsbo/j4eFpcXCQPDw/a2dkhMzMz0tXVJT09PaqpqWFHqwIO2t/fZ4ep6lSHl5cX8vT0pPr6erX6VLGxscH2nJ6e/pL8DeV5NQWKJJBak3n/7/iWCI+Pj9xGdrC1taXl5WWampoiBwcHjnZVKOvRhAgTExPk6upKeXl5PMefQpO5VKH6jdqMb4mAtD05Ocn9ggjKpDg5OaG+vj6+8C7uRkZG1NHRwW1LS0saGBignp4eOjg4YN0CiMSioiKqrKykgoICOjw8ZDkiu7e3lwYHB+nu7o4WFhaou7ub5ufnOYphD+5CPjMzw/rFvOiDTPRhnq2tLVpdXWUZiPzw8EDl5eWcjfCt2o5viQDnQI6ULJwPh9rZ2dHu7i6NjIyQl5cXZ4iysjKKiooiHR0dCg0NpfX1dTI2Nqbw8HCysLCg5OTkT6kbTg4ODuZxxcXFND09zVsFnl1cXCgwMJC3poCAAM4ahYWFCntgh5Dn5OTwHGJepHvInJ2dydHRkb8tOzubQkJCyMnJiXVDL/r19fUpMzPzl0Xai98iAu4ZGRmUmJhICQkJ7DQUbnV1ddyOjo5WjIce6DQwMKDOzk6anZ1lMmC8ACIUxEGh2NzczBEKcoAwXV1dPGZzc5NrgpWVFW4LO4eHh9XKhf1wdElJCRkaGvIz7I6NjeVMgDn7+/sV3yi3BiUiYAtAdImFxEKlpaXR8fGxgghI876+vhQTE0Pb29sc3XAgIs3Pz48JokoEdc8A0jUIhKjMz8/niLaysmIiNDU1UW5uLhMDRSrqB4xpb2/nrQh6QCJ1cui/uLhgZ8MuExMTJgL0tbW1sc3iWRLhHyiIgOOij48PEwBOwmJVVFTwomKBlbcGAdQKcXFxvA8PDQ0xcTQlAhYfxImIiKCUlBRKSkoiU1NTWlpa4n5sE4h43IGWlhZ2LjKEsh518vHxcXJzc2NygNySCN9DQQSgurqa3N3dKSwsjEmBtCscqI4ISOmISH9/f34nNTWVU7+9vT07FgXaV0SAk5BZUGcAOP6lp6dz8VhVVcUZwtvbm50KXUFBQZSVlcWFJPTMzc19koOwYl4Q08bGhiIjI8nc3PxLIuBbUC+UlpayDdqMT0TAcbCxsZEdgYodzoGzsV9j60DFrXxkROYAWWprazk9o6rHQqPib21tZefjXUSc0COiD9kER0dU+AJra2s0OjrKpwzYgBMAHNzQ0MD/LeBgjIcebFnKctgi5r25uWFH498ExoKcsG1vb4/HiWfYgPF4T9vxiQgS2gtJBAmGJIIEQxJB4ieI/gJOjJhSOIKjvgAAAABJRU5ErkJggg==" InformativeScreenshot="604c980140c2837bacc7a88f5d04b19b.png" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='explorer.exe' cls='CabinetWClass' title='* - Search Results in UiPath' /&gt;" SearchSteps="Selector, FuzzySelector" />
               </uix:NTypeInto.Target>

@@ -5,10 +5,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1214,3298</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1214,3299</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_02_2___requst_trial_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="21">
+    <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -30,6 +30,7 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -62,44 +63,28 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_02_2___requst_trial" sap:VirtualizedContainerService.HintSize="476,3133" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_02_2___requst_trial" sap:VirtualizedContainerService.HintSize="476,3134" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Remote Desktop Chrome: Process Automation Software - Request your free download" sap:VirtualizedContainerService.HintSize="434,3041" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" UserDataFolderMode="Automatic" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Remote Desktop Chrome: Process Automation Software - Request your free download" sap:VirtualizedContainerService.HintSize="434,3042" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" UserDataFolderMode="Automatic" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,2825" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,2826" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Default="DELETEME" Name="orgName" />
               <Variable x:TypeArguments="x:String" Default="John" Name="firstName" />
               <Variable x:TypeArguments="x:String" Default="Doe" Name="lastName" />
               <Variable x:TypeArguments="x:String" Default="Romania" Name="country" />
-              <Variable x:TypeArguments="x:String" Name="company">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">UiPath</Literal>
-                </Variable.Default>
-              </Variable>
-              <Variable x:TypeArguments="x:String" Name="companyIndustry">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">Engineering</Literal>
-                </Variable.Default>
-              </Variable>
-              <Variable x:TypeArguments="x:String" Name="jobTitle">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">Robot Automator</Literal>
-                </Variable.Default>
-              </Variable>
-              <Variable x:TypeArguments="x:String" Name="downloadType">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">UiPath Enterprise for on-premises</Literal>
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:String" Default="UiPath" Name="company" />
+              <Variable x:TypeArguments="x:String" Default="Engineering" Name="companyIndustry" />
+              <Variable x:TypeArguments="x:String" Default="Robot Automator" Name="jobTitle" />
+              <Variable x:TypeArguments="x:String" Default="UiPath Enterprise for on-premises" Name="downloadType" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -155,7 +140,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Company*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_10" Text="[company]">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayAfter="1" DisplayName="Type Into 'Company*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_10" Text="[company]">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://licensing01.uipath.com/product/studio" ContentHash="ApWkPW8cEEagV19fdLldpQ" DesignTimeRectangle="359, 496, 149, 45" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl name='Organization' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl name='Organization' tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="c70f307923fcf17bff03e0edf1b4cf31.png" Reference="8q7tX2HVr025SmmVI-6yXQ/GObU3LGwSkSiJyKJMHYy9Q" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='Process Automation Software - Request your free download' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -166,7 +151,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click 'UiPath SRL'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
+            <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click 'UiPath SRL'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://licensing01.uipath.com/product/studio" ContentHash="JFFgiRD_e0aM1NHIZ076PQ" DesignTimeRectangle="369, 574, 78, 20" ElementType="Text" FriendlyName="'UIPATH SRL'" FullSelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl aaname='UIPATH SRL' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inlineFrameForm' tag='IFRAME' /&gt;&lt;webctrl aaname='UIPATH SRL' tag='SPAN' type='' check:text='UIPATH SRL' /&gt;" ImageBase64="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" InformativeScreenshot="b7218e423b6755e5f0a0d48d4881734f.png" Reference="8q7tX2HVr025SmmVI-6yXQ/ggDFxQuWJ0qnR5qYgCOOaA" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='Process Automation Software - Request your free download' /&gt;" SearchSteps="FuzzySelector, Image" />
               </uix:NClick.Target>
