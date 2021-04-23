@@ -3,11 +3,10 @@
   "description": "FRE experience - from uipath.com to assistant",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.ComputerVision.LocalServer": "[21.2.1-preview]",
     "UiPath.DataService.Activities": "[21.1.2]",
     "UiPath.Mail.Activities": "[1.10.4]",
     "UiPath.System.Activities": "[21.4.0]",
-    "UiPath.UIAutomation.Activities": "[21.4.1-preview]",
+    "UiPath.UIAutomation.Activities": "[21.4.3]",
     "UiPath.VMware.Activities": "[1.1.4]"
   },
   "webServices": [],
@@ -21,7 +20,7 @@
   ],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.0.0",
-  "projectVersion": "1.1.42",
+  "projectVersion": "1.1.47",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
