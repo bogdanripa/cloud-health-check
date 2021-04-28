@@ -2,11 +2,14 @@
   "Id": "KYX4bIxp9Eq0GecaiOL-Zw",
   "Reference": "8q7tX2HVr025SmmVI-6yXQ/KYX4bIxp9Eq0GecaiOL-Zw",
   "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/POahWNmcXUGXXqGgr4zXZw",
-  "Name": "20.10.6",
+  "Name": "21.4.3",
   "Type": "AppVersion",
   "Created": "2021-04-14T08:45:08.0820355Z",
   "CreatedBy": [
     "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
   ],
-  "Updated": "2021-04-14T08:45:08.0820355Z"
+  "Updated": "2021-04-27T11:32:27.6376667Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
 }

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetAnchorable ContentHash="iKoRCE0XhkmBmNgPaUvoOg" DesignTimeRectangle="282, 112, 80, 20" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Install' cls='Button' title='&amp;amp;Install' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Install' cls='Button' title='&amp;amp;Install' check:text='unchecked' /&gt;" Reference="8q7tX2HVr025SmmVI-6yXQ/-beYsVkRrU6dEfCe5En2ew" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="ImageBase64" xmlns="">0o3DAJf2pIUqwLCkEyQN_bg</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="547ccc5cfa4ca1a10f0ed39d8b4a045b.png" xmlns="">0frZjhfsqt0mt1OuTBHjMfw</imageRef>
+<TargetAnchorable ContentHash="JHK8yli8Uk2D2l3mj5SvfQ" DesignTimeRectangle="471, 170, 132, 33" ElementType="Button" FriendlyName="'Install'" FullSelectorArgument="&lt;ctrl automationid='wizard' /&gt;&lt;ctrl automationid='installScenarioPage' /&gt;&lt;ctrl name='Install' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='wizard' /&gt;&lt;ctrl automationid='installScenarioPage' /&gt;&lt;ctrl name='Install' role='push button' automationid='' check:text='Install' /&gt;" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='HwndWrapper*' title='UiPath Studio Installation' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="33, 170, 41, 23" ElementType="Text" FriendlyName="'Studio'" FullSelectorArgument="&lt;ctrl automationid='wizard' /&gt;&lt;ctrl automationid='installScenarioPage' /&gt;&lt;ctrl name='Studio' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='wizard' /&gt;&lt;ctrl automationid='installScenarioPage' /&gt;&lt;ctrl name='Studio' role='text' automationid='' check:text='Studio' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">1bUzL4o4mpkGiD-Zpx1Zuvw</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0lPCi1gn-mk-msXzS1EHXRA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="f537f42c00f1d11a25c8491fc65d3dd5.png" xmlns="">0bwzUCcWYrE690-wbN2-4Jw</imageRef>
 </TargetAnchorable>

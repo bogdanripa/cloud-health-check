@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetAnchorable ContentHash="Rly0s0iqV0umn84xZvfz3A" DesignTimeRectangle="1702, 823, 83, 22" ElementType="Button" FriendlyName="'&amp;Install'" FullSelectorArgument="&lt;wnd aaname='Install' cls='Button' title='&amp;amp;Install' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Install' cls='Button' title='&amp;amp;Install' check:text='&amp;amp;Install' /&gt;" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='MsiDialogCloseClass' title='UiPath Studio Setup v20.10.6' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="ImageBase64" xmlns="">0zsjqUGnwnEOobZ0G3hoShQ</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="16d38490ed9817319e61a986832ae8c3.png" xmlns="">0YD3ivbDt7UaLhQBTyv-dtQ</imageRef>
+<TargetAnchorable ContentHash="Xjf0fOWc5EKP6cnDcDhSWg" DesignTimeRectangle="402, 576, 97, 33" ElementType="Button" FriendlyName="'Install'" FullSelectorArgument="&lt;ctrl name='Install' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Install' role='push button' automationid='' check:text='Install' /&gt;" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='HwndWrapper*' title='UiPath Studio Installation' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="437, 584, 27, 17" ElementType="Text" FriendlyName="'Install'" FullSelectorArgument="&lt;ctrl name='Install' role='push button' /&gt;&lt;ctrl name='Install' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Install' role='push button' /&gt;&lt;ctrl name='Install' role='text' automationid='' check:text='Install' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">1im8kF7yadEOmzwlvVj31ng</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0b7B7P08V5kmUkWKGCLJ0mw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="e42d704cb9a0cf7f1edb3ff107dd3b68.png" xmlns="">0sOciEB7uUUC41fF4lE5hhw</imageRef>
 </TargetAnchorable>

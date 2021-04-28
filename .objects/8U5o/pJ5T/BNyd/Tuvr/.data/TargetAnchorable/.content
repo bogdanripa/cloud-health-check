@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://staging.uipath.com/deletogqttoy/DefaultTenant/orchestrator_/?tid=33500&amp;fid=73982" ContentHash="Sck9BaAYKkGD875CeYxItg" DesignTimeRectangle="93, 353, 34, 15" ElementType="Text" FriendlyName="'Shared'" FullSelectorArgument="&lt;webctrl aaname='Shared' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Shared' tag='SPAN' type='' check:text='Shared' /&gt;" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='*UiPath*' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0sVR1zzoIBUe5tRyblFiZAA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="e48ba182ae5245738cbb32de7af4a391.png" xmlns="">0-mZKvAf290iNLphBkA-3yg</imageRef>
+</TargetAnchorable>

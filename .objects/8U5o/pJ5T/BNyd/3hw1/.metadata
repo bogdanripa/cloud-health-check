@@ -1,0 +1,13 @@
+﻿{
+  "Id": "3hw1BySYhUuhgPtAG1LzYQ",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/3hw1BySYhUuhgPtAG1LzYQ",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/BNydtyceM0iEC2eg-4ShGQ",
+  "Name": "Skip Button",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-28T07:01:33.5178425Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-28T07:01:33.5178425Z"
+}

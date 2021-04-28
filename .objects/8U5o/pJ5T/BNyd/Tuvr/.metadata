@@ -1,0 +1,16 @@
+﻿{
+  "Id": "TuvryJ74bEydS6ES3PVhYw",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/TuvryJ74bEydS6ES3PVhYw",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/BNydtyceM0iEC2eg-4ShGQ",
+  "Name": "Shared Folder",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-28T07:01:28.0000815Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-28T07:29:11.2751371Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
