@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="IvniIdlXA0GxrTTxMFQ8Qw" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' /&gt;" Url="https://www.uipath.com/developers/studio-download" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+<TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="IvniIdlXA0GxrTTxMFQ8Qw" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' /&gt;" Url="https://www.uipath.com/developers/studio-download" xmlns="http://schemas.uipath.com/workflow/activities/uix">
   <imageRef attrName="IconBase64" xmlns="">0lfkmGOxaP0ag245Ms9lUYQ</imageRef>
   <imageRef attrName="InformativeScreenshot" originalValue="aba26af31d4eed381e8a6e4f18b65f6c.png" xmlns="">0oogSFyofZkmM2SFVO26qkQ</imageRef>
 </TargetApp>

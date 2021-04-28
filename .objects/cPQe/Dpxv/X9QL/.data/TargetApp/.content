@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="92zS8hDX8UqIhv5kMuBagQ" Reference="8q7tX2HVr025SmmVI-6yXQ/X9QLFrhYBEu8qNW8CbKN9w" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='Process Automation Software - Request your free download' /&gt;" Url="https://www.uipath.com/developers/studio-download" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+<TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="92zS8hDX8UqIhv5kMuBagQ" Reference="8q7tX2HVr025SmmVI-6yXQ/X9QLFrhYBEu8qNW8CbKN9w" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='Process Automation Software - Request your free download' /&gt;" Url="https://www.uipath.com/developers/studio-download" xmlns="http://schemas.uipath.com/workflow/activities/uix">
   <imageRef attrName="IconBase64" xmlns="">0d2n9_EZ6T0eUIxuGnSlTKA</imageRef>
   <imageRef attrName="InformativeScreenshot" originalValue="1d2bf705249ed53c70a27e0fad604693.png" xmlns="">0LvRDDO2dFUGIGT8k6rBXjA</imageRef>
 </TargetApp>

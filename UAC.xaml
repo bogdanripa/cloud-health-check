@@ -136,7 +136,7 @@
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
             <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
-              <uc:CVCache DisplayName="Main Screen" Id="574201d0-29ee-40ce-971f-5b20951f3699" InformativeScreenshot="64117aca576e09b80af7f179d84fa763" LogicalPosition="0, 0" OcrText="TestingFRE.deskover.local - Remote Desktop Connection - X User Account Control X Do you want to allow this app to make changes to your device? UiPath Verified publisher: UiPath, Inc. File origin: Downloaded from the Internet Show more details Yes No" Position="0, 0" ScreenshotGuid="1fc59681-e10b-4e8f-a538-216e3c99e756" ServerVersion="1">
+              <uc:CVCache DisplayName="Main Screen" Id="574201d0-29ee-40ce-971f-5b20951f3699" InformativeScreenshot="64117aca576e09b80af7f179d84fa763" LogicalPosition="0, 0" OcrText="* - Remote Desktop Connection - X User Account Control X Do you want to allow this app to make changes to your device? UiPath Verified publisher: UiPath, Inc. File origin: Downloaded from the Internet Show more details Yes No" Position="0, 0" ScreenshotGuid="1fc59681-e10b-4e8f-a538-216e3c99e756" ServerVersion="1">
                 <uc:CVCache.CvUiElements>
                   <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="32">
                     <uc:CvElementInfo Category="CloseButton" Region="1104, 380, 19, 18" />
@@ -165,7 +165,7 @@
                 </uc:CVCache.CvUiElements>
                 <uc:CVCache.OcrTexts>
                   <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="64">
-                    <uc:OcrTextInfo Region="22, 4, 138, 15" Text="TestingFRE.deskover.local" />
+                    <uc:OcrTextInfo Region="22, 4, 138, 15" Text="*" />
                     <uc:OcrTextInfo Region="158, 6, 7, 10" Text="-" />
                     <uc:OcrTextInfo Region="166, 4, 44, 13" Text="Remote" />
                     <uc:OcrTextInfo Region="210, 4, 46, 16" Text="Desktop" />
@@ -221,7 +221,7 @@
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bb8e10b4-0612-4051-802b-ecbc67b42254" InformativeScreenshot="0520ce123933fbd1f0e72391ce1e01fd" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TestingFRE.deskover.local - Remote Desktop Connection' /&gt;" WaitForReady="INTERACTIVE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bb8e10b4-0612-4051-802b-ecbc67b42254" InformativeScreenshot="0520ce123933fbd1f0e72391ce1e01fd" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
