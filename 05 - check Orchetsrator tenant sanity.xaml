@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="check_Orchetsrator_tenant_sanity" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1137,1145" sap2010:WorkflowViewState.IdRef="_6___check_Orchetsrator_tenant_sanity_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="check_Orchetsrator_tenant_sanity" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1137,1450" sap2010:WorkflowViewState.IdRef="_6___check_Orchetsrator_tenant_sanity_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="28">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -29,10 +29,10 @@
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -64,21 +64,24 @@
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Check Orchetsrator tenant sanity" sap:VirtualizedContainerService.HintSize="476,980" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Check Orchetsrator tenant sanity" sap:VirtualizedContainerService.HintSize="476,1285" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use 'Automation Cloud Homepage'" sap:VirtualizedContainerService.HintSize="434,888" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use 'Automation Cloud Homepage'" sap:VirtualizedContainerService.HintSize="434,1193" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,672" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,977" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="cookies" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -105,6 +108,22 @@
                 <uix:TargetAnchorable BrowserURL="https://staging.uipath.com/deletogqttoy/DefaultTenant/orchestrator_/?tid=33500&amp;fid=73982" ContentHash="Sck9BaAYKkGD875CeYxItg" DesignTimeRectangle="93, 353, 34, 15" ElementType="Text" FriendlyName="'Account Icon'" FullSelectorArgument="&lt;webctrl aaname='Shared' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Shared' tag='SPAN' type='' check:text='Shared' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAATCAYAAAD8in+wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN5SURBVEhL7ZX7S5NxFMb774KI+qGgwq4UEUJUVpa2SlPJbKZz3rUMqUy7uoxs06kzp6UV07m703lbM2PzNp06n845bstsFf4gGPSAuPfL+b7fz/uc57zvNmxR/QfbqP4dsMXFRSwshCJXQCAwBYfDieXl5cjK5sjv98NkMsXOiYExULO+FWeSLiLx9FlU3a/GzMwMnK4BVD94hPn5hUjl5shudyA7J5dMWT0nBuYZHsGdfDVev2mErkmPNkM7gsEg+i1WFBSWyO/NlNncj6SLqXTOvFzHwD5096C4tIKcmcfKygpCoZD8ZzCVuhifPn3Gy5f1sNlsCIfDsicQCECvb4FGo4HbPRjbZ7PZMTn5DVqtTta53mTqlf0cC65jMYROp0NLSyu6ut7HB2MA5R0VpqamIiursljt1N5LqKi8i4aG18jIyobL5aYshNHWZsDz5y+gedWA28o8+Hw+TE/PoKziHjJvKlFT8xhOpxNGYycU1zNQX6/BuQuXBZwBcqlDanUhXtH+FEUaLlxS/Ao2OzuH/IIiHD1xCgaDAUtLS7LOwNfSMuD1emlTEA9r6qCnJ2RxHthhhrlbVU05cdLvaSiupeOttknqOdQMZbHYpL6xUYuCojK6tiL1ajo5Oyn3qHvyFEnJcRxj8WJ7+zscOnYSeapC2RBtJR8SDq9QBrVobm6Reh6Ivj6ztDNVcZ3ctQkY1w8OeaRmbGwc+xOOiDPl5RVIz8zG+eQraG1tQ2lpmdSwenv74rdyrfz+gEyI3eH6Kfxrwfg1knYjC8UlpfIwOdRKK7Wdwbh+yDMi92Kw8+QE13R2dslff78FHR1G1NbWSQ3LbDbHB+OA/ghlUHJitTl+C8bZi66zc9xKK2VnPZjPNyEZHR/3yjWLz+rp6YFSmRt7bzFwXDCPZ5jsNGOApognND9fhS9ffL8Fczhd4pKL3nNmcuAq5SrayrVgodAi1JSpysp7MjQDbjdGR8cwMfGVnExBJ03jEJ2dpyqi8F/5Fay7+yMOHDyK7Tt24fCxEzRJRpk8t3sItXXPJLjsaIfxvYDPzc3R66Wc3EimCcyRiR0ZGaUhmpV6r9cXufPq1yPrVi527t6DvfsSpK3sGrt0/GQiOZUik1lWWRX76vyUMbaVpzP6nvqbGJSfMBqBPylau/7TxtPPrq5X3PBvBf0H25iA7/Andfd+2P73AAAAAElFTkSuQmCC" InformativeScreenshot="e48ba182ae5245738cbb32de7af4a391.png" Reference="8q7tX2HVr025SmmVI-6yXQ/TuvryJ74bEydS6ES3PVhYw" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='*UiPath*' /&gt;" SearchSteps="FuzzySelector, Image" />
               </uix:NClick.Target>
             </uix:NClick>
+            <ui:InjectJsScript InputParameter="{x:Null}" DisplayName="Inject Js Script 'DIV'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="InjectJsScript_1" ScriptCode="function (element, input) {&#xA;    return document.cookie;&#xA;}">
+              <ui:InjectJsScript.ScriptOutput>
+                <OutArgument x:TypeArguments="x:String">[cookies]</OutArgument>
+              </ui:InjectJsScript.ScriptOutput>
+              <ui:InjectJsScript.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c9bdd568-7a75-4fd6-85a5-3332c608ea70" InformativeScreenshot="2c0730d8b1a3a982cb3246019349c233" Selector="&lt;webctrl tag='BODY' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:InjectJsScript.Target>
+            </ui:InjectJsScript>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[cookies]" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

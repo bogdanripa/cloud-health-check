@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1137,2164</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1224,2164</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -87,6 +87,7 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.VMware.Activities</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="797,1999" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -148,18 +149,27 @@
     </ui:InvokeWorkflowFile>
     <If Condition="[Community]" sap:VirtualizedContainerService.HintSize="755,289" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 6 - check Orchetsrator tenant sanity workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="WithArguments" LogExit="WithArguments" UnSafe="False" WorkflowFileName="05 - check Orchetsrator tenant sanity.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 5 - check Orchetsrator tenant sanity workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="WithArguments" LogExit="WithArguments" UnSafe="False" WorkflowFileName="05 - check Orchetsrator tenant sanity.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </If.Then>
     </If>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 9 - install Studio workflow" sap:VirtualizedContainerService.HintSize="755,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" LogEntry="WithArguments" LogExit="WithArguments" UnSafe="False" WorkflowFileName="06 - install and open Studio.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 6 - install Studio workflow" sap:VirtualizedContainerService.HintSize="755,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" LogEntry="WithArguments" LogExit="WithArguments" UnSafe="False" WorkflowFileName="06 - install and open Studio.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="UseStaging">[UseStaging]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ActivationKey">[activationKey]</InArgument>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="Community">[Community]</InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="UseStaging">
+          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="UseStaging" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ActivationKey">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="activationKey" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="Community">
+          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Community" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="email">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="email" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 07 - create and publish Studio project workflow" sap:VirtualizedContainerService.HintSize="755,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" LogEntry="WithArguments" LogExit="WithArguments" UnSafe="False" WorkflowFileName="07 - create and publish Studio project.xaml">

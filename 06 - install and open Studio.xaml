@@ -3,11 +3,12 @@
     <x:Property Name="UseStaging" Type="InArgument(x:Boolean)" />
     <x:Property Name="ActivationKey" Type="InArgument(x:String)" />
     <x:Property Name="Community" Type="InArgument(x:Boolean)" />
+    <x:Property Name="email" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1137,4067</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1224,4067</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_9___install_Studio_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -89,6 +90,7 @@
       <AssemblyReference>DataService.FRE</AssemblyReference>
       <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
       <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Install and open Studio" sap:VirtualizedContainerService.HintSize="798,3902" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -214,7 +216,12 @@
       <If.Then>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 06.1 - install community workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="WithArguments" LogExit="WithArguments" UnSafe="False" WorkflowFileName="06.1 - install community.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:Boolean" x:Key="UseStaging">[UseStaging]</InArgument>
+            <InArgument x:TypeArguments="x:Boolean" x:Key="UseStaging">
+              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="UseStaging" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="email">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="email" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </If.Then>
