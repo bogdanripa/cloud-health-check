@@ -1,0 +1,14 @@
+﻿{
+  "Id": "6eZTerJPTEac87987wxkxg",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/6eZTerJPTEac87987wxkxg",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/pJ5TBuwwRkGGsTmZtnY3JA",
+  "Name": "Automatically Open Studio",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2021-05-14T10:27:21.858745Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.4.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-05-14T10:27:21.858745Z"
+}

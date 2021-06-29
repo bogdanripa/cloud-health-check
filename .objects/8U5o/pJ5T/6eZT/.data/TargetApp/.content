@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="-6, 16, 1932, 993" BrowserType="Chrome" ContentHash="6J7-TeELtEO5Jip2ns8_ow" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;html app='chrome.exe' title='Manually Redirect - UiPath Identity' /&gt;" Url="https://staging.uipath.com/identity_/web/manual-redirect?redirect_uri=com.uipath.robot.oidc:%2F%2Foauthredirect&amp;client_triggered_redirect=true&amp;code=_ev4Kf9N9K7T5XbVemYtE6HJQs8ZknS93B8YY9J-UE0&amp;scope=openid%20profile%20offline_access&amp;state=WBXv3E_VgMX6f3k6Pzbcng&amp;session_state=T3KGF7kLphe0rKYQhvLnmvN0cZ82Ii6ogHrIbtYbkqM.ES1TynJgPv3LdqFV3ktN8Q" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0upeW14u3T0G0P5wx1dTHtQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="00895c80660bf32431e4919d8d5bd482.png" xmlns="">0nrXxwDUe40eR1pqPCF6YIg</imageRef>
+</TargetApp>

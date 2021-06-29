@@ -4,9 +4,9 @@
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.DataService.Activities": "[21.1.2]",
-    "UiPath.Mail.Activities": "[1.10.4]",
-    "UiPath.System.Activities": "[21.4.0]",
-    "UiPath.UIAutomation.Activities": "[21.4.3]",
+    "UiPath.Mail.Activities": "[1.10.5]",
+    "UiPath.System.Activities": "[21.4.1]",
+    "UiPath.UIAutomation.Activities": "[21.4.4]",
     "UiPath.VMware.Activities": "[1.1.4]"
   },
   "webServices": [],
@@ -20,7 +20,7 @@
   ],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.0.0",
-  "projectVersion": "1.1.60",
+  "projectVersion": "1.1.67",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -32,7 +32,8 @@
     ],
     "executionType": "Workflow",
     "readyForPiP": false,
-    "startsInPiP": false
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -59,5 +60,6 @@
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},
-  "targetFramework": "Legacy"
+  "targetFramework": "Legacy",
+  "coverageMergeWorkflowPath": ""
 }

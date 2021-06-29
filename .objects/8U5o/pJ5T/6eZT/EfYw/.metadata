@@ -1,0 +1,14 @@
+﻿{
+  "Id": "EfYw4kwEVEyZa-2uFQ7LzQ",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/EfYw4kwEVEyZa-2uFQ7LzQ",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/6eZTerJPTEac87987wxkxg",
+  "Name": "Open UiPath",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-05-14T10:27:38.3259006Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.4.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-05-14T10:27:38.3259006Z"
+}
