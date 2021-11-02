@@ -1,12 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.UseStaging="True" this:Main.Community="True" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.UseStaging="True" this:Main.Community="True" this:Main.ResetVM="True" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="UseStaging" Type="InArgument(x:Boolean)" />
     <x:Property Name="Community" Type="InArgument(x:Boolean)" />
+    <x:Property Name="ResetVM" Type="InArgument(x:Boolean)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1224,2164</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1197,2064</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -87,7 +88,6 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.VMware.Activities</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="797,1999" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -103,7 +103,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="0 - setup workflow" sap:VirtualizedContainerService.HintSize="755,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" LogEntry="WithArguments" LogExit="WithArguments" UnSafe="False" WorkflowFileName="00 - setup.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        <InArgument x:TypeArguments="x:Boolean" x:Key="resetVM">[ResetVM]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="1 - try for free workflow" sap:VirtualizedContainerService.HintSize="755,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="WithArguments" LogExit="WithArguments" UnSafe="False" WorkflowFileName="01 - try for free.xaml">
@@ -158,18 +158,10 @@
     </If>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 6 - install Studio workflow" sap:VirtualizedContainerService.HintSize="755,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" LogEntry="WithArguments" LogExit="WithArguments" UnSafe="False" WorkflowFileName="06 - install and open Studio.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="UseStaging">
-          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="UseStaging" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ActivationKey">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="activationKey" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="Community">
-          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Community" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="email">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="email" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="UseStaging">[UseStaging]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ActivationKey">[activationKey]</InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="Community">[Community]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="email">[email]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 07 - create and publish Studio project workflow" sap:VirtualizedContainerService.HintSize="755,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" LogEntry="WithArguments" LogExit="WithArguments" UnSafe="False" WorkflowFileName="07 - create and publish Studio project.xaml">

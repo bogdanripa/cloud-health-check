@@ -1,6 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="UAC" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1312,781" sap2010:WorkflowViewState.IdRef="UAC_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="UAC" this:UAC.grantAccess="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="grantAccess" Type="InArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1197,1030</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>UAC_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="32">
+    <scg:List x:TypeArguments="x:String" Capacity="64">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -33,10 +41,11 @@
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>UiPath.CV.Activities.Interfaces</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="29">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="58">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -66,9 +75,15 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="UAC" sap:VirtualizedContainerService.HintSize="486,716" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="UAC" sap:VirtualizedContainerService.HintSize="739,965" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="CVApiKey" />
     </Sequence.Variables>
@@ -77,12 +92,12 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CV API Key" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CV API Key" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="697,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[CVApiKey]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" ApiKey="[CVApiKey]" CvMethod="ElementDetection, OCR" DesignTimeCacheId="574201d0-29ee-40ce-971f-5b20951f3699" DisplayName="CV Screen Scope 'mstsc.exe TestingFRE.de...'" sap:VirtualizedContainerService.HintSize="434,447" sap2010:WorkflowViewState.IdRef="CVScope_1" UseLocalServer="False" Version="V2">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" ApiKey="[CVApiKey]" CvMethod="ElementDetection, OCR" DesignTimeCacheId="7c4a0480-f65d-436f-b64c-818f2ab0dd1e" DisplayName="CV Screen Scope 'mstsc.exe TestingFRE.de...'" sap:VirtualizedContainerService.HintSize="697,696" sap2010:WorkflowViewState.IdRef="CVScope_1" UseLocalServer="False" Version="V2">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -94,40 +109,60 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" Descriptor="[&quot;Target: Button (806,634,151,32)&quot; +&#xA;&quot;Anchor: Text 'Yes' (873,643,19,15)&quot;]" DesignTimeCacheId="574201d0-29ee-40ce-971f-5b20951f3699" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="f5f315d41f9808a2620260d0a8c03340" KeyModifiers="None" MouseButton="BTN_LEFT" TimeoutMS="90000" Version="V2">
-              <p:CvClickWithDescriptor.CursorPosition>
-                <ui:CursorPosition Position="Center">
-                  <ui:CursorPosition.OffsetX>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetX>
-                  <ui:CursorPosition.OffsetY>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetY>
-                </ui:CursorPosition>
-              </p:CvClickWithDescriptor.CursorPosition>
-              <p:CvClickWithDescriptor.DesignTimeDescriptor>
-                <uc:CvDescriptor>
-                  <uc:CvDescriptor.Anchors>
-                    <x:Array Type="uc:CvElementDescriptor">
-                      <uc:CvElementDescriptor DesignTimeArea="873, 643, 19, 15" ElementType="Text" Text="Yes" />
-                    </x:Array>
-                  </uc:CvDescriptor.Anchors>
-                  <uc:CvDescriptor.Target>
-                    <uc:CvElementDescriptor DesignTimeArea="806, 634, 151, 32" ElementType="Button" />
-                  </uc:CvDescriptor.Target>
-                </uc:CvDescriptor>
-              </p:CvClickWithDescriptor.DesignTimeDescriptor>
-              <p:CvClickWithDescriptor.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="263c95e4-4318-4cf7-b8b7-265447898690">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </p:CvClickWithDescriptor.Target>
-            </p:CvClickWithDescriptor>
+            <If Condition="[grantAccess]" sap:VirtualizedContainerService.HintSize="663,385" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="242,83" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,228" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" Descriptor="[&quot;Target: Button (959,754,153,32)&quot; +&#xA;&quot;Anchor: Text 'No' (1028,764,16,12)&quot;]" DesignTimeCacheId="7c4a0480-f65d-436f-b64c-818f2ab0dd1e" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="099193682333b407359b9fe7e132f12a" KeyModifiers="None" MouseButton="BTN_LEFT" TimeoutMS="90000" Version="V2">
+                    <p:CvClickWithDescriptor.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </p:CvClickWithDescriptor.CursorPosition>
+                    <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <uc:CvDescriptor>
+                        <uc:CvDescriptor.Anchors>
+                          <x:Array Type="uc:CvElementDescriptor">
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1028, 764, 16, 12" ElementType="Text" Text="No" />
+                          </x:Array>
+                        </uc:CvDescriptor.Anchors>
+                        <uc:CvDescriptor.Target>
+                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="959, 754, 153, 32" ElementType="Button" />
+                        </uc:CvDescriptor.Target>
+                      </uc:CvDescriptor>
+                    </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                    <p:CvClickWithDescriptor.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="263c95e4-4318-4cf7-b8b7-265447898690">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </p:CvClickWithDescriptor.Target>
+                  </p:CvClickWithDescriptor>
+                </Sequence>
+              </If.Else>
+            </If>
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
@@ -138,75 +173,83 @@
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
             <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
-              <uc:CVCache DisplayName="Main Screen" Id="574201d0-29ee-40ce-971f-5b20951f3699" InformativeScreenshot="64117aca576e09b80af7f179d84fa763" LogicalPosition="0, 0" OcrText="* - Remote Desktop Connection - X User Account Control X Do you want to allow this app to make changes to your device? UiPath Verified publisher: UiPath, Inc. File origin: Downloaded from the Internet Show more details Yes No" Position="0, 0" ScreenshotGuid="1fc59681-e10b-4e8f-a538-216e3c99e756" ServerVersion="1">
+              <uc:CVCache DisplayName="Main Screen 2" Id="7c4a0480-f65d-436f-b64c-818f2ab0dd1e" InformativeScreenshot="c6962a0fb1efe4fe1306042db2907f06" LogicalPosition="0, 0" OcrText="10.10.18.148 - Remote Desktop Connection - X User Account Control X Do you want to allow this app to make changes to your device? UiPath extensions installer helper Verified publisher: UiPath, Inc. File origin: Hard drive on this computer Show more details To continue, enter an admin user name and password. bogdan Password DESKTOP-OVUEUTG\bogdan Yes No" Position="0, 0" ScreenshotGuid="aeafb16d-39e0-4dce-933d-3bb980411096" ServerVersion="1">
                 <uc:CVCache.CvUiElements>
-                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="32">
-                    <uc:CvElementInfo Category="CloseButton" Region="1104, 380, 19, 18" />
-                    <uc:CvElementInfo Category="Icon" Region="0, 1, 21, 22" />
-                    <uc:CvElementInfo Category="Button" Region="806, 634, 151, 32" />
-                    <uc:CvElementInfo Category="CloseButton" Region="1885, 1, 19, 18" />
-                    <uc:CvElementInfo Category="MinimizeButton" Region="1794, 2, 20, 17" />
-                    <uc:CvElementInfo Category="MaximizeButton" Region="1840, 1, 18, 19" />
-                    <uc:CvElementInfo Category="Icon" Region="806, 488, 33, 31" />
-                    <uc:CvElementInfo Category="Button" Region="958, 632, 158, 38" />
-                    <uc:CvElementInfo Category="Cell" Region="805, 633, 152, 34" />
-                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1887, 2, 16, 16" />
-                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1840, 1, 20, 20" />
-                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="806, 490, 31, 29" />
-                    <uc:CvElementInfo Category="CheckBox" Confidence="Runtime" Region="808, 490, 29, 27" />
-                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="961, 634, 151, 34" />
-                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1104, 379, 20, 21" />
-                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="804, 593, 154, 40" />
-                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="955, 665, 4, 7" />
-                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 1, 15, 57" />
-                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1106, 662, 14, 11" />
-                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="951, 665, 7, 8" />
-                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="953, 662, 167, 12" />
-                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="948, 666, 177, 21" />
+                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="16">
+                    <uc:CvElementInfo Category="InputBox" Region="807, 666, 221, 32" />
+                    <uc:CvElementInfo Category="Button" Region="807, 755, 152, 32" />
+                    <uc:CvElementInfo Category="MaximizeButton" Region="1840, 1, 19, 19" />
+                    <uc:CvElementInfo Category="CloseButton" Region="1104, 361, 19, 19" />
+                    <uc:CvElementInfo Category="Icon" Region="0, 1, 21, 21" />
+                    <uc:CvElementInfo Category="Button" Region="959, 754, 153, 32" />
+                    <uc:CvElementInfo Category="CloseButton" Region="1886, 1, 19, 19" />
+                    <uc:CvElementInfo Category="MinimizeButton" Region="1795, 3, 19, 17" />
+                    <uc:CvElementInfo Category="Icon" Region="804, 467, 35, 35" />
+                    <uc:CvElementInfo Category="CheckBox" Confidence="Runtime" Region="807, 469, 30, 31" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1838, 1, 19, 19" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="960, 753, 149, 31" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="804, 752, 152, 33" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="958, 784, 162, 23" />
                   </scg:List>
                 </uc:CVCache.CvUiElements>
                 <uc:CVCache.OcrTexts>
                   <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="64">
-                    <uc:OcrTextInfo Region="22, 4, 138, 15" Text="*" />
-                    <uc:OcrTextInfo Region="158, 6, 7, 10" Text="-" />
-                    <uc:OcrTextInfo Region="166, 4, 44, 13" Text="Remote" />
-                    <uc:OcrTextInfo Region="210, 4, 46, 16" Text="Desktop" />
-                    <uc:OcrTextInfo Region="256, 5, 65, 13" Text="Connection" />
-                    <uc:OcrTextInfo Region="1796, 3, 16, 12" Text="-" />
-                    <uc:OcrTextInfo Region="1886, 2, 16, 15" Text="X" />
-                    <uc:OcrTextInfo Region="805, 382, 21, 12" Text="User" />
-                    <uc:OcrTextInfo Region="825, 382, 35, 12" Text="Account" />
-                    <uc:OcrTextInfo Region="860, 382, 32, 12" Text="Control" />
-                    <uc:OcrTextInfo Region="1106, 380, 14, 15" Text="X" />
-                    <uc:OcrTextInfo Region="805, 410, 21, 16" Text="Do" />
-                    <uc:OcrTextInfo Region="827, 413, 28, 18" Text="you" />
-                    <uc:OcrTextInfo Region="856, 410, 36, 17" Text="want" />
-                    <uc:OcrTextInfo Region="893, 410, 16, 16" Text="to" />
-                    <uc:OcrTextInfo Region="910, 409, 37, 18" Text="allow" />
-                    <uc:OcrTextInfo Region="949, 408, 27, 19" Text="this" />
-                    <uc:OcrTextInfo Region="976, 412, 29, 18" Text="app" />
-                    <uc:OcrTextInfo Region="1006, 410, 17, 17" Text="to" />
-                    <uc:OcrTextInfo Region="1024, 408, 39, 19" Text="make" />
-                    <uc:OcrTextInfo Region="805, 435, 57, 21" Text="changes" />
-                    <uc:OcrTextInfo Region="863, 436, 17, 17" Text="to" />
-                    <uc:OcrTextInfo Region="881, 439, 33, 17" Text="your" />
-                    <uc:OcrTextInfo Region="916, 433, 51, 19" Text="device?" />
-                    <uc:OcrTextInfo Region="843, 495, 42, 17" Text="UiPath" />
-                    <uc:OcrTextInfo Region="805, 543, 41, 15" Text="Verified" />
-                    <uc:OcrTextInfo Region="847, 544, 51, 17" Text="publisher:" />
-                    <uc:OcrTextInfo Region="898, 543, 37, 17" Text="UiPath," />
-                    <uc:OcrTextInfo Region="935, 545, 20, 14" Text="Inc." />
-                    <uc:OcrTextInfo Region="806, 562, 19, 15" Text="File" />
-                    <uc:OcrTextInfo Region="826, 563, 34, 17" Text="origin:" />
-                    <uc:OcrTextInfo Region="860, 562, 66, 15" Text="Downloaded" />
-                    <uc:OcrTextInfo Region="926, 563, 26, 14" Text="from" />
-                    <uc:OcrTextInfo Region="953, 562, 19, 15" Text="the" />
-                    <uc:OcrTextInfo Region="973, 563, 41, 14" Text="Internet" />
-                    <uc:OcrTextInfo Region="805, 600, 30, 15" Text="Show" />
-                    <uc:OcrTextInfo Region="836, 602, 28, 13" Text="more" />
-                    <uc:OcrTextInfo Region="866, 600, 34, 15" Text="details" />
-                    <uc:OcrTextInfo Region="873, 643, 19, 15" Text="Yes" />
-                    <uc:OcrTextInfo Region="1027, 643, 18, 15" Text="No" />
+                    <uc:OcrTextInfo Region="23, 5, 64, 12" Text="10.10.18.148" />
+                    <uc:OcrTextInfo Region="88, 6, 6, 11" Text="-" />
+                    <uc:OcrTextInfo Region="96, 5, 42, 12" Text="Remote" />
+                    <uc:OcrTextInfo Region="139, 5, 45, 15" Text="Desktop" />
+                    <uc:OcrTextInfo Region="186, 5, 63, 12" Text="Connection" />
+                    <uc:OcrTextInfo Region="1797, 4, 13, 10" Text="-" />
+                    <uc:OcrTextInfo Region="1887, 3, 14, 13" Text="X" />
+                    <uc:OcrTextInfo Region="806, 364, 20, 12" Text="User" />
+                    <uc:OcrTextInfo Region="825, 364, 36, 11" Text="Account" />
+                    <uc:OcrTextInfo Region="860, 364, 33, 11" Text="Control" />
+                    <uc:OcrTextInfo Region="1108, 363, 11, 13" Text="X" />
+                    <uc:OcrTextInfo Region="805, 391, 21, 16" Text="Do" />
+                    <uc:OcrTextInfo Region="827, 395, 28, 17" Text="you" />
+                    <uc:OcrTextInfo Region="856, 392, 35, 16" Text="want" />
+                    <uc:OcrTextInfo Region="893, 392, 16, 15" Text="to" />
+                    <uc:OcrTextInfo Region="911, 390, 37, 17" Text="allow" />
+                    <uc:OcrTextInfo Region="949, 390, 27, 17" Text="this" />
+                    <uc:OcrTextInfo Region="977, 395, 28, 17" Text="app" />
+                    <uc:OcrTextInfo Region="1007, 392, 15, 15" Text="to" />
+                    <uc:OcrTextInfo Region="1025, 391, 38, 16" Text="make" />
+                    <uc:OcrTextInfo Region="805, 415, 57, 22" Text="changes" />
+                    <uc:OcrTextInfo Region="864, 417, 16, 16" Text="to" />
+                    <uc:OcrTextInfo Region="881, 420, 33, 17" Text="your" />
+                    <uc:OcrTextInfo Region="916, 416, 52, 17" Text="device?" />
+                    <uc:OcrTextInfo Region="844, 477, 41, 16" Text="UiPath" />
+                    <uc:OcrTextInfo Region="886, 479, 65, 14" Text="extensions" />
+                    <uc:OcrTextInfo Region="953, 477, 48, 16" Text="installer" />
+                    <uc:OcrTextInfo Region="1003, 477, 40, 20" Text="helper" />
+                    <uc:OcrTextInfo Region="806, 525, 38, 14" Text="Verified" />
+                    <uc:OcrTextInfo Region="844, 526, 47, 15" Text="publisher:" />
+                    <uc:OcrTextInfo Region="892, 525, 34, 13" Text="UiPath," />
+                    <uc:OcrTextInfo Region="928, 526, 17, 12" Text="Inc." />
+                    <uc:OcrTextInfo Region="806, 544, 18, 12" Text="File" />
+                    <uc:OcrTextInfo Region="825, 544, 32, 15" Text="origin:" />
+                    <uc:OcrTextInfo Region="858, 543, 24, 13" Text="Hard" />
+                    <uc:OcrTextInfo Region="882, 544, 25, 12" Text="drive" />
+                    <uc:OcrTextInfo Region="908, 546, 14, 10" Text="on" />
+                    <uc:OcrTextInfo Region="923, 544, 19, 12" Text="this" />
+                    <uc:OcrTextInfo Region="943, 545, 47, 14" Text="computer" />
+                    <uc:OcrTextInfo Region="806, 580, 28, 13" Text="Show" />
+                    <uc:OcrTextInfo Region="834, 583, 27, 10" Text="more" />
+                    <uc:OcrTextInfo Region="861, 580, 33, 13" Text="details" />
+                    <uc:OcrTextInfo Region="806, 605, 13, 13" Text="To" />
+                    <uc:OcrTextInfo Region="820, 606, 44, 12" Text="continue," />
+                    <uc:OcrTextInfo Region="865, 607, 27, 11" Text="enter" />
+                    <uc:OcrTextInfo Region="892, 608, 14, 10" Text="an" />
+                    <uc:OcrTextInfo Region="907, 605, 30, 13" Text="admin" />
+                    <uc:OcrTextInfo Region="939, 608, 20, 10" Text="user" />
+                    <uc:OcrTextInfo Region="961, 608, 27, 10" Text="name" />
+                    <uc:OcrTextInfo Region="990, 606, 19, 12" Text="and" />
+                    <uc:OcrTextInfo Region="1010, 606, 48, 15" Text="password." />
+                    <uc:OcrTextInfo Region="806, 640, 38, 15" Text="bogdan" />
+                    <uc:OcrTextInfo Region="813, 674, 45, 14" Text="Password" />
+                    <uc:OcrTextInfo Region="806, 709, 134, 17" Text="DESKTOP-OVUEUTG\bogdan" />
+                    <uc:OcrTextInfo Region="874, 764, 17, 12" Text="Yes" />
+                    <uc:OcrTextInfo Region="1028, 764, 16, 12" Text="No" />
                   </scg:List>
                 </uc:CVCache.OcrTexts>
               </uc:CVCache>
@@ -219,11 +262,11 @@
           <ActivityFunc.Argument>
             <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
           </ActivityFunc.Argument>
-          <p1:UiPathScreenOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="[CVApiKey]" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
+          <p1:UiPathScreenOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="[CVApiKey]" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bb8e10b4-0612-4051-802b-ecbc67b42254" InformativeScreenshot="0520ce123933fbd1f0e72391ce1e01fd" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;" WaitForReady="INTERACTIVE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bb8e10b4-0612-4051-802b-ecbc67b42254" InformativeScreenshot="e7a98fcefe92b84457fa7cb5f092e34d" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

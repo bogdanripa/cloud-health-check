@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="5gafMONgZEeWOQNilTs_pg" DesignTimeRectangle="36, 410, 194, 16" ElementType="CheckBox" FriendlyName="'I accept'" FullSelectorArgument="&lt;ctrl role='check box' /&gt;" FuzzySelectorArgument="&lt;ctrl role='check box' automationid='' /&gt;" Guid="222340d2-2cea-43d2-b0f9-6203f549d52d" ScopeSelectorArgument="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='HwndWrapper*' title='UiPath Setup' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <TargetAnchorable.PointOffset>
+    <PointOffset Position="BottomLeft" X="10" Y="-8" />
+  </TargetAnchorable.PointOffset>
+  <imageRef attrName="ImageBase64" xmlns="">0o4pyJYgxQ0m3faI63yAIPw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="624f70dc29b7f19996a90c53b206e6e7.png" xmlns="">03y5GsufrY0OONu15msa_dA</imageRef>
+</TargetAnchorable>

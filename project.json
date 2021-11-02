@@ -3,11 +3,12 @@
   "description": "FRE experience - from uipath.com to assistant",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.DataService.Activities": "[21.6.0]",
-    "UiPath.Mail.Activities": "[1.11.0-preview]",
-    "UiPath.System.Activities": "[21.6.1-preview]",
-    "UiPath.UIAutomation.Activities": "[21.6.1-preview]",
-    "UiPath.VMware.Activities": "[1.1.4]"
+    "UiPath.Azure.Activities": "[1.1.8]",
+    "UiPath.DataService.Activities": "[21.10.0]",
+    "UiPath.Mail.Activities": "[1.12.2]",
+    "UiPath.System.Activities": "[21.10.2]",
+    "UiPath.UIAutomation.Activities": "[21.10.3]",
+    "UiPath.VMware.Activities": "[1.1.7]"
   },
   "webServices": [],
   "entitiesStores": [
@@ -20,10 +21,11 @@
   ],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.0.0",
-  "projectVersion": "1.1.68",
+  "projectVersion": "1.1.73",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
     "excludedLoggedData": [

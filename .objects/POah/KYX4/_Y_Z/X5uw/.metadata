@@ -1,0 +1,17 @@
+﻿{
+  "Id": "X5uwZ2zJZ0CMgg3NLJT2BQ",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/X5uwZ2zJZ0CMgg3NLJT2BQ",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/_Y_ZGk4ou0SZ1oCrUDwPoA",
+  "Name": "I accept",
+  "Type": "Element",
+  "TaxonomyType": "Checkbox",
+  "Created": "2021-10-26T15:24:54.6881136Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-10-27T08:23:02.8731233Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

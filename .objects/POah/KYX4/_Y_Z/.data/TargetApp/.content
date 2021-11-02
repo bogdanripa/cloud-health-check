@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetApp Area="0, 0, 0, 0" ContentHash="RCB_0SNef0OiPhgPNjDOEw" FilePath="[Nothing]" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='HwndWrapper*' title='UiPath Studio Installation' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="IconBase64" xmlns="">0OWE5-2jeBU6kT52e1lGZwA</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="e8417a9e858072e4665a746e7af5e118.png" xmlns="">0XNNMrY3wpEqgAfj7eEGgdw</imageRef>
+<TargetApp Area="0, 0, 0, 0" ContentHash="JcHPdYqB30ugwlYCz9g0Gg" FilePath="[Nothing]" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='* - Remote Desktop Connection' /&gt;&lt;wnd app='msiexec.exe' cls='HwndWrapper*' title='UiPath Setup' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0dPhrP5ga-0yaKYXgPVfN6w</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="081825f57fe4bf7604e49d15d1160714.png" xmlns="">0-D20C5Qx1k260Rf2QiRr1w</imageRef>
 </TargetApp>

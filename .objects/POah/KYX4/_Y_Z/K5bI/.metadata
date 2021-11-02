@@ -1,0 +1,14 @@
+﻿{
+  "Id": "K5bItL7PZkGbLRF7duIDVg",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/K5bItL7PZkGbLRF7duIDVg",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/_Y_ZGk4ou0SZ1oCrUDwPoA",
+  "Name": "Install",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2021-10-27T07:41:17.2407383Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-10-27T07:41:17.2407383Z"
+}

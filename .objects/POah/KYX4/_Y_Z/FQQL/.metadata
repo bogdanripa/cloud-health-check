@@ -1,0 +1,14 @@
+﻿{
+  "Id": "FQQLS67qtUauvaaZeTKeuQ",
+  "Reference": "8q7tX2HVr025SmmVI-6yXQ/FQQLS67qtUauvaaZeTKeuQ",
+  "ParentRef": "8q7tX2HVr025SmmVI-6yXQ/_Y_ZGk4ou0SZ1oCrUDwPoA",
+  "Name": "Launch UiPath Studio",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2021-10-26T15:26:16.1208168Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-10-26T15:26:16.1208168Z"
+}
